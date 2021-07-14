@@ -1,0 +1,60 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block meta %}
+            <!-- Declare the encoding of document -->
+            <meta charset="UTF-8">
+
+            <!-- Set up support for older IE browsers -->
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+            <!-- Set the viewport to make website look good on all devices -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <!-- Define keywords for search engines: -->
+            <meta name="keywords" content="gentleman, suit, tuxedo, jacket, waiscoat, trouser, shirt, tie, cufflink, tie clip, bow tie, belts, shoe, sock, overcoat, scarves">
+
+            <!-- Define a description of your web page -->
+            <meta name="description" content="Gentleman Mayer offer suits, tuxedo, and all other men's accessories. Free delivery on orders over €100, free returns.">
+            
+            <!-- Define the author of a page: -->
+            <meta name="author" content="">
+        {% endblock %}
+
+        {% block extra_meta %}
+        {% endblock %}
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+
+        {% block corecss %}
+            <!-- Bootstrap CSS 4.4.1 -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        {% endblock %}
+
+        {% block extra_css %}
+        {% endblock %}
+
+        {% block corejs %}
+            <!-- jQuery and Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        {% endblock %}
+
+        {% block extra_js %}
+        {% endblock %}
+
+        <title>Gentleman Mayer{% block extra_title %}{% endblock %}</title>
+    </head>
+    <body>
+
+    </body>
+</html>
