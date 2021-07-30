@@ -1,8 +1,28 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-
-    <h1 class="display-4 text-success">Gentleman Mayer</h1>
-
+<section class="bg-homepage-section">
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-7 col-md-6 my-auto">
+                <h1 class="header-text">men's</h1>
+                <h1 class="header-text">collection</h1>
+                <h2 class="subheader-text">From suits, jackets, shirts, shoes</h2>
+                
+                <div class="my-5">
+                    <a href="" class="btn btn-lg btn-outline-white rounded-0 subheader-text font-weight-500 text-uppercase py-3">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
