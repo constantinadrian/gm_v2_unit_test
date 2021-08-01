@@ -37,6 +37,7 @@
         {% block corecss %}
             <!-- Bootstrap CSS 4.4.1 -->
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <link rel="stylesheet" href="{% static 'css/base.css' %}">
         {% endblock %}
 
         {% block extra_css %}
@@ -47,7 +48,6 @@
             <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-            <link rel="stylesheet" href="{% static 'css/base.css' %}">
         {% endblock %}
 
         {% block extra_js %}
@@ -170,16 +170,28 @@
         <script type="text/javascript">
         // Make the collapse navbar menu scroll on mobile, tablets, if needed, and disable the scroll on body
         $("button.navbar-toggler").on("click touchstart", function(event){
-            var scrollPosition = $(".header-container")
             if ($("button.navbar-toggler").attr("aria-expanded") == "false") {
-                $(".navbar").addClass("mobile-menu");
-                $("html body").addClass("disable-scroll");
+                $(".navbar").addClass("enable-scroll-mobile-menu");
+                $("html body").addClass("disable-scroll-on-body");
 
             }
             else {
-                $(".navbar").removeClass("mobile-menu");
-                $("html body").removeClass("disable-scroll");
+                $(".navbar").removeClass("enable-scroll-mobile-menu");
+                $("html body").removeClass("disable-scroll-on-body");
+            }
+        });
 
+        // Toggle the navbar menu, if open, with search form
+        $("a#mobile-search").on("click touchstart", function(event){
+            if ($("a#mobile-search").attr("aria-expanded") == "false" && ($("button.navbar-toggler").attr("aria-expanded") == "true")) {
+                $("button.navbar-toggler").click();
+            }
+        });
+
+        // Toggle the navbar menu, if open, with user-options
+        $("a#user-options").on("click touchstart", function(event){
+            if ($("a#user-options").attr("aria-expanded") == "false" && ($("button.navbar-toggler").attr("aria-expanded") == "true")) {
+                $("button.navbar-toggler").click();
             }
         });
 
@@ -189,6 +201,8 @@
                 $("button.navbar-toggler").click();
             }
         });
+
+
         </script>
         {% endblock %}
     </body>

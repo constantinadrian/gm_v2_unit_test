@@ -22,18 +22,17 @@ body {
     font-size: 14px;
 }
 
-html.disable-scroll,
-body.disable-scroll {
+html.disable-scroll-on-body,
+body.disable-scroll-on-body {
     overflow: hidden;
 }
 
 /* ------------------------------------- Navigation Bar ------------------------------------------- */
-.navbar.mobile-menu {
+.navbar.enable-scroll-mobile-menu {
     width: 100%;
     max-height: 100vh;
     -webkit-overflow-scrolling: touch;
                     overflow-y: auto;
-    
 }
 
 /* from Bulma */
@@ -101,9 +100,11 @@ button[aria-expanded="true"] .bar2 {
     background: #fff;
 }
 
-.form-control:focus {
-    outline: 0;
-    box-shadow: none;
+.form-control:focus,
+.btn.focus, 
+.btn:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
 }
 
 .dropdown-item {
