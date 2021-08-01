@@ -1,3 +1,13 @@
+:root {
+    --header-container-lg-padding: 150.4px;
+    --header-container-sm-md-padding: 104px;
+    --header-container-xs-padding: 78.4px;
+    --font-family-montserrat: 'Montserrat', sans-serif;
+    --font-family-oswald: 'Oswald', sans-serif;
+    --font-family-raleway: 'Raleway', sans-serif;
+    --light-periwinkle: #c7cfdd;
+}
+
 html {
     height: 100%;
 }
@@ -5,17 +15,25 @@ html {
 body {
     margin:0;
     padding: 0;
+
+    font-family: var(--font-family-montserrat);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
 }
 
-.bg-homepage-section{
-    background: url('/media/homepage_background.jpg') no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-        -o-background-size: cover;
-            background-size: cover;
-    background-position-x: 65%;
-    background-position-y: 10%;
-    height: calc(100vh - 164px);
+html.disable-scroll,
+body.disable-scroll {
+    overflow: hidden;
+}
+
+/* ------------------------------------- Navigation Bar ------------------------------------------- */
+.navbar.mobile-menu {
+    width: 100%;
+    max-height: 100vh;
+    -webkit-overflow-scrolling: touch;
+                    overflow-y: auto;
+    
 }
 
 /* from Bulma */
@@ -35,62 +53,137 @@ body {
     width: fit-content;
 }
 
+.main-logo-link img {
+    vertical-align: unset;
+}
+
+button:focus {
+    outline: none;
+}
+
+.bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    -webkit-transition: all 0.6s ease-in-out;
+        -o-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+}
+
+.bar1 {
+    width: 15px;
+}
+
+button[aria-expanded="true"] .bar1 {
+    width: 30px;
+    -webkit-transform: rotate(45deg) translate(0px, 4px);
+        -ms-transform: rotate(45deg) translate(0px, 4px);
+            transform: rotate(45deg) translate(0px, 4px);
+}
+
+button[aria-expanded="true"] .bar2::before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+button[aria-expanded="true"] .bar2 {
+    -webkit-transform: rotate(-45deg) translate(2px,-6px);
+        -ms-transform: rotate(-45deg) translate(2px,-6px);
+            transform: rotate(-45deg) translate(2px,-6px);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #000;
+    background: #fff;
+}
+
+.form-control:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.dropdown-item {
+    font-family: var(--font-family-montserrat);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: .5rem 0;
+}
+/* ---------------------------------- End Navigation Bar ------------------------------------------ */
+
+/* --------------------------------- Font Family Classes ------------------------------------------ */
 .header-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-family-montserrat);
     font-weight: 800;
     font-style: normal;
     line-height: 1.219;
-    font-size: 4rem;
+    font-size: 1.7rem;
     color: #fff;
     letter-spacing: 1px;
     word-break: break-word;
+    transition: all .4s ease-in-out;
 }
 
 .subheader-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-family-montserrat);
     font-weight: 400;
     font-style: normal;
     line-height: 1.219;
-    font-size: 1.2rem;
+    font-size: 0.6rem;
     color: #fff;
     letter-spacing: 1px;
     word-break: break-word;
+    transition: all .4s ease-in-out;
 }
 
-.brand {
-    font-family: 'Oswald', sans-serif;
+.brand-text {
+    font-family: var(--font-family-oswald);
     font-weight: 500;
     font-style: normal;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 1.5px;
 }
 
-.title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+.title-text {
+    font-family: var(--font-family-montserrat);
+    font-weight: 600;
     font-style: normal;
-    font-size: 16px;
-    letter-spacing: 1px;
+    font-size: 12px;
     word-break: break-word;
 }
 
-.links {
-    font-family: 'Montserrat', sans-serif;
+.links-text {
+    font-family: var(--font-family-montserrat);
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
     letter-spacing: 1px;
 }
 
-.content {
-    font-family: 'Raleway', sans-serif;
+.content-text {
+    font-family: var(--font-family-raleway);
     font-weight: 500;
     font-style: normal;
     letter-spacing: 1px;
     font-size: 14px;
 }
 
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+/* ------------------------------- End Font Family Classes ---------------------------------------- */
+
+/* ------------------------------ Buttons and Color Classes --------------------------------------- */
 .btn-outline-white {
     color: #fff;
     border: 1px solid #fff;
@@ -105,18 +198,16 @@ body {
     border: 1px solid #fff;
 }
 
-.font-weight-500 {
-    font-weight: 500;
-}
-
-.font-weight-600 {
-    font-weight: 600;
-}
-
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
+.btn--shop-now-text {
+    font-family: var(--font-family-montserrat);
+    font-weight: 800;
+    font-style: normal;
+    line-height: 1.219;
+    font-size: 0.875rem;
+    color: #fff;
+    letter-spacing: 1px;
+    word-break: break-word;
+    transition: all .4s ease-in-out;
 }
 
 .btn-black {
@@ -141,18 +232,152 @@ body {
 .border-black {
     border: 1px solid black !important;
 }
+/* ---------------------------- End Buttons and Color Classes ------------------------------------- */
 
-/* -------------------------------- Media Queries */
+/* ---------------------------------- Containers Classes ------------------------------------------ */
+#delivery-banner {
+    background: var(--light-periwinkle);
+}
 
+.header-container {
+    padding-top: var(--header-container-xs-padding);
+}
+
+.homepage-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;   
+        -ms-flex-align: center;   
+            align-items: center;
+}
+/* ------------------------------- End Containers Classes ----------------------------------------- */
+
+/* --------------------------------- Background Classes ------------------------------------------- */
+.bg-homepage-section{
+    background: url('/media/homepage_background.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+        -o-background-size: cover;
+            background-size: cover;
+    background-position-x: 65%;
+    background-position-y: 10%;
+    /* height: -moz-calc(100vh - var(--header-container-xs-padding));
+    height: -webkit-calc(100vh - var(--header-container-xs-padding));
+    height: calc(100vh - var(--header-container-xs-padding)); */
+    min-height: -moz-calc(100vh - var(--header-container-xs-padding));
+    min-height: -webkit-calc(100vh - var(--header-container-xs-padding));
+    min-height: calc(100vh - var(--header-container-xs-padding));
+}
+/* ------------------------------ End Background Classes ------------------------------------------ */
+
+/* --------------------------------------- Footer ------------------------------------------------- */
+#footer {
+    width: 100%;
+    padding: 4rem 0 4rem;
+    background: #0c121c;
+}
+
+.footer-links {
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 0;
+    word-break: break-word;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-links-item {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.social-icon-links {
+    margin-bottom: 2rem;
+}
+
+.social-icon-links li a i {
+    color: #000;
+    background-color: var(--light-periwinkle);
+    width: 38px;
+    height: 38px;
+    padding-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#footer .form-control {
+    background: var(--light-periwinkle);
+    color: #000;
+}
+
+#footer .form-control::placeholder {
+    color: #0c121cc7;
+    opacity: 1;
+}
+
+#footer .form-control:focus {
+    color: #000;
+    background-color: var(--light-periwinkle);
+    border: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+.btn-white {
+    background: #fff;
+    color: #0c121c;
+    border: none;
+}
+
+.btn-white:hover,
+.btn-white:active,
+.btn-white:focus {
+    background: #fff;
+    color: #0c121c;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.form-group-wrapper-input {
+    width: 100%;
+}
+
+.form-group-wrapper-submit {
+    width: 100%;
+}
+
+#footer input.links-text {
+    min-height: 38px !important;
+}
+/* -------------------------------------- End Footer ---------------------------------------------- */
+
+/* ------------------------------------ Media Query ----------------------------------------------- */
 /* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
 }
 
 /* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -162,23 +387,91 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: var(--header-container-lg-padding);
+    }
+
+    .bg-homepage-section{
+        /* height: -moz-calc(100vh - var(--header-container-lg-padding));
+        height: -webkit-calc(100vh - var(--header-container-lg-padding));
+        height: calc(100vh - var(--header-container-lg-padding)); */
+        min-height: -moz-calc(100vh - var(--header-container-lg-padding));
+        min-height: -webkit-calc(100vh - var(--header-container-lg-padding));
+        min-height: calc(100vh - var(--header-container-lg-padding));
+    }
+
+    .form-group-wrapper {
+        margin: 0 20% 0 0;
+    }
+
+    .form-group-wrapper-input {
+        width: 60%;
+    }
+    
+    .form-group-wrapper-submit {
+        width: 40%;
+        flex-grow: 1;
     }
 }
 
-@media only screen and (max-width:575px) {
+@media only screen and (min-width:768px) and (max-width: 991px){
+}
+
+@media only screen and (min-width:768px) {
+    .header-text {
+        font-size: 4rem;
+    }
+
+    .subheader-text {
+        font-size: 1.2rem;
+    }
+    .btn--shop-now-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .header-container {
+        padding-top: var(--header-container-sm-md-padding);
+    }
+
+    .bg-homepage-section{
+        /* height: -moz-calc(100vh - var(--header-container-sm-md-padding));
+        height: -webkit-calc(100vh - var(--header-container-sm-md-padding));
+        height: calc(100vh - var(--header-container-sm-md-padding)); */
+        min-height: -moz-calc(100vh - var(--header-container-sm-md-padding));
+        min-height: -webkit-calc(100vh - var(--header-container-sm-md-padding));
+        min-height: calc(100vh - var(--header-container-sm-md-padding));
+    }
 
     .header-text {
-        font-size: 1.2rem;
+        font-size: 2.5rem;
     }
 
     .subheader-text {
         font-size: 0.8rem;
     }
+}
 
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+}
+
+@media only screen and (max-width:575px) {
     .btn-outline-white {
         min-width: 1px;
-        word-break: break-word;
     }
-    
+
+    .fa-lg {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width:576px){
+    .title-text {
+        font-size: 15px;
+    }
+
+    .dropdown-item {
+        font-size: 14px;
+        margin: 0;
+    }
 }
