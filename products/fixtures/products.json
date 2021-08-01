@@ -1,0 +1,2756 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100011",
+      "brand": "French Connection",
+      "name": "Slim Fit Navy Stretck Suit",
+      "slug": "slim-fit-navy-stretck-suit",
+      "description": "A versatile jacket for work, play and special events. You'll turn to French Connection's piece time and time again as the navy tone will bend to any occasion. \r\nIt's cut to a slim fit that gives you a defined outline by sitting close through your body, and the full lining helps to keep its sharp shape. Wear with a crisp shirt and a bold tie to give it personality.",
+      "price": 253.99,
+      "category": 1,
+      "image_url": null,
+      "image": "alex-robinson-vpwDZgKtgVk-unsplash-1.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100012",
+      "brand": "Mayer",
+      "name": "Tailored Fit Grey Check Suit",
+      "slug": "tailored-fit-grey-check-suit",
+      "description": "Whether you're plugging a wardrobe gap or freshening up last season's check, Mayer's mixable grey jacket is a savvy choice. \r\nDesigned in crease-fighting stretch cloth and woven with a navy Prince of Wales pattern, it's cut to the brand's featured tailored fit for a well-balanced shape that follows all the tried-and-true rules of men's tailoring. \r\nOpen it up to reveal full lining that's structured in two tones for signature interest.",
+      "price": 309.99,
+      "category": 1,
+      "image_url": null,
+      "image": "behrouz-sasani-1mdpEQXnJ0A-unsplash-1.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100013",
+      "brand": "Mayer",
+      "name": "Tailored Fit Blue Check Suit",
+      "slug": "tailored-fit-blue-check-suit",
+      "description": "This tailoring takes inspiration from Italian-style suits, which are typically pared-back, easy to wear and have a natural drape. \r\nFeaturing bold checks and a ticket pocket, it also has personality while still meeting the dress code of business settings. The skinny cut ensures you look sharp with a narrow fit on the shoulders, chest and waist, while stretch in the material means you’ll have room to move. \r\nComplete the look with a white shirt to match the crisp look of the checks. ",
+      "price": 349.99,
+      "category": 1,
+      "image_url": null,
+      "image": "benjamin-rascoe-6wh3McESH2w-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100014",
+      "brand": "Ted Baker",
+      "name": "Slim Fit Yale Suit",
+      "slug": "slim-fit-yale-suit",
+      "description": "Tailored to a slim fit for neat, confident lines, Ted Baker's blue jacket is lifted through the addition of a characterful purple check. \r\nIt's woven in a wool blend that features stretch, meaning it'll fight off wrinkles through the day and deliver flexible comfort to the fit. \r\nThe brand's creative DNA is present as always at the partial lining, which is printed with a purple motif emphasised by tonal binding.",
+      "price": 329.99,
+      "category": 1,
+      "image_url": null,
+      "image": "benjamin-rascoe-14WR7joqiUg-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100015",
+      "brand": "Ted Baker",
+      "name": "Slim Fit Eco Blue Check Suit",
+      "slug": "slim-fit-eco-blue-check-suit",
+      "description": "Cut from a recycled polyester-blend cloth, this eco suit will help you do your bit for the environment. \r\nWe’ve rescued 45 plastic bottles from landfill and our oceans to make this eco suit. That’s not all – we’ve also chosen 100% natural and biodegradable corozo nut buttons and lining fabric made with 99% post-consumer recycled polyester to limit its suit’s impact on the environment. All this and you can still expect a smooth handle and Ted Baker’s frame-defining fit. The cloth is tightly woven, so you might want to go one size up if you prefer more movement. \r\nOffset the blue checked fabric with a crisp white or pink shirt and complete with a patterned silk tie.",
+      "price": 289.99,
+      "category": 1,
+      "image_url": null,
+      "image": "benjamin-rascoe-Ci_fZ5cL9Jo-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100016",
+      "brand": "Mayer",
+      "name": "Slim Fit Blue Slub Suit",
+      "slug": "slim-fit-blue-slub-suit",
+      "description": " The deliberate unevenness in slub fabric is what gives Mayer's single-breasted blue jacket its charm. \r\nCreated with that characteristic melange texture, it's tailored to a slim fit to offer you pin-sharp lines for quiet confidence. \r\nEmphasise the silhouette by opting for a slim-cut shirt or get creative by layering a charcoal knit with a white tee.",
+      "price": 439.99,
+      "category": 1,
+      "image_url": null,
+      "image": "benjamin-rascoe-Eav5V0COmQ4-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100017",
+      "brand": "Mayer",
+      "name": "Slim Fit Semi Plain Navy Check Suit",
+      "slug": "slim-fit-semi-plain-navy-check-suit",
+      "description": "Known for delivering classic tailoring with extra character, Mayer is a savvy place to turn when updating your officewear. \r\nDelivered in pure-wool cloth with a navy tone that couldn’t be easier to style, this three-piece suit is cut to a tailored fit that provides a clean, strong profile without feeling too restrictive. \r\nA pin at the lapel gives a little nod to the signature lining, which is bursting with bee motifs. Play up the personality your way by wearing it with a floral-print shirt.",
+      "price": 389.99,
+      "category": 1,
+      "image_url": null,
+      "image": "benjamin-rascoe-gnfoPgyWiFo-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100018",
+      "brand": "Mayer",
+      "name": "Slim Fit Teal Check Suit",
+      "slug": "slim-fit-teal-check-suit",
+      "description": "A bright addition to your suit collection. \r\nThe vivid teal tone of this suit will grab attention while the slim fit makes you look sharp when all eyes are on you. It’s a close-fitting suit and spandex in the material means it feels unrestrictive. Texture through the material gives you added on-trend style. \r\nAll you need is a white shirt, a tie and a pocket square in a similar tone.",
+      "price": 389.99,
+      "category": 1,
+      "image_url": null,
+      "image": "benjamin-rascoe-HoZi2x3V4L8-unsplash-1.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100019",
+      "brand": "French Connection",
+      "name": "Slim Fit Sky Blue Marl Suit",
+      "slug": "slim-fit-sky-blue-marl-suit",
+      "description": "Dial up your workwear game a fair few notches with French Connection's sky-blue jacket. \r\nFreshening your look with its seasonal pastel colour, it's tailored in wool-blend cloth to a neat fit, trimmed with pearlised buttons and presented with a pull-out pocket square. \r\nThe piano-faced lining features an elegant bamboo print that's echoed throughout the coordinating three-piece.",
+      "price": 404.99,
+      "category": 1,
+      "image_url": null,
+      "image": "benjamin-rascoe-HoZi2x3V4L8-unsplash-1.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100020",
+      "brand": "Mayer",
+      "name": "Tailored Fit Blue Texture Suit",
+      "slug": "tailored-fit-blue-texture-suit",
+      "description": "Designed in blue fabric with a creative pattern woven in, Mayer's two-piece suit is a direct hit on formal style. \r\nThe tailored fit provides lines that skim your frame without feeling restrictive, the cloth contains a little stretch for flex you'll appreciate on manic days and the jacket is lined with two-tone panelling to emphasise the structure. \r\nWe'd go for a classic cotton-poplin shirt and tie or switch things up with a knitted polo shirt and printed pocket square to suit the occasion.",
+      "price": 374.99,
+      "category": 1,
+      "image_url": null,
+      "image": "benjamin-rascoe-MC0Izet52_c-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100021",
+      "brand": "Ted Baker",
+      "name": "Slim Fit Green Suit",
+      "slug": "slim-fit-green-suit",
+      "description": "Ted Baker is known for its youthful yet professional outfits. This suit offers a fresh take on the classic suit, made with a dark green cloth. \r\nCut in a slim fit, it’ll sit close to the shoulders and define the frame. It’s a quality item, with 70% wool construction. The four-button cuff and double back vent add to the classic look. \r\nPair with grey knitwear for a sophisticated outfit and use your pocket square to bring some pattern and depth.",
+      "price": 374.99,
+      "category": 1,
+      "image_url": null,
+      "image": "benjamin-rascoe-NxtxmmHc2OE-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100022",
+      "brand": "Mayer",
+      "name": "Tailored Fit Blue Grid Check Suit",
+      "slug": "tailored-fit-blue-grid-check-suit",
+      "description": "If it's true that clothes make the man then investing in Mayer tailoring is worth every penny. \r\nScale up your workweek options with our fresh interpretation of the blue three-piece suit, patterned with a grid check for classic appeal. \r\nIt's cut in stretch fabric to a tailored fit that gives you all the crisp lines where you need them with the benefit of easy movement.",
+      "price": 369.99,
+      "category": 1,
+      "image_url": null,
+      "image": "benjamin-rascoe-r4F-Br3usPA-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100023",
+      "brand": "Empire Mills",
+      "name": "Slim Fit Signature Black Stripe Suit",
+      "slug": "slim-fit-signature-black-stripe-suit",
+      "description": "Made from fabrics woven in Britain, this slim fit suit is a fine way to elevate your formalwear. \r\nWith 100% wool, produced by Empire Mills, Yorkshire, know for supplying premium products since 1915 – especially for men's suits and jackets. We've also added traditional elements; functional cuffs and a half-canvas chest construction which offers superior shape retention and a natural lapel roll. \r\nRadiate the elegance of an English gentleman.",
+      "price": 269.99,
+      "category": 1,
+      "image_url": null,
+      "image": "benjamin-rascoe-SwOvGPVhdcM-unsplash-1.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100024",
+      "brand": "Ermenegildo Zegna Cloth",
+      "name": "Tailored Fit Naples Blue Suit",
+      "slug": "tailored-fit-naples-blue-suit",
+      "description": "Be the exception. \r\nThis sophisticated Naples blue jacket from Ermenegildo Zegna will see you through multiple events in your calendar. It’s cut to flatter your frame in a classic tailored fit that’s generous through the chest and slimmer at the waist. Thanks to its high-performance merino wool, it will remain crease-free so you can stay on top of your game all day long. \r\nFor a smart business outfit, bring out the rich blue of the fabric by pairing it with a sky-blue shirt and patterned tie. Need to impress? Wear it as part of a 2-piece suit with the matching waistcoat and trousers, and don’t forget a silk pocket square in a contrasting colour to highlight the blue.",
+      "price": 429.99,
+      "category": 1,
+      "image_url": null,
+      "image": "benjamin-rascoe-Z7b2Px6yT40-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100025",
+      "brand": "Mayer",
+      "name": "Regular Fit Navy Black Check Suit",
+      "slug": "regular-fit-navy-black-check-suit",
+      "description": "Switch out plain cloths for the contemporary character of a check. \r\nMoss 1851's suit is made with 2% stretch, introducing extra flexibility to the regular fit. Which you'll love for its natural lines, generous cut and day-long comfort. \r\nThe navy base and subtle check has just the right amount of impact for everyday styling. Try it with a crisp white shirt and coordinate your tie with the lightest thread in the weave.",
+      "price": 469.99,
+      "category": 1,
+      "image_url": null,
+      "image": "benjamin-rascoe-zNPlKIWCoZc-unsplash-1.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100026",
+      "brand": "Mayer",
+      "name": "Slim Fit Grey Navy Check Suit",
+      "slug": "slim-fit-grey-navy-check-suit",
+      "description": "Woven in a blend that's rich in virgin wool, HUGO's single-breasted jacket can bend and flex to the occasion with its navy hue and fine fabric structure. \r\nPare it back with jeans or chinos to greet the weekend and mix it together with coordinating separates during the week. The infinity flex fabric and silken lining make it a breeze to wear, wherever you're heading.",
+      "price": 235.99,
+      "category": 1,
+      "image_url": null,
+      "image": "man-6019697_1920.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100027",
+      "brand": "Mayer",
+      "name": "Regular Fit Grey Navy Check Suit",
+      "slug": "regular-fit-grey-navy-check-suit",
+      "description": "Join the ranks of the well-dressed with a little help from Mayer. \r\nThat classic British charm for which the brand is known is stamped all over this mixable jacket, which is tailored to a regular fit in pure wool. \r\nA blue check deepens the impact of the fabric, while full lining ensures an easy glide over shirts or knitwear.",
+      "price": 485.99,
+      "category": 1,
+      "image_url": null,
+      "image": "man-6019697_1920.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100028",
+      "brand": "Mayer",
+      "name": "Tailored Fit Blue Flannel Suit",
+      "slug": "tailored-fit-blue-flannel-suit",
+      "description": "Feel good; look great. Moss 1851's tailored-fit blue suit is your sure advantage for staying on point during hectic days. \r\nIt's crafted in our premium flannel, which is rich in wool and blended with just the right amount of stretch to guarantee freedom of movement. The brushed finish offers a super-soft handfeel and stretch lining inside the jacket increases that flexibility you'll come to depend on. \r\nYear-round versatile but particularly foolproof as we step into cooler weather, it's guaranteed to kick your mood up a few notches when weekdays get a bit challenging.",
+      "price": 425.99,
+      "category": 2,
+      "image_url": null,
+      "image": "benjamin-rascoe-58jMNIfE2Xg-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 3
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100029",
+      "brand": "Mayer",
+      "name": "Navy Highlight Check Slim Fit Suit",
+      "slug": "navy-highlight-check-slim-fit-suit",
+      "description": "Keep things interesting midweek with Moss London's intentionally versatile blue suit. \r\nCreated in stretch fabric and tailored to a neat fit for sharp lines, it's woven with a modern check for failsafe styling with your go-to shirts and accessories. \r\nWear the three elements together or break them up to satisfy any occasion.",
+      "price": 444.99,
+      "category": 2,
+      "image_url": null,
+      "image": "benjamin-rascoe-ECJWF1NxSpM-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 3
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100030",
+      "brand": "French Connection",
+      "name": "Tailored Fit Blue Sharkskin Suit",
+      "slug": "tailored-fit-blue-sharkskin-suit",
+      "description": "Stand out in bright blue. This suit is designed to attract attention while still sending out a smart message. \r\nIt’s tailored to be both frame defining and comfortable by tucking in at the waist but leaving you room to move. Stretch in the material also helps. Peak lapels add a special occasion look, as does the 3-piece design. \r\nLook relaxed yet formal with an open-necked shirt and a pocket square. If you need to wear a tie, choose a classic silk one with some vibrant colours.",
+      "price": 244.99,
+      "category": 2,
+      "image_url": null,
+      "image": "donovan-sikaona-v4Sy7qvb2MY-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 3
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100031",
+      "brand": "Mayer",
+      "name": "Tailored Fit Black Suit",
+      "slug": "tailored-fit-black-suit",
+      "description": "An outfit that works as hard as you do, Moss 1851's black suit is packed with high-performance features. \r\nCrafted in wool-rich cloth that's blended with just the right amount of Lycra, it's crease resistant to keep you looking sharp on the go and the water-repelling and anti-stain finish helps you brush off spills and splashes in an instant. \r\nThis suit showcases the brand's featured tailored fit in a great light, offering a natural line at the shoulders and clever tapering that provides a neat and flattering effect.",
+      "price": 264.99,
+      "category": 2,
+      "image_url": null,
+      "image": "hamid-tajik-_OJqycX72pQ-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 3
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100032",
+      "brand": "Ted Baker",
+      "name": "Slim Fit Cool Grey & Blue Stripe Suit",
+      "slug": "slim-fit-cool-grey-blue-stripe-suit",
+      "description": "There’s something quite summery about the clementine check of Ted Baker’s slim-cut suit – but the grey base will allow it to transition comfortably into the cooler months too. \r\nPick out the pattern with a tonal pocket square, add shades and a crisp shirt and you've got an instant winner for warm-weather occasions. Or try it with tan brogues and navy knitwear for a fresh morning commute.",
+      "price": 281.99,
+      "category": 2,
+      "image_url": null,
+      "image": "hamid-tajik-HRazOEIHLdk-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 3
+    }
+  },
+  {
+    "pk": 23,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100033",
+      "brand": "Mayer",
+      "name": "Tailored Fit Navy Twill Dress Suit",
+      "slug": "tailored-fit-navy-twill-dress-suit",
+      "description": "Packing personality, Mayer's tailored-fit jacket is turned out in a navy tone to go with all your finishing touches. Topped with peak lapels for a contemporary nod, it fastens with a single button and is trimmed with satin elements to up the ante on formal finesse. The pure-wool cloth offers a refined, smooth finish you'll love.",
+      "price": 381.99,
+      "category": 3,
+      "image_url": null,
+      "image": "benjamin-rascoe-xnN7N0dxpEQ-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 24,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100034",
+      "brand": "Mayer",
+      "name": "Tailored Fit Blue Dress Suit",
+      "slug": "tailored-fit-blue-dress-suit",
+      "description": "High-end events require an evening suit that'll stand up to the dress code. \r\nMayer's blue dress suit is just the ticket, crafted in wool-blend cloth and trimmed with tonal satin lapels for understated detail that'll make all the right statements. \r\nThe tailored fit gives a strong profile, so all you need to do is select a crisp shirt.",
+      "price": 291.99,
+      "category": 3,
+      "image_url": null,
+      "image": "mohamad-khosravi--eb0moHDPBI-unsplash-1.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 25,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100035",
+      "brand": "Mayer",
+      "name": "Slim Fit Black Dress Suit",
+      "slug": "slim-fit-black-dress-suit",
+      "description": "The growing popularity of the double-breasted suit isn’t letting up, so it’s time you welcomed it into your eveningwear options. \r\nMayer’s two-piece takes the guesswork out of getting it right with its versatile black tone and sleek fit. Satin trims provide that occasion-ready refinement you’re looking for. \r\nNot a fan of stiff wing collars? An open-necked black shirt will offer a confident backdrop, as long as you bring the polish with patent leather footwear.",
+      "price": 271.99,
+      "category": 3,
+      "image_url": null,
+      "image": "mohamad-khosravi-vS0Kya7E5V4-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 2
+    }
+  },
+  {
+    "pk": 26,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100036",
+      "brand": "Mayer",
+      "name": "Slim Fit White Jacket",
+      "slug": "slim-fit-white-jacket",
+      "description": "For centuries white has been regarded as the warm-weather fabric of choice. With its relaxed, unstructured profile, Mayer's jacket brings contemporary style to a formalwear classic. Made from blended cloth with a low thread count, it's lightweight and breathable, but won't crease as easily as pure white. The stripped-black design makes it comfortable to wear and gives it a more natural drape. Add a dark bow tie as extra contrast if the situation calls for a smarter finish.",
+      "price": 214.99,
+      "category": 16,
+      "image_url": null,
+      "image": "alvin-mahmudov-5N2tCRDWaLI-unsplash-1.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 27,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100037",
+      "brand": "Mayer",
+      "name": "Slim Fit Dark Cyan Blue Jacket",
+      "slug": "slim-fit-dark-cyan-blue-jacket",
+      "description": "Go Dark Cyan Blue and stand out from the crowd. \r\nInject personality into your look with this unique multi-check jacket. It’s a bold choice that will add smartness and style to an off-duty look. Add into the mix a flattering tailored fit, that allows for plenty of movement through the chest and shoulders but gives you a sharp shape thanks to its closer-cut waist, and you’ve got a standout jacket. \r\nTeam with a light white shirt and orange tie and prepare to command attention for all the right reasons.",
+      "price": 108.99,
+      "category": 16,
+      "image_url": null,
+      "image": "andriyko-podilnyk-tDfARv36xEQ-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 28,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100038",
+      "brand": "Mayer",
+      "name": "Slim Fit Navy Jacket",
+      "slug": "slim-fit-navy-jacket",
+      "description": "Go Dark Cyan Blue and stand out from the crowd. \r\nInject personality into your look with this unique multi-check jacket. It’s a bold choice that will add smartness and style to an off-duty look. Add into the mix a flattering tailored fit, that allows for plenty of movement through the chest and shoulders but gives you a sharp shape thanks to its closer-cut waist, and you’ve got a standout jacket. \r\nTeam with a light white shirt and orange tie and prepare to command attention for all the right reasons.",
+      "price": 147.99,
+      "category": 4,
+      "image_url": null,
+      "image": "benjamin-rascoe-ACR44H1X8jE-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 29,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100039",
+      "brand": "Mayer",
+      "name": "Regular Fit Grey Check Jacket",
+      "slug": "regular-fit-grey-check-jacket",
+      "description": "Reinvent how you show up on a Monday morning with Mayer's regular-fit grey check jacket. \r\nCrafted in stretch fabric with a windowpane check, it's tailored to a regular fit for classic lines that are easy to style. \r\nTwo-tone panelled lining adds a touch of colour at the interior of the jacket.",
+      "price": 127.99,
+      "category": 4,
+      "image_url": null,
+      "image": "benjamin-rascoe-A-RK0fxqin0-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 30,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100040",
+      "brand": "Barberis",
+      "name": "Tailored Fit Dark Grey Check Jacket",
+      "slug": "tailored-fit-dark-grey-check-jacket",
+      "description": "Vitale Barberis Canonico is Italy’s oldest mill and it uses only the finest raw materials before washing, spinning, dying and hand-finishing them in-house. \r\nThe mill’s quality craftsmanship is reflected in its luxurious cloths. This one is made with 90% wool, which gives the bold check a refined finish. We’ve half-lined the jacket for comfort and breathability. It also has a contrasting undercollar for classic detail. Cut in a tailored fit, it will highlight the shoulders and chest while tapering through the arms. \r\nWear over a knit on cold days or dress it up with a plain shirt and tie for formal occasions.",
+      "price": 174.99,
+      "category": 16,
+      "image_url": null,
+      "image": "benjamin-rascoe-fFeiBhk5B7k-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 31,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100041",
+      "brand": "Mayer",
+      "name": "Slim Fit Blue Donegal Jacket",
+      "slug": "slim-fit-blue-donegal-jacket",
+      "description": "The intensely grained and subtly flecked character of Donegal cloth is what gives Mayer's jacket its enduring appeal. Cut with a contemporary slim fit for a pin-sharp outline, it's a great partner to a box-fresh shirt and a silk-jacquard tie for a play on textures we guarantee you'll enjoy.",
+      "price": 174.99,
+      "category": 4,
+      "image_url": null,
+      "image": "benjamin-rascoe-g_1Dkk0ufP8-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 32,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100042",
+      "brand": "Mayer",
+      "name": "Tailored Fit Black Check Jacket",
+      "slug": "tailored-fit-black-check-jacket",
+      "description": "Dial up your formal collection with Mayer's balck check jacket. \r\nDesigned in wool-rich black cloth with a solid weave for versatility, it's cut to a tailored fit for strong lines that'll deliver the goods at any black-tie event. \r\nTrimmed with the essential tonal sheen at the lapels for an elevated look after dark, it's lined with signature printed fabric for an unexpected touch.",
+      "price": 255.99,
+      "category": 4,
+      "image_url": null,
+      "image": "benjamin-rascoe-JXf2e0nb_-o-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 33,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100043",
+      "brand": "Mayer",
+      "name": "Slim Fit Blue Check Jacket",
+      "slug": "slim-fit-blue-check-jacket",
+      "description": "This tailoring takes inspiration from Italian-style suits, which are typically pared-back, easy to wear and have a natural drape. \r\nFeaturing bold checks and a ticket pocket, it also has personality while still meeting the dress code of business settings. The skinny cut ensures you look sharp with a narrow fit on the shoulders, chest and waist, while stretch in the material means you’ll have room to move. \r\nComplete the look with a white shirt to match the crisp look of the checks.",
+      "price": 164.99,
+      "category": 4,
+      "image_url": null,
+      "image": "benjamin-rascoe-jXzyR6tgd18-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 34,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100044",
+      "brand": "Mayer",
+      "name": "Slim Fit Navy Puppytooth Tweed Jacket",
+      "slug": "slim-fit-navy-puppytooth-tweed-jacket",
+      "description": "Impress consistently from weekday meetings to weekend events with Moss London's navy suit, patterned with a puppytooth weave that'll never fall out of favour. \r\nFeaturing half lining and binding printed with florals for a little tucked-away creativity, it's tailored in wool-blend cloth to a bulk-beating slim fit that layers well over your choice of knits and shirts.",
+      "price": 161.99,
+      "category": 4,
+      "image_url": null,
+      "image": "benjamin-rascoe-lQQpyVvW0l0-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 35,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100045",
+      "brand": "Mayer",
+      "name": "Tailored Fit Green Jacket",
+      "slug": "tailored-fit-green-jacket",
+      "description": "Cut in pure-cotton velvet with a rich green hue, Moss 1851's dress jacket tops off a formal look with trending opulence. \r\nIts tailored fit creates a modern and clean outline that's complemented by a single-button closure and offset by printed lining hidden away inside. \r\nLayer it over black knitwear for a confident evening ensemble or mix it up with an Oxford shirt and printed pocket square.",
+      "price": 242.99,
+      "category": 4,
+      "image_url": null,
+      "image": "benjamin-rascoe-ntGUpxGogHA-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 36,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100046",
+      "brand": "Mayer",
+      "name": "Henry Box Check Jacket",
+      "slug": "henry-box-check-jacket",
+      "description": "Mayer's beautiful Glen Check men's jacket is part of the seasonal heritage collection. Providing a classic look for the modern man's wardrobe. Navy and light blue blend together to create this distinctive look of sophisticated elegance.",
+      "price": 249.99,
+      "category": 4,
+      "image_url": null,
+      "image": "benjamin-rascoe-opJElA_rBNw-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 37,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100047",
+      "brand": "Mayer",
+      "name": "Mayer Multi Check Wool/Silk/Linen Jacket",
+      "slug": "mayer-multi-check-wool-silk-linen-jacket",
+      "description": "Mayer's Mulit Check Wool/Silk/Linen Mens Jacket is the ultimate in hybrid jacket design. This wonderful piece encapsulates the strengths of three of the major textiles in a hugely beneficial way. The 40% wool content gives it the sturdy and reliable feel, the 35% silk adds the decadent softness and the 25% linen offers the breath-ability for hotter weather.",
+      "price": 274.99,
+      "category": 4,
+      "image_url": null,
+      "image": "benjamin-rascoe-rnV9Y5_EbJs-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 38,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100048",
+      "brand": "Mayer",
+      "name": "Silk Cashmere Jacket",
+      "slug": "silk-cashmere-jacket",
+      "description": "Add some elegance to your outfit with this exquisite jacket from Mayer. A versatile tone of burgundy will allow you to fit this piece into many outfits, from days in the office to nights in the city.",
+      "price": 274.99,
+      "category": 4,
+      "image_url": null,
+      "image": "benjamin-rascoe-vXmHnW7puxE-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 39,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100049",
+      "brand": "Mayer",
+      "name": "Wool Slim Fit Navy Check Jacket",
+      "slug": "wool-slim-fit-navy-check-jacket",
+      "description": "Crafted from pure wool, this suit jacket from Mayer will add some modern sophistication to your formal wardrobe. \r\nCut to a slim contemporary fit, it is single breasted and features padded shoulders and notch lapels. Completed with patch pockets, a two button fastening and buttoned sleeve cuffs- you will be reaching for this for a sleek look. \r\nCombine with the matching trousers and waistcoat to complete a striking three-piece ensemble.",
+      "price": 239.99,
+      "category": 16,
+      "image_url": null,
+      "image": "benjamin-rascoe-wSeGsdjltYw-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 40,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100050",
+      "brand": "Mayer",
+      "name": "Tailored Fit Wool, Silk & Linen Blend Grey Jacket",
+      "slug": "tailored-fit-wool-silk-linen-blend-grey-jacket",
+      "description": "Crafted from pure wool, silk and linen this jacket will make a sharp addition to your formal wardrobe. \r\nCut to a tailored fit with elegant peak lapels, the two-button front, flap front pockets, and double-vented reverse add traditional details.",
+      "price": 204.99,
+      "category": 4,
+      "image_url": null,
+      "image": "benjamin-rascoe-XyLmhOb9jvg-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 41,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100051",
+      "brand": "Mayer",
+      "name": "Tailored Fit Lined Navy Jacket",
+      "slug": "tailored-fit-linen-navy-jacket",
+      "description": "This Mayer Jacket is the perfect addition to your wardrobe, years of experience allows us to create the ideal jacket.",
+      "price": 204.99,
+      "category": 4,
+      "image_url": null,
+      "image": "benjamin-rascoe-ZnI0c4RmUPA-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 42,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100052",
+      "brand": "Mayer",
+      "name": "Regular Fit Wool, Silk & Linen Blend Wine Jacket",
+      "slug": "regular-fit-wool-silk-linen-blend-wine-jacket",
+      "description": "Stylish tailored regular fit jacket in a linen, wool and silk blend.",
+      "price": 204.99,
+      "category": 16,
+      "image_url": null,
+      "image": "heng-films-mpdIPhYqZ4Y-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 43,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100053",
+      "brand": "Mayer",
+      "name": "Tailored Fit Navy Check Tweed Waistcoat",
+      "slug": "tailored-fit-navy-check-tweed-waistcoat",
+      "description": "The trick for working classic tweed with current form? It all lies in the fit. \r\nComplete Mayer’s three-piece with this navy waistcoat, deftly cut to a tailored fit that’ll provide strong lines without feeling too restrictive. \r\nThe textured weave of the fabric is given a modern boost with a contrasting windowpane check, so keep your shirt and tie plain to avoid overdoing the detail.",
+      "price": 104.99,
+      "category": 5,
+      "image_url": null,
+      "image": "benjamin-rascoe-qElUnJhfjzQ-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 44,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100054",
+      "brand": "Mayer",
+      "name": "Tailored Fit Blue Grid Check Double Breasted Waistcoat",
+      "slug": "tailored-fit-blue-grid-check-double-breasted-waistcoat",
+      "description": "Whether you style it with the jacket and trousers or let it fly solo, Mayer's blue tailored-fit waistcoat ticks off your must-haves. \r\nThe cloth? Woven with plenty of stretch for easy movement and pepped up with a tonal check. The fit? Tailored to sit neatly at your upper torso then taper in slightly at the waist. \r\nAnd the navy lining adds a polished finish that's all about quiet confidence.",
+      "price": 84.99,
+      "category": 5,
+      "image_url": null,
+      "image": "benjamin-rascoe-Rf_wydmmbl8-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 45,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100055",
+      "brand": "Mayer",
+      "name": "Tailored Fit Grey Blue Charcoal Check Waistcoat",
+      "slug": "tailored-fit-grey-blue-charcoal-check-waistcoat",
+      "description": "Elevate your formalwear with this check waistcoat. Designed with an adjustable back and five-button fastening.",
+      "price": 94.99,
+      "category": 5,
+      "image_url": null,
+      "image": "pexels-anastasiya-vragova-6791665.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 46,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100056",
+      "brand": "Mayer",
+      "name": "Tailored Fit Navy Waistcoat",
+      "slug": "tailored-fit-navy-waistcoat",
+      "description": "Whether you’re wearing it for business or a special gathering, Mayer’s waistcoat will deliver the style points every time. \r\nCut to a strong tailored fit, it’s crafted in navy wool yarns woven with a subtle structure and features a contrast silken backing in a gold effect.",
+      "price": 109.99,
+      "category": 5,
+      "image_url": null,
+      "image": "royal-anwar-u5T5b3lNYw8-unsplash.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 47,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100057",
+      "brand": "Tie Bar",
+      "name": "Printed Dot Navy Dress Shirt",
+      "slug": "printed-dot-navy-drees-shirt",
+      "description": "This classic dotted dress shirts made to be worn with ease. Pair with any tie your closet has to offer. \r\nThe best selling printed dots dress shirt is back and with more colors! This men's dress shirt is great for the office and date night, it's just as easy as rolling up the sleeves and keeping it an open collar.",
+      "price": 54.99,
+      "category": 6,
+      "image_url": null,
+      "image": "benjamin-rascoe-6fIUr-1hvqI-unsplash-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 48,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100058",
+      "brand": "Tie Bar",
+      "name": "Polished Chambray Blue Dress Shirt",
+      "slug": "polished-chambray-blue-drees-shirt",
+      "description": "Add the Polished Chambray Blue Dress Shirt to your wardrobe today. \r\nThe mature older brother of our chambray dress shirt. This dress shirt provides a more polished look with tonal stitching details and a bit of sheen that is great for meetings or any occasion you need to make an impression.",
+      "price": 42.99,
+      "category": 6,
+      "image_url": null,
+      "image": "benjamin-rascoe-6fIUr-1hvqI-unsplash-1-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 49,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100059",
+      "brand": "Tie Bar",
+      "name": "Printed Dot White Dress Shirt",
+      "slug": "printed-dot-white-drees-shirt",
+      "description": "Add interest to your business attire and slip on our Printed Dot white dress shirt. Or layer it under a cardigan this weekend. \r\nAdd some fun to your wardrobe with this printed all-over polka dot white dress shirt. Great for work and any weekend wedding.",
+      "price": 57.99,
+      "category": 6,
+      "image_url": null,
+      "image": "benjamin-rascoe-6fIUr-1hvqI-unsplash-2-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 50,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100060",
+      "brand": "Tie Bar",
+      "name": "Pinpoint Solid - Button-Down Collar White Non-Iron Dress Shirt",
+      "slug": "pinpoint-solid-button-down-collar-white-non-iron-drees-shirt",
+      "description": "Add the Pinpoint Solid - Button-Down Collar White Non-Iron Dress Shirt to your wardrobe today. \r\nOur favorite go-to solid dress shirt with a button-down collar that lends itself to more casual occasions, so save this guy for casual Fridays or weekend events.",
+      "price": 49.99,
+      "category": 6,
+      "image_url": null,
+      "image": "benjamin-rascoe-aFGamJJdaQA-unsplash-3-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 51,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100061",
+      "brand": "Tie Bar",
+      "name": "Multicolored Check Navy Casual Shirt",
+      "slug": "multicolored-check-navy-casual-shirt",
+      "description": "Add the Multicolored Check Navy Casual Shirt to your wardrobe today. \r\nThis casual blue multicolored checked dress shirt is a must have for your spring wardrobe. It can easily be dressed up with a suit and tie for work or worn untucked for more casual occasions.",
+      "price": 59.99,
+      "category": 6,
+      "image_url": null,
+      "image": "benjamin-rascoe-aFGamJJdaQA-unsplash-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 52,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100062",
+      "brand": "Tailor Store",
+      "name": "Floral Pattern Grey Dress Shirt",
+      "slug": "floral-pattern-grey-dress-shirt",
+      "description": "Tired of traditional dress shirts in solid colors or striped patterns? This floral pattern grey dress shirt is PERFECT for those looking to change up their look in style.. \r\nMade to your measurements.",
+      "price": 59.99,
+      "category": 6,
+      "image_url": null,
+      "image": "benjamin-rascoe-MuhOKvEYE9g-unsplash-2-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 53,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100063",
+      "brand": "Tie Bar",
+      "name": "Chambray Indigo Dress Shirt",
+      "slug": "chambray-indigo-dress-shirt",
+      "description": "Love the look of denim but want a lighter fabric? Our Chambray Indigo shirt looks amazing with summery cotton ties and wool ties for Fall. \r\nThe casual staple for every wardrobe. This solid chambray shirt can be worn for work and play, so don't be afraid to dress it up. ",
+      "price": 57.99,
+      "category": 6,
+      "image_url": null,
+      "image": "benjamin-rascoe-p8OqZKJCMS0-unsplash-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 54,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100064",
+      "brand": "Tie Bar",
+      "name": "White Blue Stripe Short Sleeve Shirt",
+      "slug": "white-blue-stripe-short-sleeve-shirt",
+      "description": "Add the White Blue Stripe Short Sleeve Shirt to your wardrobe today. \r\nThis white blue striped short sleeve shirt is the perfect choice for those busy summer days when you have to run from work to a date night after! Style tip: roll the short sleeve cuff just once unevenly for more style and less perfection.",
+      "price": 45.99,
+      "category": 6,
+      "image_url": null,
+      "image": "benjamin-rascoe-t34i3FBsF90-unsplash-3-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 55,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100065",
+      "brand": "Tie Bar",
+      "name": "Multi Camp Stripe Navy Short Sleeve Shirt",
+      "slug": "multi-camp-stripe-navy-short-sleeve-shirt",
+      "description": "Add the Multi Camp Stripe Navy Short Sleeve Shirt to your wardrobe today. \r\nThis multi-colored striped short sleeve shirt is the perfect choice for those busy summer days when you have to run from work to a date night after! Style tip: roll the short sleeve cuff just once unevenly for more style and less perfection.",
+      "price": 45.99,
+      "category": 6,
+      "image_url": null,
+      "image": "benjamin-rascoe-t34i3FBsF90-unsplash-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 56,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100066",
+      "brand": "Nimble Made",
+      "name": "Purple Patterned Dress Shirt",
+      "slug": "purple-patterned-dress-shirt",
+      "description": "This popular purple pattern dress shirt is a one-of-kind dress shirt that presents itself in blue and purple hues depending on the lighting. The darker color dress shirt is great for evening wear or casual attire.",
+      "price": 55.99,
+      "category": 6,
+      "image_url": null,
+      "image": "nimble-made-7RIMS-NMsbc-unsplash-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 57,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100067",
+      "brand": "Nimble Made",
+      "name": "Navy Blue Textured Dress Shirt",
+      "slug": "navy-blue-textured-dress-shirt",
+      "description": "The trim inside the collar sports a bright red that gives this navy blue dress shirt vibrancy and personality. This dress shirt is great for happy hours, evening wear, or going to events with friends.",
+      "price": 55.99,
+      "category": 6,
+      "image_url": null,
+      "image": "nimble-made-BKYeLLB1OxI-unsplash-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 58,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100068",
+      "brand": "Tie Bar",
+      "name": "Classic Gingham Sky Blue Non-Iron Dress Shirt With Red Tie",
+      "slug": "classic-gingham-sky-blue-non-iron-dress-shirt-with-red-tie",
+      "description": "Add the Classic Gingham Sky Blue Non-Iron Dress Shirt With Red Tie to your wardrobe today. \r\nThe timeless gingham dress shirt in a light blue is perfect for summer. This dress shirt can easily take you from work to happy hour, keeping you looking your absolute best on hot summer days.",
+      "price": 75.99,
+      "category": 15,
+      "image_url": null,
+      "image": "benjamin-rascoe-aFGamJJdaQA-unsplash-1-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 59,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100069",
+      "brand": "Stenstroms",
+      "name": "Navy Dress Shirt With White Dots and Dark Blue Printed Tie",
+      "slug": "navy-dress-shirt-with-white-dots-and-dark-blue-printed-tie",
+      "description": "These shirt is made from a cotton-blend fabric in an easy-to-iron and crease-resistant finish. Comes in with a dark blue tie, perfect for stocking up on formalwear.",
+      "price": 115.99,
+      "category": 15,
+      "image_url": null,
+      "image": "benjamin-rascoe-aFGamJJdaQA-unsplash-2-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 60,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100070",
+      "brand": "Tie Bar",
+      "name": "White Linen Shirt with Black Tie",
+      "slug": "white-linen-shirt-with-black-tie",
+      "description": "Enjoy wearing linen this season without all the wrinkles! This white non-iron linen shirt can easily be dressed up with a suit and tie or worn untucked for more casual occasions.",
+      "price": 84.99,
+      "category": 15,
+      "image_url": null,
+      "image": "benjamin-rascoe-btv3BferYeU-unsplash-1-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 61,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100071",
+      "brand": "Oliver Wicks",
+      "name": "White Cotton Royal Oxford Shirt with Black Bow Tie",
+      "slug": "white-cotton-royal-oxford-shirt-with-black-bow-tie",
+      "description": "The white royal oxford shirt is a timeless dressy classic, and the light-weight Tessitura Monti fabric is as sophisticated as it gets, with its fine 120s two-ply construction. Unlike many oxford weaves, this fabric weighs just 103 gms, making it perfect for all-seasonal wear.",
+      "price": 175.99,
+      "category": 15,
+      "image_url": null,
+      "image": "benjamin-rascoe-fdHt9HvtmA0-unsplash-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 62,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100072",
+      "brand": "Tie Bar",
+      "name": "Printed Dot Dark Navy Dress Shirt with Purpple Tie",
+      "slug": "printed-dot-dark-navy-dress-shirt-with-purpple-tie",
+      "description": "This classic dotted dress shirts made to be worn with ease. Pair with any tie your closet has to offer. \r\nThe best selling printed dots dress shirt is back and with more colors! This men's dress shirt is great for the office and date night, it's just as easy as rolling up the sleeves and keeping it an open collar.",
+      "price": 85.99,
+      "category": 15,
+      "image_url": null,
+      "image": "benjamin-rascoe-fgzXrG_aK2w-unsplash-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 63,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100073",
+      "brand": "Twillory",
+      "name": "Non-Iron Orange Shirt with Floral Pattern Green Tie",
+      "slug": "non-iron-orange-shirt-with-floral-pattern-green-tie",
+      "description": "We've engineered the world's most innovative non-iron fabric: SafeCotton. For years, shirting companies used a cocktail of chemicals (like formaldehyde) to create non-irons. Our process removes wrinkles and chemicals, all while improving softness to deliver a handfeel like no other. So go ahead, try it: after all, feeling is believing!",
+      "price": 109.99,
+      "category": 15,
+      "image_url": null,
+      "image": "benjamin-rascoe-Hh-bzs_uhbk-unsplash-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 64,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100074",
+      "brand": "Tie Bar",
+      "name": "The Modern-Fit Oxford Lavender Casual Shirt with Navy Tie",
+      "slug": "the-modern-fit-oxford-lavender-casual-shirt-with-navy-tie",
+      "description": "Add the The Modern-Fit Oxford Lavender Casual Shirt to your wardrobe today. \r\nOur take on the classic oxford, this modern version is truly meant for any day of the week. This versatile lavender oxford can easily be dressed up for work with a tie or worn on it's own for more casual occasions.",
+      "price": 78.99,
+      "category": 15,
+      "image_url": null,
+      "image": "benjamin-rascoe-iNvK2Xmpx8o-unsplash-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 65,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100075",
+      "brand": "Tie Bar",
+      "name": "Point Collar Light Blue Dress Shirt with Multi Color Tie",
+      "slug": "point-collar-light-blue-dress-shirt-with-multi-color-tie",
+      "description": "Our shirt hero! The Pinpoint Solid light blue shirt will stand up to any pant in your closet. \r\nThe Pinpoint solid dress shirt in a light blue with a modern point collar that will become your favorite dress shirt for all occasions. From the board room to a weekend wedding, this dress shirt can be dressed up or down.",
+      "price": 77.99,
+      "category": 15,
+      "image_url": null,
+      "image": "benjamin-rascoe-iNvK2Xmpx8o-unsplash-1-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 66,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100076",
+      "brand": "Nifty Genius",
+      "name": "Light Blue Long Sleeve Shirt with Black Tie",
+      "slug": "light-blue-long-sleeve-shirt-with-black-tie",
+      "description": "This cotton shirt is perfect for any summer activity or layered under a suit making it truly versatile.",
+      "price": 78.99,
+      "category": 15,
+      "image_url": null,
+      "image": "benjamin-rascoe-ItqFmSxKnIg-unsplash-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 67,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100076",
+      "brand": "Tailor Store",
+      "name": "White Dots Shirt with Pattern Blue Tie",
+      "slug": "white-dots-shirt-with-pattern-blue-tie",
+      "description": "A white dress shirt featuring contrast collars and rounded cuffs. This dress shirt is perfect for an eccentric casual outfit and a popular choice for a casual putting.",
+      "price": 78.99,
+      "category": 15,
+      "image_url": null,
+      "image": "benjamin-rascoe--jd3cpn9-lw-unsplash-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 68,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100078",
+      "brand": "Tailor Store",
+      "name": "Cabana Stripe Royal Blue Non-Iron Dress Shirt with Red Tie",
+      "slug": "cabana-stripe-royal-blue-non-iron-dress-shirt-with-red-tie",
+      "description": "Cabana Add the Cabana Stripe Royal Blue Non-Iron Dress Shirt to your wardrobe today. \r\nThis royal blue Cabana Stripe men's dress shirt is the perfect alternative to your staple pinstripe blue work shirt. This bold stripe can brighten up any outfit and put a pep in your step no matter the occasion.",
+      "price": 78.99,
+      "category": 15,
+      "image_url": null,
+      "image": "benjamin-rascoe-t34i3FBsF90-unsplash-1-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 69,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100079",
+      "brand": "Tie Bar",
+      "name": "Gingham Orange Non-Iron Dress Shirt with Dot Navy Tie",
+      "slug": "gingham-orange-non-iron-dress-shirt-with-dot-navy-tie",
+      "description": "Add the Gingham Orange Non-Iron Dress Shirt to your wardrobe today. \r\nThis orange Gingham dress shirt's middle name is bold and it's going all-in on one of the summer's most popular trends: neon. This orange dress shirt is versatile for summer, we love dressing this down for summer pool parties and bbqs.",
+      "price": 83.99,
+      "category": 15,
+      "image_url": null,
+      "image": "benjamin-rascoe-t34i3FBsF90-unsplash-2-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 70,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100080",
+      "brand": "Mixers",
+      "name": "White Men's Tuxedo Shirt with Silver Natte Silk Tie",
+      "slug": "white-mens-tuxedo-shirt-with-silver-natte-silk-tie",
+      "description": "Add the Gingham Orange Non-Iron Dress Shirt to your wardrobe today. \r\nThis orange Gingham dress shirt's middle name is bold and it's going all-in on one of the summer's most popular trends: neon. This orange dress shirt is versatile for summer, we love dressing this down for summer pool parties and bbqs.",
+      "price": 124.99,
+      "category": 15,
+      "image_url": null,
+      "image": "white-shirt-6338053_1920-srt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 71,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100081",
+      "brand": "Mayer",
+      "name": "Slim Fit Navy Stripe Stretch Trousers",
+      "slug": "slim-fit-navy-stripe-stretch-trousers",
+      "description": "Earn your stripes. \r\nTurn to classic pinstripe for an effortlessly smart office look that never goes out of style. The skinny fit of these Mayer trousers will sit close to your frame and add an updated touch to the timeless pattern. Easy to maintain and comfortable, they’re made with a machine-washable, brushed stretch fabric that will stay smart wear after wear. \r\nPair with a crisp white shirt and black patent loafers for an on-trend, stylish look.",
+      "price": 57.99,
+      "category": 7,
+      "image_url": null,
+      "image": "benjamin-rascoe-41UXKQIzhQA-unsplash-1-tro.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 72,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100082",
+      "brand": "Mayer",
+      "name": "Tailored Fit Navy Check Trousers",
+      "slug": "tailored-fit-navy-check-trousers",
+      "description": "Revive your interest in creating Monday-to-Friday looks with Mayer’s endlessly versatile trousers. \r\nCut to a tailored fit for a strong shape that allows a little room around the seat and thighs, they're delivered in an adaptable shade of navy patterned with a tonal check that’ll lift any formal look in an instant. \r\nWe like to balance them with leather lace-ups and a textured blue shirt.",
+      "price": 61.99,
+      "category": 7,
+      "image_url": null,
+      "image": "benjamin-rascoe-41UXKQIzhQA-unsplash-2-tro.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 73,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100083",
+      "brand": "Mayer",
+      "name": "Tailored Fit Blue Check Trousers",
+      "slug": "tailored-fit-blue-check-trousers",
+      "description": "Woven in wool-rich yarns, Mayer's blue trousers add instant energy to your formal options. \r\nA tonal check lifts the fabric and coordinates tonally with the lining, while a front crease and minimalist closure sit smartly alongside the fit.",
+      "price": 81.99,
+      "category": 7,
+      "image_url": null,
+      "image": "benjamin-rascoe-btv3BferYeU-unsplash-1-tro.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 74,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100084",
+      "brand": "Mayer",
+      "name": "Tailored Fit Navy Stretch Chino Trousers",
+      "slug": "tailored-fit-navy-stretch-chino-trousers",
+      "description": "Using the same sturdy twill weave that makes denim such an enduring choice, Mayer's chinos deliver the goods from Monday through to Sunday. From more laid-back workwear looks to off-duty outfits come the evening, their deep navy tone and neat tailored fit will offer just the foundation you're after. The stretch-cotton fabric seals the deal, debsoting a flexible feel you'll appreciate as you go about your day.",
+      "price": 67.99,
+      "category": 7,
+      "image_url": null,
+      "image": "benjamin-rascoe-fdHt9HvtmA0-unsplash-1-tro.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 75,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100085",
+      "brand": "French Connection",
+      "name": "Slim Fit Charcoal Flannel Trousers",
+      "slug": "slim-fit-charcoal-flannel-trousers",
+      "description": "Tailored on a slim block for sleek lines, French Connection's trousers are cut in grey flannel to bring you a whole host of styling options. \r\nAll you need is a crisp white shirt and glossy patent loafers for instant polish.",
+      "price": 122.99,
+      "category": 7,
+      "image_url": null,
+      "image": "benjamin-rascoe-HF0O7lhhMBU-unsplash-1-tro.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 76,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100086",
+      "brand": "Mayer",
+      "name": "Slim Fit Blue Check Trousers",
+      "slug": "slim-fit-blue-check-trousers",
+      "description": "Tailored on a slim block for sleek lines, French Connection's trousers are cut in grey flannel to bring you a whole host of styling options. \r\nAll you need is a crisp white shirt and glossy patent loafers for instant polish.",
+      "price": 85.99,
+      "category": 7,
+      "image_url": null,
+      "image": "benjamin-rascoe-MuhOKvEYE9g-unsplash-1-tro.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 77,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100087",
+      "brand": "Mayer",
+      "name": "Slim Fit Grey Navy Blue Dogtooth Trousers",
+      "slug": "slim-fit-grey-navy-blue-dogtooth-trousers",
+      "description": "Break that plain trouser habit. \r\nReach for these bold trousers the next time you need to impress. With their tweed-inspired dogtooth design and cropped length, they’re ideal for showing off your frame and letting your shoes take centre stage. Thanks to their machine washable material with stretch, they’re also comfortable and simple to care for. \r\nContrast the grey and navy of the check with a crisp white skinny fit shirt. Complete the look with a pair of grey Derby shoes.",
+      "price": 55.99,
+      "category": 7,
+      "image_url": null,
+      "image": "benjamin-rascoe-p8OqZKJCMS0-unsplash-1-tro.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 78,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100088",
+      "brand": "Mayer",
+      "name": "Tailored Fit Black Stretch Trousers",
+      "slug": "tailored-fit-black-stretch-trousers",
+      "description": "Wardrobe staples you’ll be thankful to own. \r\nWhether it’s a formal event or work, you can reach for these classic black trousers. They’ll taper down your legs without feeling too close fitting, giving you a smart outline. Stretch in the fabric keeps you comfortable and they’re machine washable for quick and easy care. \r\nWear with a contrasting grey jacket and a blue shirt for a new formal outfit. Or simply wear with a smart shirt for the office.",
+      "price": 57.99,
+      "category": 7,
+      "image_url": null,
+      "image": "benjamin-rascoe-SzbQh_qrb3U-unsplash-1-tro.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 79,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100089",
+      "brand": "DKNY",
+      "name": "Black Satin Silk Tie",
+      "slug": "black-satin-silk-tie",
+      "description": "Want to move away from a bow tie for a formal accessory? This tie will do the trick with its satin fabric and simple design. Made from 100% silk, it has the polished effect you want for special occasions.",
+      "price": 41.99,
+      "category": 8,
+      "image_url": null,
+      "image": "benjamin-rascoe-A-RK0fxqin0-unsplash-tie.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 80,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100090",
+      "brand": "Mayer",
+      "name": "Navy Textured Tie",
+      "slug": "navy-textured-tie",
+      "description": "Want to demonstrate knowhow when it comes to selecting the right tie? Mayer's option has your back. \r\nWoven in navy with a fine structure, its 6.5cm blade features full lining to help its shape stay stable. \r\nSync it with the matching pocket square or opt for a hank with a bold pattern to show your creativity.",
+      "price": 22.99,
+      "category": 8,
+      "image_url": null,
+      "image": "benjamin-rascoe-fFeiBhk5B7k-unsplash-tie.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 81,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100091",
+      "brand": "Mayer",
+      "name": "Red Textured Tie",
+      "slug": "red-textured-tie",
+      "description": "When your outfit is calling for something bright to give it eye-catching merit, this tie is ideal. The vivid red will offset a navy suit and white shirt combination while the texture adds depth. It has a slim 5.5cm blade width, making it a sharp accessory to pair with a slim or skinny fit suit.",
+      "price": 22.99,
+      "category": 8,
+      "image_url": null,
+      "image": "benjamin-rascoe-SRBHZzeNi6Q-unsplash-tie.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 82,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100092",
+      "brand": "Mayer",
+      "name": "Navy, Brown and Cream Club Stripe Silk Tie",
+      "slug": "navy-brown-and-cream-club-stripe-silk-tie",
+      "description": "Delivered in cool navy that'll work with all your go-to tailoring, Mayer's club-stripe tie will slot easily into your rack. \r\nThe pure-silk yarns give a little sheen and richness to the pattern, while interlining will create and maintain a full shape at the knot and blade.",
+      "price": 41.99,
+      "category": 8,
+      "image_url": null,
+      "image": "benjamin-rascoe-SwOvGPVhdcM-unsplash-tie.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 83,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100093",
+      "brand": "Mayer",
+      "name": "Brown with White Dots Silk Tie",
+      "slug": "brown-with-white-dots-silk-tie",
+      "description": "It's the textured weave made from silk that gives Mayer's brown tie a little extra edge. \r\nPatterned with white dots and interlined for a better drape, it's just the thing for livening up a workwear or special-occasion look.",
+      "price": 41.99,
+      "category": 8,
+      "image_url": null,
+      "image": "benjamin-rascoe-WdhmRPvMn7A-unsplash-tie.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 84,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100094",
+      "brand": "Mayer",
+      "name": "Navy with Blue Check Tie",
+      "slug": "navy-with-blue-check-tie",
+      "description": "Designed to complement the whole of your look rather than detract from it, Mayer's interlined tie is woven in navy yarns with a tonal check that's just detailed enough. \r\nBe sure to balance the width of the blade with a slim notch lapel.",
+      "price": 27.99,
+      "category": 8,
+      "image_url": null,
+      "image": "benjamin-rascoe-zNPlKIWCoZc-unsplash-tie.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 85,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100095",
+      "brand": "Mayer",
+      "name": "Navy & Royal Blue Club Stripe Silk Tie",
+      "slug": "navy-royal-blue-club-stripe-silk-tie",
+      "description": "Delivered in cool blues that'll work with all your go-to tailoring, Moss 1851's club-stripe tie will slot easily into your rack. \r\nThe pure-silk yarns give a little sheen and richness to the pattern, while interlining will create and maintain a full shape at the knot and blade.",
+      "price": 41.99,
+      "category": 8,
+      "image_url": null,
+      "image": "envy-creative-sQraV1PtJnA-unsplash-tie.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 86,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100096",
+      "brand": "Mayer",
+      "name": "Navy Puppytooth Tie",
+      "slug": "navy-puppytooth-tie",
+      "description": "Woven with a tonal puppytooth motif, Moss London's navy tie is an all-rounder that'll polish up every formal look. \r\nThe 6.5cm blade width looks sharp with a slender notch lapel, while the interlining helps it lie neatly and fully on your choice of shirt.",
+      "price": 27.99,
+      "category": 8,
+      "image_url": null,
+      "image": "junior-reis-2FBZMMMa24o-unsplash-tie.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 87,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100097",
+      "brand": "Mayer",
+      "name": "Brown with White and Black Stripe Silk Tie",
+      "slug": "brown-with-white-and-black-stripe-silk-tie",
+      "description": "Pulling back on the formality by blending the richness of silk and cotton, Mayer's tie is a particularly great choice for cool-weather occasions and more casual events. \r\nThe textured weave lends extra interest to the brown, and white and black stripe, while a soft interlining gives the blade and knot a fullness that's guaranteed to last.",
+      "price": 41.99,
+      "category": 8,
+      "image_url": null,
+      "image": "rene-ranisch-IA406kVES4Y-unsplash-tie.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 88,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100098",
+      "brand": "Mayer",
+      "name": "Canteloupe Natte with Black Dots Silk Tie",
+      "slug": "canteloupe-natte-with-black-dots-silk-tie",
+      "description": "If plain’s too little and prints are too much, Mayer’s tie will sit comfortably in the middle. \r\nCrafted in silk yarns with a natté technique for a close, basket-woven structure, it’s delivered in a cantaloupe shade that’ll pair well with any tailoring you have in mind. \r\nInterlining keeps the tip looking full and helps it fall neatly where it should.",
+      "price": 34.99,
+      "category": 8,
+      "image_url": null,
+      "image": "tim-mossholder-ZIJuls2dJ1o-unsplash-1-tie.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 89,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100099",
+      "brand": "Mayer",
+      "name": "Multi Colour Club Stripe Men's Tie",
+      "slug": "multi-colour-club-stripe-mens-tie",
+      "description": "A traditional multi colour club stripe with modern knowhow, Mayer's tie is crafted in pure-silk yarns for a smooth finish that'll work for any occasion. \r\nThe interlining helps it lie with a natural drape and the 7.5cm blade width works beautifully alongside a slim notch lapel.",
+      "price": 41.99,
+      "category": 8,
+      "image_url": null,
+      "image": "tim-mossholder-ZIJuls2dJ1o-unsplash-2-tie.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 90,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100100",
+      "brand": "BOSS",
+      "name": "Franzisko Square Black and Silver Pattern Cufflinks",
+      "slug": "franzisko-square-black-and-silver-pattern-cufflinks",
+      "description": "These square design BOSS cufflinks are ideal for any occasion, adding the finishing touch to your formal wear with their understated yet impactful design. \r\nMade from durable polished brass with a black inlay, on which you'll find the famous Hugo Boss name, these cufflinks are the ultimate in modern elegance.",
+      "price": 59.99,
+      "category": 9,
+      "image_url": null,
+      "image": "cufflink-798778_1920-c.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 91,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100101",
+      "brand": "Mayer",
+      "name": "Classic Silver with Black Onyx Cufflinks",
+      "slug": "classic-silver-with-black-onyx-cufflinks",
+      "description": "A natural style mate for black dress-shirt studs, Moss 1851’s brass cufflinks are crafted with an onyx centre set inside a ribbed frame. \r\nTheir clean design features a click that’ll fasten neatly through a French cuff, delivering a direct hit on formal polish.",
+      "price": 44.99,
+      "category": 9,
+      "image_url": null,
+      "image": "cufflinks-194032_1280-c.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 92,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100102",
+      "brand": "Paul Smith",
+      "name": "Silver Rectangular Black Stripe Cufflinks",
+      "slug": "silver-rectangular-black-stripe-cufflinks",
+      "description": "Complete a sharp tailored ensemble with these Paul Smith cufflinks. \r\nMade from polished metal in a rectangular design, they're inlaid with the brand's signature stripe motif in ribbon for textural appeal.",
+      "price": 65.99,
+      "category": 9,
+      "image_url": null,
+      "image": "cufflinks-263545_1280-c.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 93,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100103",
+      "brand": "Mayer",
+      "name": "GM Black Silver Square Cufflinks",
+      "slug": "gm-black-silver-square-cufflinks",
+      "description": "These simple cufflinks will go with any smart outfit. With a black silver colour, they’ll lend a subtle contrast to a lighter-toned shirt.",
+      "price": 35.99,
+      "category": 9,
+      "image_url": null,
+      "image": "cufflinks-925004_1920-c.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 94,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100104",
+      "brand": "Mayer",
+      "name": "Union Jack Flag Silver Cufflinks",
+      "slug": "union-jack-flag-silver-cufflinks",
+      "description": "Add the Union Jack Flag Silver Cufflinks to your wardrobe today.",
+      "price": 25.99,
+      "category": 9,
+      "image_url": null,
+      "image": "cufflinks-1202686_1920-c.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 95,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100105",
+      "brand": "Mulberry",
+      "name": "Silver Rectangular Plaque Cufflinks",
+      "slug": "silver-rectangular-plaque-cufflinks",
+      "description": "Add a formal accessory to your assortment with these Cufflinks from Mulberry. Crafted from brass, they feature a rectangular plaque with a Mulberry tree embossing, a curved T-bar design and swivel-back fastening. \r\nThese come presented in a gift box.",
+      "price": 75.99,
+      "category": 9,
+      "image_url": null,
+      "image": "mens-accessories-5227800_1920-322-c.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 96,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100106",
+      "brand": "Mayer",
+      "name": "GM Silver Knot Cufflinks",
+      "slug": "gm-silver-knot-cufflinks",
+      "description": "These classic Mayer silver metal knot cufflinks are the perfect finising touch to all your formal outfits. Great for both special ocassions and business wear.",
+      "price": 55.99,
+      "category": 9,
+      "image_url": null,
+      "image": "pexels-caleb-oquendo-3023668-c.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 97,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100107",
+      "brand": "Mayer",
+      "name": "Silver Tone and Black Enamel Tie Clip",
+      "slug": "silver-tone-and-black-enamel-tie-clip",
+      "description": "The functional part of your wardrobe can also express your personality. Our black enamel tie bar is meant for the rugged and cool. \r\nThis silver black enamel tie bar is one of our most popular tie bars. It's perfect for a day at the office or special occasion.",
+      "price": 19.99,
+      "category": 10,
+      "image_url": null,
+      "image": "tie-clip-194031_1280-t.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 98,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100108",
+      "brand": "Mayer",
+      "name": "Silver Patterned and Black Enamel Tie Clip",
+      "slug": "silver-patterned-and-black-enamel-tie-clip",
+      "description": "A tie clip is generally used to hold a tie in place, but they’re also sharp styling accessories. This one by Mayer features a silver pattern to bring extra depth to your outfit.",
+      "price": 19.99,
+      "category": 10,
+      "image_url": null,
+      "image": "nimble-made-g153y-2B_X4-unsplash-1-t.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 99,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100109",
+      "brand": "Mayer",
+      "name": "Gold Patterned and Black Enamel Tie Clip",
+      "slug": "gold-patterned-and-black-enamel-tie-clip",
+      "description": "A tie clip is generally used to hold a tie in place, but they’re also sharp styling accessories. This one by Mayer features a silver pattern to bring extra depth to your outfit.",
+      "price": 19.99,
+      "category": 10,
+      "image_url": null,
+      "image": "nimble-made-g153y-2B_X4-unsplash-2-t.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 100,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100110",
+      "brand": "Mayer",
+      "name": "Black Enamel with Silver Stripe Tie Clip",
+      "slug": "black-enamel-with-silver-stripe-tie-clip",
+      "description": "Used to accentuate a tie and also to optionally hold it in place with a shirt, this is a functional accessory for the dapper gentleman to enjoy.",
+      "price": 24.99,
+      "category": 10,
+      "image_url": null,
+      "image": "nimble-made-g153y-2B_X4-unsplash-3-t.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 101,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100111",
+      "brand": "Mayer",
+      "name": "Silver Classic Textured Tie Clip",
+      "slug": "silver-classic-textured-tie-clip",
+      "description": "This Mayer textured tie bar is the perfect stylish addtion to your wardrobe. This tie bar is great for work or special ocassions.",
+      "price": 19.99,
+      "category": 10,
+      "image_url": null,
+      "image": "nimble-made-g153y-2B_X4-unsplash-4-t.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 102,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100112",
+      "brand": "Mayer",
+      "name": "Navy Bow Tie with Silver Metal Edge",
+      "slug": "navy-bow-tie-with-silver-metal-edge",
+      "description": "Give your black-tie look the edge with this silver metal edge bow tie. It will go with almost any tux and it’s pre-tied to help you get ready in no-time.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "alvin-mahmudov-ZHmES480_XE-unsplash-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 103,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100113",
+      "brand": "Mayer",
+      "name": "Yacht Checks Navy Red Bow Tie",
+      "slug": "yacht-checks-navy-red-bow-tie",
+      "description": "Add the Yacht Checks Navy Red Bow Tie to your wardrobe today.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "andriyko-podilnyk-KI834jvkYs0-unsplash-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 104,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100114",
+      "brand": "Mayer",
+      "name": "GM Black Skinny Bow Tie",
+      "slug": "gm-black-skinny-bow-tie",
+      "description": "Pre-tied for fans of the easy life, Mayer's bow tie is cut to a skinny profile that'll bring a shot of modern edge to a black-tie outfit. \r\nIt's woven with a subtle structure and delivered in black to pull your look together in a flash.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "benjamin-rascoe-6wh3McESH2w-unsplash-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 105,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100115",
+      "brand": "Mayer",
+      "name": "GM Teal Anchor Check Bow Tie",
+      "slug": "gm-teal-anchor-check-bow-tie",
+      "description": "Add the GM Teal Anchor Check Bow Tie to your wardrobe today.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "benjamin-rascoe-fXL2lWhotWM-unsplash-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 106,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100116",
+      "brand": "Mayer",
+      "name": "Black Silk Bow Tie",
+      "slug": "black-silk-bow-tie",
+      "description": "In order to avoid falling at the final formal hurdle, choose your bow tie wisely. \r\nCrafted in pure silk with a classic butterfly shape, Mayer’s black silhouette strikes all the right notes. Plus it’s pre-tied for fans of the easy life.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "benjamin-rascoe-xnN7N0dxpEQ-unsplash-1-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 107,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100117",
+      "brand": "Mayer",
+      "name": "GM Grey and Black Check Bow Tie",
+      "slug": "gm-grey-and-black-check-bow-tie",
+      "description": "An extra-special occasion calls for a standout accessory – enter the grey and black check bow tie. \r\nThanks to its pre-tied nature and hardy weave, the crisp symmetry of Moss 1851's butterfly will stand strong through even the most drawn-out events.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "bow-tie-732295_1920-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 108,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100118",
+      "brand": "Mayer",
+      "name": "Wine Texture Bow Tie",
+      "slug": "wine-texture-bow-tie",
+      "description": "Take a bow. Get ready to shake up your smart attire with the addition of a modish bow tie. Textured and simple in its design, this bow tie by Mayer is easy to wear on an everyday basis, especially for those who dare to bear their bow in the office. Wear it with a textured shirt and a wool suit to achieve an on-trend look. If you want to wear it to a smart occasion, make sure you've got a navy or grey suit and a white shirt. A pocket square is the must-have addition for the snappy dresser.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "cameron-behymer-yR4kKVVNLxg-unsplash-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 109,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100119",
+      "brand": "Mayer",
+      "name": "Light Champagne Texture Bow Tie",
+      "slug": "light-champagne-texture-bow-tie",
+      "description": "From wedding to work do to everything in between, Mayer’s navy bow tie will say all the right things about your style credentials. \r\nIt’s woven in soft yarns with a tonal diamond motif, bringing a little texture to the material without going overboard. The pre-tied design will slip on with ease and the butterfly will hold its shape from welcome drinks to the cab home.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "hermes-rivera-FXpJgHKJQ4I-unsplash-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 110,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100120",
+      "brand": "Mayer",
+      "name": "Solid Satin Spearmint Bow Tie",
+      "slug": "solid-satin-spearmint-bow-tie",
+      "description": "An extra-special occasion calls for a standout accessory – enter the spearmint bow tie. \r\nThanks to its pre-tied nature and hardy weave, the crisp symmetry of Mayer's butterfly will stand strong through even the most drawn-out events.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "inna-lesyk-oSaJDA9XJmY-unsplash-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 111,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100121",
+      "brand": "Mayer",
+      "name": "Blush Pink Bow Tie",
+      "slug": "blush-pink-bow-tie",
+      "description": "Add the Blush Pink Bow Tie to your wardrobe today. \r\nThis blush pink textured bow tie is perfect for weddings and special occasions.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "man-642063_1920-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 112,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100122",
+      "brand": "Mayer",
+      "name": "Navy Skinny Bow Tie",
+      "slug": "navy-skinny-bow-tie",
+      "description": "Whether you reserve it solely for black tie or feel like styling things up at the office, Moss London’s bow tie will bend to the occasion. \r\nOffered in navy that’ll go with everything, it’s woven with a subtle structure and pre-tied with a skinny butterfly for pleasing symmetry that won’t let you down.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "mens-accessories-5227800_1920-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 113,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100123",
+      "brand": "Mayer",
+      "name": "Crystal Wave Row Pink Bow Tie",
+      "slug": "crystal-wave-row-pink-bow-tie",
+      "description": "Add the Crystal Wave Row Pink Bow Tie to your wardrobe today. \r\nThis pink plaid bow tie is perfect for weddings and special occasions.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "necktie-1970976_1920-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 114,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100124",
+      "brand": "Mayer",
+      "name": "Gingham Navy Bow Tie",
+      "slug": "ginghan-navy-bow-tie",
+      "description": "Add the Gingham Navy Bow Tie to your wardrobe today. \r\nThis bow tie is a Wedding Favorite - Translation: it's the perfect choice for your big day or just another day at the office.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "necktie-1970980_1920-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 115,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100125",
+      "brand": "Mayer",
+      "name": "Petite Gingham Red Navy Bow Tie",
+      "slug": "petite-ginghan-red-navy-bow-tie",
+      "description": "Add the Petite Gingham Red Bow Tie to your wardrobe today. \r\nSmall gingham pattern made from soft cotton fabric.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "necktie-1970985_1920-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 116,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100126",
+      "brand": "Mayer",
+      "name": "Seersucker Midnight Navy Bow Tie",
+      "slug": "seersucker-midnight-navy-bow-tie",
+      "description": "Add the Seersucker Midnight Navy Bow Tie to your wardrobe today.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "scott-webb-pcbuJpqHUak-unsplash-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 117,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100127",
+      "brand": "Mayer",
+      "name": "Moody Florals Navy Bow Tie",
+      "slug": "moody-florals-navy-bow-tie",
+      "description": "Add the Moody Florals Navy Bow Tie to your wardrobe today.",
+      "price": 15.99,
+      "category": 11,
+      "image_url": null,
+      "image": "tai-s-captures-PyaoqKzd3uE-unsplash-b.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 118,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100128",
+      "brand": "Mayer",
+      "name": "Solid Suede Navy Belt",
+      "slug": "solid-suede-navy-belt",
+      "description": "The Mayer Belts Collection is designed with the same careful attention to quality and detail that has evolved during more than a century of shoemaking experience. Our Navy Suede Belt is fully leather lined with a hand finished, silver coloured buckle.",
+      "price": 25.99,
+      "category": 12,
+      "image_url": null,
+      "image": "bar-1904458_1920-bottom2-blt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 119,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100129",
+      "brand": "Mayer",
+      "name": "Black Leather Belt",
+      "slug": "black-leather-belt",
+      "description": "Slip on this poised and practical leather belt for a go-to staple that adds another level to your style game. Choose to loop around off-duty jeans to set off your favourite shirt and switch up something casual. Or, pair with the right suit to work some extra flair from your office outfits. Whether you’re heading to town or off to the office, the premium look and feel of real leather will add proper polish to whatever you wear. Choose one size bigger than your usual trouser waist size to ensure a good fit.",
+      "price": 25.99,
+      "category": 12,
+      "image_url": null,
+      "image": "belt-2146914_1920-blt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 120,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100130",
+      "brand": "Mayer",
+      "name": "Tan Leather Belt",
+      "slug": "tan-leather-belt",
+      "description": "Missing a wardrobe essential? Mayer's tan leather belt is a must-have accessory designed to complement a huge range of casual and formal looks. Wear it to any event that calls for casual sophistication, this premium belt is made from leather for a quality look and feel. It'll do a great job wrapped around a pair of formal suit trousers and look just as much at home holding up some weekend chinos. For a formal look you'll turn to time and again, team this belt with a bright blue suit and don't forget the matching tan derby shoes. Choose one size bigger than your usual trouser waist size to ensure a good fit.",
+      "price": 25.99,
+      "category": 12,
+      "image_url": null,
+      "image": "menswear-952836_1920-blt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 121,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100131",
+      "brand": "Mayer",
+      "name": "Navy Suede Belt",
+      "slug": "navy-suede-belt",
+      "description": "The Mayer Belts Collection is designed with the same careful attention to quality and detail that has evolved during more than a century of shoemaking experience. Our Navy Suede Belt is fully leather lined with a hand finished, silver coloured buckle.",
+      "price": 25.99,
+      "category": 12,
+      "image_url": null,
+      "image": "clothing-4267339_1920-blt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 122,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100132",
+      "brand": "Mayer",
+      "name": "Dark Brown Rough-Out Suede Belt",
+      "slug": "dark-brown-rough-out-suede-belt",
+      "description": "The Mayer Belts Collection is designed with the same careful attention to quality and detail that has evolved during more than a century of shoemaking experience. Our Dark Brown Rough-Out Suede Belt is fully leather lined with a hand finished, brass coloured buckle.",
+      "price": 25.99,
+      "category": 12,
+      "image_url": null,
+      "image": "belt-6223937_1920-blt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 123,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100133",
+      "brand": "Mayer",
+      "name": "Brown Leather Belt",
+      "slug": "brown-leather-belt",
+      "description": "This leather belt from Mayer lets you pull your outfit together with style to spare. Flexibility is the key. You can loop it through a pair of jeans or chinos for classic off-duty cool, or instantly upgrade your go-to work wardrobe by wearing it with a suit. The look and feel of real leather adds a sophisticated edge, and transforms a practical staple into something special you’ll want to wear every day. Choose one size bigger than your usual trouser waist size to ensure a good fit.",
+      "price": 25.99,
+      "category": 12,
+      "image_url": null,
+      "image": "belt-139757_1920-blt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 124,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100134",
+      "brand": "Mayer",
+      "name": "Cognac Belt",
+      "slug": "cognac-belt",
+      "description": "Upgrade your smart casual outfits with the help of this Mayer belt. The versatile cognac shade can be dressed up or down and the minimalist buckle will add sophistication to your look. Simply loop it through jeans or skinny fit trousers and you’re good to go.",
+      "price": 25.99,
+      "category": 12,
+      "image_url": null,
+      "image": "bar-3458209_1920-blt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 125,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100135",
+      "brand": "S & M",
+      "name": "Black Tumbled Leather Belt",
+      "slug": "black-tumbled-leather-belt",
+      "description": "This S & M belt is in a highly versatile black shade, making it easy to style whatever the occasion. Statement red stitching adds interest, while the silver single tongue buckle is smart and simple.",
+      "price": 25.99,
+      "category": 12,
+      "image_url": null,
+      "image": "mens-fashion-3504771_1920-blt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 126,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100136",
+      "brand": "Mayer",
+      "name": "GEXTER Leather Black Belt",
+      "slug": "gexter-leather-black-belt",
+      "description": "Upgrade your smart casual outfits with the help of this Mayer belt. This leather belt from Mayer lets you pull your outfit together with style to spare.",
+      "price": 25.99,
+      "category": 12,
+      "image_url": null,
+      "image": "bar-1904458_1920-top-blt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 127,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100137",
+      "brand": "Mayer",
+      "name": "MTL Brown Belt",
+      "slug": "mtl-brown-belt",
+      "description": "Cut in brown leather that’ll sit confidently alongside on-form and casual looks alike, Mayer’s belt is a versatile addition to your capsule. \r\nTonal stitching adds a refined touch at the edges, while rectangle buckle introduces polish to chinos, denim or deftly tailored suits.",
+      "price": 25.99,
+      "category": 12,
+      "image_url": null,
+      "image": "waist-belt-3330570_1920-blt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 128,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100138",
+      "brand": "Mayer",
+      "name": "ADO Brown Belt",
+      "slug": "ado-brown-belt",
+      "description": "With its brown shade and contrast tonal stitching, this Mayer belt is an essential addition to any smart wardrobe. Go off-duty by pairing it with navy chinos or use it to add contrast to a sharp blue suit.",
+      "price": 25.99,
+      "category": 12,
+      "image_url": null,
+      "image": "waist-belt-3330549_1920-blt.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 129,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100139",
+      "brand": "Mirage",
+      "name": "Guildhall Black Oxford Shoes",
+      "slug": "guildhall-black-oxford-shoes",
+      "description": "Put your best foot forward in these black Oxfords. \r\nSelecting the right shoes is essential to crafting the ultimate suited look. These sleek black Oxfords from Northampton-based shoemaker Mirage feature leather uppers and soles, along with a leather and textile lining for superior comfort. \r\nOxford-style lacing should be your go-to choice for the smartest occasions. Pair with a modern black business suit or a grey wedding outfit for a knockout combination.",
+      "price": 99.99,
+      "category": 13,
+      "image_url": null,
+      "image": "arno-senoner-H_MHjHRVgCQ-unsplash-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 130,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100140",
+      "brand": "John White",
+      "name": "Alberta Black Performance Derby Shoes",
+      "slug": "alberta-black-performance-derby-shoes",
+      "description": "With a design that’s smart and simple, these black Derby shoes are a classic choice that will pair with a huge range of outfits. Crafted in smooth leather they’re designed for long-lasting performance with a soft, flexible fit that wraps around the foot for enhanced comfort.",
+      "price": 99.99,
+      "category": 13,
+      "image_url": null,
+      "image": "arno-senoner-H_MHjHRVgCQ-unsplash-1-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 131,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100141",
+      "brand": "Crockett & Jones",
+      "name": "Chelsea 11 Dark Brown Scotch Grain Shoes",
+      "slug": "chelsea-11-dark-brown-scotch-grain-shoes",
+      "description": "Chelsea 11, a hearty version of our infamous Chelsea 5. Made using the finest dark brown scotch grain with an oversized cleated rubber sole from Vibram and a storm welt for added water resistance. Chelsea 11 is the ultimate chelsea for Winter. From the Men's Main Collection.",
+      "price": 585.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe-6fIUr-1hvqI-unsplash-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 132,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100142",
+      "brand": "Crockett & Jones",
+      "name": "Chelsea 5 Dark Brown Wax Calf Shoes",
+      "slug": "chelsea-5-dark-brown-wax-calf-shoes",
+      "description": "Chelsea 5, a Chelsea boot made from fine quality dark brown waxed calf leather for added water resistance, with Dainite rubber soles. From the Men's Main Collection.",
+      "price": 585.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe-6fIUr-1hvqI-unsplash-1-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 133,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100143",
+      "brand": "Moss London",
+      "name": "Belmont Brown Brogue Boot Shoes",
+      "slug": "belmont-brown-brogue-boot-shoes",
+      "description": "Equal parts rugged and refined, the Belmont boot from Moss London is ideal when you feel like giving your trainers the day off. \r\nPunctuated from heel to toe with brogueing and delivered in black to go with everything, they're pulled together with firm midsole stitching to ensure they keep going through the seasons.",
+      "price": 79.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe-6fIUr-1hvqI-unsplash-12-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 134,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100144",
+      "brand": "Brother x Frere",
+      "name": "Boone White Shoes",
+      "slug": "boone-white-shoes",
+      "description": "Cut in a classic silhouette, these Boone sneakers by Brother x Frère will style well with your everyday wear.",
+      "price": 224.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe-41UXKQIzhQA-unsplash-1-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 135,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100145",
+      "brand": "Brother x Frere",
+      "name": "Haden Blue Shoes",
+      "slug": "haden-blue-shoes",
+      "description": "Brother x Frère approach to the saddle loafer are ideal for everyday wear. Crafted with Italian soft suedes.",
+      "price": 274.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe-41UXKQIzhQA-unsplash-11-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 136,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100146",
+      "brand": "MB by Moss Bros",
+      "name": "Dalston White Leather Smart Trainer",
+      "slug": "dalston-white-leather-smart-trainer",
+      "description": "Fresh in white Italian leather with a navy counter trim, Moss Bros’ Dalston trainer forms a critical part of any man’s wardrobe. Ideal for styling with chinos and a simple white T-shirt, they’ve been hand crafted in Portugal with cushioned footbeds for increased support underfoot. Try them with tailoring to bring a sportive note to workwear.",
+      "price": 99.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe-aFGamJJdaQA-unsplash-2-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 137,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100147",
+      "brand": "Paul Evans",
+      "name": "The Caine Bit Tobacco Loafer",
+      "slug": "the-caine-bit-tobacco-loafer",
+      "description": "Add some metal hardware for a sporty look that you can pull off in the office or on the go. Make the Caine bit loafer yours.",
+      "price": 414.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe-aFGamJJdaQA-unsplash-21-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 138,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100148",
+      "brand": "Paul Evans",
+      "name": "The Van Damme Belgian Black Loafer",
+      "slug": "the-van-damme-belgian-black-loafer",
+      "description": "Our Belgian loafer is the perfect combination of quality, comfort and elegance. Looking for something other than a penny loafer? The Van Damme belgian loafer is the perfect substitute.",
+      "price": 419.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe-MuhOKvEYE9g-unsplash-1-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 139,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100149",
+      "brand": "Paul Evans",
+      "name": "The Van Damme Belgian Oxblood Loafer",
+      "slug": "the-van-damme-belgian-oxblood-loafer",
+      "description": "Our Belgian loafer is the perfect combination of quality, comfort and elegance. Looking for something other than a penny loafer? The Van Damme belgian loafer is the perfect substitute.",
+      "price": 419.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe-t34i3FBsF90-unsplash-1-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 140,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100150",
+      "brand": "Paul Evans",
+      "name": "The Stewart Penny Tobacco Loafer",
+      "slug": "the-stewart-penny-tabacco-loafer",
+      "description": "The Stewart is the loafer you'll never stop wearing. Stylish, comfortable and devilishly handsome, our penny loafer may be the most versatile shoe in your wardrobe.",
+      "price": 419.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe-t34i3FBsF90-unsplash-2-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 141,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100151",
+      "brand": "Paul Evans",
+      "name": "The Burton Double Monk Tobacco Strap",
+      "slug": "the-burton-double-monk-tobacco-strap",
+      "description": "The Burton double monk is built on an aggressive last but detailed with a refined cap toe to make sure he behaves. Pair wells with denim and just about everything else.",
+      "price": 449.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe-t34i3FBsF90-unsplash-3-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 142,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100152",
+      "brand": "Crockett & Jones",
+      "name": "Crawford Dark Brown Antique Calf",
+      "slug": "crawford-dark-brown-antique-calf",
+      "description": "Crawford, a penny loafer made from the finest dark brown antique calf leather and bark tanned single leather soles. From the Hand Grade collection.",
+      "price": 689.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe-p8OqZKJCMS0-unsplash-2-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 143,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100153",
+      "brand": "Paul Evans",
+      "name": "The Olivier Single Monk Black Strap",
+      "slug": "the-olivier-single-monk-black-strap",
+      "description": "Our single monk strap exudes elegance with its sleek lines and stylish buckle. Luxuriate in the simplicity of the Olivier.",
+      "price": 424.99,
+      "category": 13,
+      "image_url": null,
+      "image": "shoes-men-3743554_1920-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 144,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100154",
+      "brand": "Moss London",
+      "name": "Bray Tan Lightweight Brogue Shoes",
+      "slug": "bray-tan-lightweight-brogue-shoes",
+      "description": "For smart and casual. \r\nYou can’t beat these brogues for versatility. They’re smart enough for work but will also look the part at weekends. It’s thanks to their classic brogue shape and chunky sole. The tan colour goes with most outfits, and they’re made from leather for long-lasting comfort. \r\nFor work, pair with smart chinos, and for play, turn to your jeans – they’ll look just as good with both and will match any colour.",
+      "price": 54.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe-t34i3FBsF90-unsplash-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 145,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100155",
+      "brand": "Crockett & Jones",
+      "name": "Tetbury Black Wax Calf",
+      "slug": "tetbury-black-wax-calf",
+      "description": "Tetbury, a plain fronted chukka boot made from the finest black wax calf with Dainite rubber soles. From the Men's Main Collection.",
+      "price": 424.99,
+      "category": 13,
+      "image_url": null,
+      "image": "shoes-3001880_1920-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 146,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100156",
+      "brand": "Moss London",
+      "name": "Hatchon Black Patent Dress Shoes",
+      "slug": "hatchon-black-patent-dress-shoes",
+      "description": "Suit sorted, now for the shoes. Moss London has sorted out the whole of your red-carpet attire with the perfect finishing touch – patent dress shoes. Why not go all out at your next black tie event with an attention-grabbing pair of patent brogues. Elegant and dressed-up with simple broguing just on the toe, they make the right kind of statement: dapper. The black colour will go with most dress suits, from plain black and cream to patterned alternatives. Wear with your dress suit and give these shoes a good polish before you leave the house so they shine all night long.",
+      "price": 64.99,
+      "category": 13,
+      "image_url": null,
+      "image": "elegant-2356636_1920-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 147,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100157",
+      "brand": "Allen Edmonds",
+      "name": "McAllister Wingtip Oxford with Dainite Rubber Sole",
+      "slug": "mcallister-wingtip-oxford-with-dainite-rubber-sole",
+      "description": "Look your best in these Dark Chilli Oxfords. \r\nElegant and expertly-crafted, these smart Oxford shoes by Allen Edmonds will complete any formal outfit. They’re made from rich dark chilli leather with a burnished toecap for an on-trend look and feature a leather and textile lining to ensure superior comfort. \r\nPair these shoes with a sharp navy suit for a wedding outfit that’ll turn heads. For the office, try them with tailored grey trousers and a crisp white shirt.",
+      "price": 413.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe--jd3cpn9-lw-unsplash-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 148,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100158",
+      "brand": "Paul Evans",
+      "name": "The Martin Wholecut Dark Blue",
+      "slug": "the-martin-wholecut-dark-blue",
+      "description": "The Martin is the sharpest dress shoe you'll ever own. Made from a single piece of Italian calfskin leather, this wholecut oxford has a sleek profile that is guaranteed to turn heads.",
+      "price": 424.99,
+      "category": 13,
+      "image_url": null,
+      "image": "shoes-5867518_1920-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 149,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100159",
+      "brand": "Paul Evans",
+      "name": "The Cagney Cap-Toe Oxford Oxblood",
+      "slug": "the-cagney-cap-toe-oxford-oxblood",
+      "description": "Let our cap-toe oxford faithfully serve as the foundation of your shoe collection. The Cagney sports double-blind stitching on the toe and vamp for a ridiculously clean look. We've got your entire wardrobe covered. ",
+      "price": 424.99,
+      "category": 13,
+      "image_url": null,
+      "image": "shoes-3966245_1920-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 150,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100160",
+      "brand": "Paul Evans",
+      "name": "The Cagney Cap-Toe Oxford Chocolate",
+      "slug": "the-cagney-cap-toe-oxford-chocolate",
+      "description": "Let our cap-toe oxford faithfully serve as the foundation of your shoe collection. The Cagney sports double-blind stitching on the toe and vamp for a ridiculously clean look. We've got your entire wardrobe covered.",
+      "price": 424.99,
+      "category": 13,
+      "image_url": null,
+      "image": "mareks-steins-xKhF4V77Mrk-unsplash-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 151,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100161",
+      "brand": "John White",
+      "name": "Rutland Brown Suede Brogue",
+      "slug": "rutland-brown-suede-brogue",
+      "description": "Slightly more casual than your formal lace-ups, the brogue is a savvy choice for your regular playbook. John White's leather-lined Rutland is crafted in soft brown suede and features punched perforations at the uppers, so roll your cuffs to let the detail take centre stage.",
+      "price": 99.99,
+      "category": 13,
+      "image_url": null,
+      "image": "shoes-2434210_1920-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 152,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100162",
+      "brand": "Allen Edmonds",
+      "name": "Strandmok Cap-Toe Oxford with Dainite Rubber Sole",
+      "slug": "strandmok-cap-toe-oxford-with-dainite-rubber-sole",
+      "description": "It’s time for something a bit special. \r\nA top-notch suit deserves to be paired with equally impressive footwear. Bring out the big guns by opting for these brown Oxfords from renowned American shoemaker Allen Edmonds. Quality materials, expert stitching and the finest brogue detailing are all on display here. Comfortable too thanks to a cushioned lining, these shoes are designed to shine under the spotlight. \r\nOxford lacing is ideal for smarter occasions, while classy broguing will give your appearance a playful edge. Pair with a blue suit for maximum impact.",
+      "price": 355.99,
+      "category": 13,
+      "image_url": null,
+      "image": "benjamin-rascoe-ItqFmSxKnIg-unsplash-1-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 153,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100163",
+      "brand": "Allen Edmonds",
+      "name": "Walnut Strand Oxford Sneaker",
+      "slug": "walnut-strand-oxford-sneaker",
+      "description": "Our best-selling Strand, now available as a sneaker. \r\nSix-eyelet lace-up Oxford dress sneaker with brogue details. \r\nDress casual style, perfect any way you wear it",
+      "price": 287.99,
+      "category": 13,
+      "image_url": null,
+      "image": "sapato-4353097_1920-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 154,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100164",
+      "brand": "Paul Evans",
+      "name": "The Martin Wholecut Chestnut",
+      "slug": "the-martin-wholecut-chestnut",
+      "description": "The Martin is the sharpest dress shoe you'll ever own. Made from a single piece of Italian calfskin leather, this wholecut oxford has a sleek profile that is guaranteed to turn heads.",
+      "price": 424.99,
+      "category": 13,
+      "image_url": null,
+      "image": "shoe-3642061_1920-shs.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 155,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100165",
+      "brand": "Mayer",
+      "name": "Red Shark Navy Cool Dress Socks",
+      "slug": "red-shark-navy-cool-dress-socks",
+      "description": "With their on-trend, understated colours and cotton-rich stretch fabric, these Mayer socks are well-suited to everyday smart looks. Pair with a navy or burgundy suit for a sharp, coordinated look right down to the last details.",
+      "price": 9.99,
+      "category": 14,
+      "image_url": null,
+      "image": "benjamin-rascoe-aFGamJJdaQA-unsplash-1-sks.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 156,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100166",
+      "brand": "Mayer",
+      "name": "Red Dot Navy Cool Dress Socks",
+      "slug": "red-dot-navy-cool-dress-socks",
+      "description": "With their on-trend, understated colours and cotton-rich stretch fabric, these Mayer socks are well-suited to everyday smart looks. Pair with a navy or burgundy suit for a sharp, coordinated look right down to the last details.",
+      "price": 12.99,
+      "category": 14,
+      "image_url": null,
+      "image": "benjamin-rascoe-aFGamJJdaQA-unsplash-sks.jpg",
+      "has_sizes": false,
+      "fields_size": 0
+    }
+  },
+  {
+    "pk": 157,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100167",
+      "brand": "Mayer",
+      "name": "Tailored Fit Black Cashmere Coat",
+      "slug": "tailored-fit-black-cashmere-coat",
+      "description": "Stylish layering for every occasion. \r\nMade from soft, warm cashmere in versatile black, this overcoat from Mayer will elevate any formal look during the colder months. The single-breasted design features 3-button fastening, notch lapels and a single vent, while straight pockets keep essentials safe. It’s designed to be worn over a jacket, and the tailored fit will complement the lines of any sharp suit. \r\nPair with a crisp white shirt and a 3-piece grey suit for a solid look, using black Oxford shoes to complete the picture.",
+      "price": 399.99,
+      "category": 17,
+      "image_url": null,
+      "image": "adria-crehuet-cano-bYiMHZiXeqQ-unsplash-cot.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 158,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100168",
+      "brand": "Mayer",
+      "name": "Tailored Fit Camel Double Face with Grey Overcoat",
+      "slug": "tailored-fit-camel-double-face-with-grey-overcoat",
+      "description": "Bring colour to cold days in camel. \r\nWith its on-trend colour and classic tailored fit, this Mayer overcoat combines style, comfort and warmth - everything you need when the cold bites. Crafted in double face fabric for texture, it also features half-lining with a light grey internal for stylish contrast, plus a peak lapel to add interest to your collar. \r\nWear it with an oatmeal polo neck jumper and a grey flannel suit for a look that works for the office or smart-casual occasions.",
+      "price": 214.99,
+      "category": 17,
+      "image_url": null,
+      "image": "aleksandra-besedina-h3nps75biGg-unsplash-cot.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 159,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100169",
+      "brand": "Mayer",
+      "name": "Slim Fit Teal Overcoat",
+      "slug": "slim-fit-teal-overcoat",
+      "description": "Gloomier commutes call for a more confident choice in colour. So blend Mayer's slim-fit overcoat into your daily grind and we guarantee it'll add a little lift to slow-starter mornings. \r\nDesigned in soft cloth blended with wool and detailed with contrasting split lining, it's just the thing for layering over a deftly cut suit. But it'll deliver just as well over a more relaxed look. \r\nTurn up the collar on layered-up days to reveal a subtle panel of contrast. ",
+      "price": 112.99,
+      "category": 17,
+      "image_url": null,
+      "image": "ante-samarzija-zdFwp4GpgRY-unsplash-cot.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 160,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100170",
+      "brand": "Mayer",
+      "name": "Tailored Fit Camel Cashmere Coat",
+      "slug": "tailored-fit-camel-cashmere-coat",
+      "description": "Rely on tailored cashmere when the weather turns. \r\nPresent a polished appearance in any weather with the help of this luxurious overcoat from Mayer. Made from fabric selected for its warmth and softness, you’ll be sharply dressed for the office or evenings out. It’s cut for a tailored fit that’ll lie snug next to a jacket and create a contemporary, frame-flattering profile. \r\nThis coat’s camel tone is ideal from bringing colour to dark suits on overcast days. A patterned scarf will add extra warmth and vibrancy.",
+      "price": 379.99,
+      "category": 17,
+      "image_url": null,
+      "image": "benjamin-rascoe-BeKpo8u_9Qo-unsplash-cot.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 161,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100171",
+      "brand": "Mayer",
+      "name": "Slim Fit Light Grey Overcoat",
+      "slug": "slim-fit-light-grey-overcoat",
+      "description": "A versatile approach to an autumn/winter essential, Moss London's light-grey overcoat is cut to a frame-defining slim fit so you can layer up and beat the bulk. \r\nWe've crafted it in a soft blend that contains wool and added a subtle contrast at the undercollar – perfect for popping up for coverage while highlighting the peak lapels. \r\nTry it over a burgundy zip-neck knit on fresh days.",
+      "price": 112.99,
+      "category": 17,
+      "image_url": null,
+      "image": "hamid-tajik-eSaTQ2F8qzQ-unsplash-cot.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  },
+  {
+    "pk": 162,
+    "model": "products.product",
+    "fields": {
+      "sku": "gm8300100172",
+      "brand": "Mayer",
+      "name": "Tailored Fit Navy Epsom Overcoat",
+      "slug": "tailored-fit-navy-epsom-overcoat",
+      "description": "Layer up in confidence this season with the classic lines of Mayer's navy Epsom coat. \r\nCut to a tailored fit that's all about balanced proportions, it's crafted in a wool blend for a rich effect. But you're not investing in one look here – you're getting three. \r\nLeave the tonal wadded insert behind as the temperatures begin to rise, then add it in and zip it up when they really plummet. In-between weather is the time to style the insert solo as a core-warmer over a shirt or knitwear. ",
+      "price": 144.99,
+      "category": 17,
+      "image_url": null,
+      "image": "jeff-tumale-ypSSm5O-73o-unsplash-cot.jpg",
+      "has_sizes": true,
+      "fields_size": 1
+    }
+  }  
+]
