@@ -143,6 +143,18 @@ button[aria-expanded="true"] .bar2 {
     transition: all .4s ease-in-out;
 }
 
+.card-collection-text {
+    font-family: var(--font-family-montserrat);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.219;
+    font-size: 0.875rem;
+    color: #fff;
+    letter-spacing: 1px;
+    word-break: break-word;
+    transition: all .4s ease-in-out;
+}
+
 .brand-text {
     font-family: var(--font-family-oswald);
     font-weight: 500;
@@ -177,17 +189,16 @@ button[aria-expanded="true"] .bar2 {
     font-size: 14px;
 }
 
-
 .breadcrumb-item.title-text.active {
-    font-weight: 400;
+    font-weight: 400 !important;
 }
 
 .font-weight-500 {
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 
 .font-weight-600 {
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 /* ------------------------------- End Font Family Classes ---------------------------------------- */
 
@@ -351,6 +362,63 @@ button[aria-expanded="true"] .bar2 {
 }
 /* ------------------------------ End Background Classes ------------------------------------------ */
 
+/* ----------------------------- Collection Card section ------------------------------------------ */
+#collection-cards .card {
+    min-height: 350px;
+}
+
+.card-waistcoat {
+    background: url('/media/pexels-royal-anwar-447186-waistcoat-main-card-collection.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+        -o-background-size: cover;
+            background-size: cover;
+}
+
+.card-tie {
+    background: url('/media/pexels-dom-j-45055-tie-main-card-collection.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+        -o-background-size: cover;
+            background-size: cover;
+    background-position-x: 40%;
+}
+
+.card-belt {
+    background: url('/media/pexels-fox-989938-belt-main-card-collection.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+        -o-background-size: cover;
+            background-size: cover;
+}
+
+.card-shoes {
+    background: url('/media/pexels-tima-miroshnichenko-6765524-shoes-main-card-collection.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+        -o-background-size: cover;
+            background-size: cover;
+}
+
+.card-shirts {
+    background: url('/media/nimble-made-BKYeLLB1OxI-unsplash-shirts-main-card-collection.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+        -o-background-size: cover;
+            background-size: cover;
+    background-position-x: 25%;
+}
+
+#collection-cards .card .card-body-footer {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+                align-self: end;
+    height: inherit;
+    width: 100%;
+    margin-top: auto;
+}
+/* -------------------------- End Collection Card section ----------------------------------------- */
+
 /* --------------------------------------- Footer ------------------------------------------------- */
 #footer {
     width: 100%;
@@ -458,7 +526,8 @@ button[aria-expanded="true"] .bar2 {
         z-index: 1030;
     }
 
-    .btn--shop-now-text {
+    .btn--shop-now-text,
+    .card-collection-text {
         font-size: 1.2rem;
     }
 
