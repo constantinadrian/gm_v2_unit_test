@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <!-- Owl carousel CSS -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.custom.theme.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+{% endblock %}
+
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -10,114 +21,200 @@
 {% endblock %}
 
 {% block content %}
-<!-- Landing section -->
-<section class="d-flex flex-row">
-    <div class="homepage-section w-100 bg-homepage-section ">
-        <div class="w-100">
+    <!-- Landing section -->
+    <section class="d-flex flex-row">
+        <div class="homepage-section w-100 bg-homepage-section ">
+            <div class="w-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9 col-md-9 my-auto py-1">
+                            <h1 class="header-text">men's</h1>
+                            <h1 class="header-text">collection</h1>
+                            <h2 class="subheader-text">From suits, jackets, shirts, shoes</h2>
+                            
+                            <div class="my-5">
+                                <a href="{% url 'products' %}" class="btn btn-lg btn-outline-white rounded-0 btn--shop-now-text text-uppercase py-3">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection cards section -->
+    <section id="collection-cards" class="custom-mt my-5 py-5">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-md-12 col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6 my-3">
+                            <div class="card border-0 rounded-0 card-waistcoat">
+                                <div class="card-body border-0 d-flex">
+                                    <div class="card-body-footer">
+                                        <p class="card-collection-text font-weight-600 text-white text-uppercase">Men's Waistcoats</p>
+                                        <p class="card-collection-text font-weight-600 text-white text-uppercase">Collection</p>
+                                        <div class="my-2">
+                                            <h4>
+                                                <a href="" class="btn btn-lg btn-outline-white rounded-0 btn--shop-now-text text-uppercase py-3">Shop Now</a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 my-3">
+                            <div class="card border-0 rounded-0 card-tie">
+                                <div class="card-body border-0 d-flex">
+                                    <div class="card-body-footer">
+                                        <p class="card-collection-text font-weight-600 text-black text-uppercase">Men's Ties</p>
+                                        <p class="card-collection-text font-weight-600 text-black text-uppercase">Collection</p>
+                                        <div class="my-2">
+                                            <h4>
+                                                <a href="" class="btn btn-lg btn-outline-white rounded-0 btn--shop-now-text border-dark text-black text-uppercase py-3">Shop Now</a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 my-3">
+                            <div class="card border-0 rounded-0 card-belt">
+                                <div class="card-body border-0 d-flex">
+                                    <div class="card-body-footer">
+                                        <p class="card-collection-text font-weight-600 text-white text-uppercase">Men's Belts</p>
+                                        <p class="card-collection-text font-weight-600 text-white text-uppercase">Collection</p>
+                                        <div class="my-2">
+                                            <h4>
+                                                <a href="" class="btn btn-lg btn-outline-white rounded-0 btn--shop-now-text text-uppercase py-3">Shop Now</a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 my-3">
+                            <div class="card border-0 rounded-0 card-shoes">
+                                <div class="card-body border-0 d-flex">
+                                    <div class="card-body-footer">
+                                        <p class="card-collection-text font-weight-600 text-white text-uppercase">Men's Shoes</p>
+                                        <p class="card-collection-text font-weight-600 text-white text-uppercase">Collection</p>
+                                        <div class="my-2">
+                                            <h4>
+                                                <a href="" class="btn btn-lg btn-outline-white rounded-0 btn--shop-now-text text-uppercase py-3">Shop Now</a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-4 my-3">
+                    <div class="card border-0 rounded-0 card-shirts h-100">
+                        <div class="card-body border-0 d-flex">
+                            <div class="card-body-footer">
+                                <p class="card-collection-text font-weight-600 text-black text-uppercase">Men's Shirts</p>
+                                <p class="card-collection-text font-weight-600 text-black text-uppercase">Collection</p>
+                                <div class="my-2">
+                                    <h4>
+                                        <a href="" class="btn btn-lg btn-outline-white rounded-0 btn--shop-now-text border-dark text-black text-uppercase py-3">Shop Now</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Owl carousel New Arrival Section -->
+    {% if new_arrival %}
+        <section class="mb-5 pb-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-9 col-md-9 my-auto py-1">
-                        <h1 class="header-text">men's</h1>
-                        <h1 class="header-text">collection</h1>
-                        <h2 class="subheader-text">From suits, jackets, shirts, shoes</h2>
-                        
-                        <div class="my-5">
-                            <a href="{% url 'products' %}" class="btn btn-lg btn-outline-white rounded-0 btn--shop-now-text text-uppercase py-3">Shop Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                <h3 class="section-title">New Arrival</h3>
 
-<!-- Collection cards section -->
-<section id="collection-cards" class="custom-mt my-5 py-5">
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-md-12 col-lg-8">
-                <div class="row">
-                    <div class="col-md-6 my-3">
-                        <div class="card border-0 rounded-0 card-waistcoat">
-                            <div class="card-body border-0 d-flex">
-                                <div class="card-body-footer">
-                                    <p class="card-collection-text font-weight-600 text-white text-uppercase">Men's Waistcoats</p>
-                                    <p class="card-collection-text font-weight-600 text-white text-uppercase">Collection</p>
-                                    <div class="my-2">
-                                        <h4>
-                                            <a href="" class="btn btn-lg btn-outline-white rounded-0 btn--shop-now-text text-uppercase py-3">Shop Now</a>
-                                        </h4>
+                <div class="owl-carousel owl-theme">
+                    {% for product in new_arrival %}
+                        <div class="item carousel-product-item">
+                            <div class="card carousel-product-item-card border-0 rounded-0 h-100">
+                                        
+                                {% if product.image %}
+                                    <a href="{{ product.get_absolute_url }}">
+                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
+                                {% else %}
+                                    <a href="{{ product.get_absolute_url }}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
+                                    </a>
+                                {% endif %}
+                                
+                                <div class="card-body pb-0">
+                                    <p class="brand-text">{{ product.brand }}</p>
+                                    <p class="mb-0">{{ product.name }}</p>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="mb-0 text-left title-text">€ {{ product.price }}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 my-3">
-                        <div class="card border-0 rounded-0 card-tie">
-                            <div class="card-body border-0 d-flex">
-                                <div class="card-body-footer">
-                                    <p class="card-collection-text font-weight-600 text-black text-uppercase">Men's Ties</p>
-                                    <p class="card-collection-text font-weight-600 text-black text-uppercase">Collection</p>
-                                    <div class="my-2">
-                                        <h4>
-                                            <a href="" class="btn btn-lg btn-outline-white rounded-0 btn--shop-now-text border-dark text-black text-uppercase py-3">Shop Now</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 my-3">
-                        <div class="card border-0 rounded-0 card-belt">
-                            <div class="card-body border-0 d-flex">
-                                <div class="card-body-footer">
-                                    <p class="card-collection-text font-weight-600 text-white text-uppercase">Men's Belts</p>
-                                    <p class="card-collection-text font-weight-600 text-white text-uppercase">Collection</p>
-                                    <div class="my-2">
-                                        <h4>
-                                            <a href="" class="btn btn-lg btn-outline-white rounded-0 btn--shop-now-text text-uppercase py-3">Shop Now</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 my-3">
-                        <div class="card border-0 rounded-0 card-shoes">
-                            <div class="card-body border-0 d-flex">
-                                <div class="card-body-footer">
-                                    <p class="card-collection-text font-weight-600 text-white text-uppercase">Men's Shoes</p>
-                                    <p class="card-collection-text font-weight-600 text-white text-uppercase">Collection</p>
-                                    <div class="my-2">
-                                        <h4>
-                                            <a href="" class="btn btn-lg btn-outline-white rounded-0 btn--shop-now-text text-uppercase py-3">Shop Now</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
+        </section>
+    {% endif %}
 
-            <div class="col-md-12 col-lg-4 my-3">
-                <div class="card border-0 rounded-0 card-shirts h-100">
-                    <div class="card-body border-0 d-flex">
-                        <div class="card-body-footer">
-                            <p class="card-collection-text font-weight-600 text-black text-uppercase">Men's Shirts</p>
-                            <p class="card-collection-text font-weight-600 text-black text-uppercase">Collection</p>
-                            <div class="my-2">
-                                <h4>
-                                    <a href="" class="btn btn-lg btn-outline-white rounded-0 btn--shop-now-text border-dark text-black text-uppercase py-3">Shop Now</a>
-                                </h4>
+        <!-- Owl carousel Now on Sale Section -->
+        {% if now_on_sale %}
+        <section class="mb-5 pb-5">
+            <div class="container">
+                <h3 class="section-title">Now on Sale</h3>
+
+                <div class="owl-carousel owl-theme">
+                    {% for product in now_on_sale %}
+                        <div class="item carousel-product-item">
+                            <div class="card carousel-product-item-card border-0 rounded-0 h-100">
+                                        
+                                {% if product.image %}
+                                    <a href="{{ product.get_absolute_url }}">
+                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
+                                {% else %}
+                                    <a href="{{ product.get_absolute_url }}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
+                                    </a>
+                                {% endif %}
+                                
+                                <div class="card-body pb-0">
+                                    <p class="brand-text">{{ product.brand }}</p>
+                                    <p class="mb-0">{{ product.name }}</p>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="mb-0 text-left title-text">€ {{ product.price }}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+    {% endif %}
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script src="{% static 'js/owl.initializer.js' %}"></script>
 {% endblock %}

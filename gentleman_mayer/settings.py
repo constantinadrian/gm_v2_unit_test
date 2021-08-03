@@ -74,6 +74,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'products.contexts.new_arrival',
+                'products.contexts.now_on_sale',
             ],
         },
     },

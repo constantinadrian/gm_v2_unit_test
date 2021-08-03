@@ -1,0 +1,101 @@
+/* ------------------------------ Owl Carousel Custom --------------------------------------------- */
+.owl-carousel .owl-stage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.carousel-product-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    height: 100%;
+}
+
+.carousel-product-item-card {
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+}
+
+.owl-carousel .card {
+    width: 100%;
+}
+
+button.owl-dot:focus,
+button.owl-prev:focus,
+button.owl-next:focus {
+    outline: 0;
+}
+
+.owl-carousel .owl-nav{
+    overflow: hidden;
+    height: 0px;
+}
+
+.owl-carousel .carousel-nav-btn{
+    position: absolute;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    top: 40%;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    background: var(--light-periwinkle);
+    border: 1px solid #000;
+    -webkit-box-shadow: 0 0px 4px 4px #f0f8ff87;
+            box-shadow: 0 0px 4px 4px #f0f8ff87;
+}
+
+.owl-carousel .carousel-nav-btn::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-size: 30px;
+}
+
+.owl-carousel .prev-slide{
+    left: 0px;
+}
+
+.owl-carousel .prev-slide::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: "\f053";
+}
+
+.owl-carousel .next-slide {
+    right: 1px;
+}
+
+.owl-carousel .next-slide::before {            
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: "\f054";
+}
+
+.owl-theme .owl-dots {
+    display: none;
+}
+/* ---------------------------- End Owl Carousel Custom ------------------------------------------- */
