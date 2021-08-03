@@ -150,6 +150,7 @@ button[aria-expanded="true"] .bar2 {
     text-transform: uppercase;
     font-size: 16px;
     letter-spacing: 1.5px;
+    word-break: break-word;
 }
 
 .title-text {
@@ -174,6 +175,11 @@ button[aria-expanded="true"] .bar2 {
     font-style: normal;
     letter-spacing: 1px;
     font-size: 14px;
+}
+
+
+.breadcrumb-item.title-text.active {
+    font-weight: 400;
 }
 
 .font-weight-500 {
@@ -264,6 +270,38 @@ button[aria-expanded="true"] .bar2 {
 }
 /* ---------------------------- End Buttons and Color Classes ------------------------------------- */
 
+/* ------------------------------------ Breadcrumb Nav -------------------------------------------- */
+.breadcrumb {
+    background: none;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+}
+/* ---------------------------------- End Breadcrumb Nav ------------------------------------------- */
+
+/* --------------------------------------- Nav Tabs ----------------------------------------------- */
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    color: #6c757d;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border-bottom: 1px solid #000 !important;
+}
+
+.nav-tabs li a {
+    margin-right: 1rem;
+}
+/* ------------------------------------- End Nav Tabs --------------------------------------------- */
+
 /* ---------------------------------- Containers Classes ------------------------------------------ */
 #delivery-banner {
     background: var(--light-periwinkle);
@@ -288,6 +326,10 @@ button[aria-expanded="true"] .bar2 {
     -webkit-box-align: center;   
         -ms-flex-align: center;   
             align-items: center;
+}
+
+#product-detail-description-container {
+    background: var(--light-periwinkle);
 }
 /* ------------------------------- End Containers Classes ----------------------------------------- */
 

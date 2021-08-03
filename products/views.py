@@ -18,11 +18,10 @@ def product_detail(request, category_slug, product_slug):
     """" A view to show individual product details """
 
     category = get_object_or_404(Category, slug=category_slug)
-    product = get_object_or_404(Product, category__slug=category_slug, 
+    product = get_object_or_404(Product, category__slug=category_slug,
                                 slug=product_slug)
 
     context = {
-        'category': category,
         'product': product,
     }
 
