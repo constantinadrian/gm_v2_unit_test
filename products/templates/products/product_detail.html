@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <!-- Owl carousel CSS -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.custom.theme.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -11,204 +21,294 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row mt-3 d-none d-sm-block">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{% url 'home' %}" class="title-text text-black">Home</a></li>
-                <li class="breadcrumb-item"><a href="{% url 'products' %}"
-                        class="title-text text-black">{{ product.category.friendly_name }}</a></li>
-                <li class="breadcrumb-item title-text active" aria-current="page">{{ product.name }}</li>
-            </ol>
-        </nav>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-md-5 col-lg-5">
-            <div class="image-container my-3">
-                {% if product.image %}
-                <a href="{{ product.image.url }}" target="_blank" rel="noopener noreferrer"
-                    aria-label="Product Image Link">
-                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                </a>
-                {% else %}
-                <a href="{{ MEDIA_URL }}noimage.jpg" target="_blank" rel="noopener noreferrer"
-                    aria-label="Product Image">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
-                </a>
-                {% endif %}
+    <section id="product-info-section">
+        <div class="container">
+            <div class="row mt-3 d-none d-sm-block">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}" class="title-text text-black">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'products' %}"
+                                class="title-text text-black">{{ product.category.friendly_name }}</a></li>
+                        <li class="breadcrumb-item title-text active" aria-current="page">{{ product.name }}</li>
+                    </ol>
+                </nav>
             </div>
-        </div>
-        <div class="col-xs-12 col-md-7 col-lg-7">
-            <div class="product-details-container mb-3 mt-md-3">
-                <p class="brand-text">{{ product.brand }}</p>
-                <p class="title-text">{{ product.name }}</p>
-                <p class="mb-0 text-left title-text font-weight-500">€ {{ product.price }}</p>
-
-                <form class="form" action="" method="POST">
-                    {% csrf_token %}
-
-                    {% if product.has_sizes %}
-                    <div class="form-row">
-                        {% if product.fields_size == 1 %}
-                        <div class="col-12">
-                            <p class="mt-3 font-weight-600">Size:</p>
-                            <select class="form-control rounded-0 w-100" name="product_size" id='id_product_size'>
-                                <option value="xs">XS</option>
-                                <option value="s">S</option>
-                                <option value="m" selected>M</option>
-                                <option value="l">L</option>
-                                <option value="xl">XL</option>
-                            </select>
-                        </div>
-                        {% elif product.fields_size == 2 %}
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <p class="mt-3 font-weight-600">Jacket:</p>
-                            <select class="form-control rounded-0 w-100" name="jacket_size" id='id_jacket_size'>
-                                <option value="xs">XS</option>
-                                <option value="s">S</option>
-                                <option value="m" selected>M</option>
-                                <option value="l">L</option>
-                                <option value="xl">XL</option>
-                            </select>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <p class="mt-3 font-weight-600">Trouser:</p>
-                            <select class="form-control rounded-0 w-100" name="trouser_size" id='id_trouser_size'>
-                                <option value="xs">XS</option>
-                                <option value="s">S</option>
-                                <option value="m" selected>M</option>
-                                <option value="l">L</option>
-                                <option value="xl">XL</option>
-                            </select>
-                        </div>
-                        {% elif product.fields_size == 3 %}
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                            <p class="mt-3 font-weight-600">Jacket:</p>
-                            <select class="form-control rounded-0 w-100" name="jacket_size" id='id_jacket_size'>
-                                <option value="xs">XS</option>
-                                <option value="s">S</option>
-                                <option value="m" selected>M</option>
-                                <option value="l">L</option>
-                                <option value="xl">XL</option>
-                            </select>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                            <p class="mt-3 font-weight-600">Waistcoat:</p>
-                            <select class="form-control rounded-0 w-100" name="waistcoat_size" id='id_waistcoat_size'>
-                                <option value="xs">XS</option>
-                                <option value="s">S</option>
-                                <option value="m" selected>M</option>
-                                <option value="l">L</option>
-                                <option value="xl">XL</option>
-                            </select>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                            <p class="mt-3 font-weight-600">Trouser:</p>
-                            <select class="form-control rounded-0 w-100" name="trouser_size" id='id_trouser_size'>
-                                <option value="xs">XS</option>
-                                <option value="s">S</option>
-                                <option value="m" selected>M</option>
-                                <option value="l">L</option>
-                                <option value="xl">XL</option>
-                            </select>
-                        </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-5 col-lg-5">
+                    <div class="image-container my-3">
+                        {% if product.image %}
+                        <a href="{{ product.image.url }}" target="_blank" rel="noopener noreferrer"
+                            aria-label="Product Image Link">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{{ MEDIA_URL }}noimage.jpg" target="_blank" rel="noopener noreferrer"
+                            aria-label="Product Image">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
+                        </a>
                         {% endif %}
                     </div>
-                    {% endif %}
+                </div>
+                <div class="col-xs-12 col-md-7 col-lg-7">
+                    <div class="product-details-container mb-3 mt-md-3">
+                        <p class="brand-text">{{ product.brand }}</p>
+                        <p class="title-text">{{ product.name }}</p>
+                        <p class="mb-0 text-left title-text font-weight-500">€ {{ product.price }}</p>
 
-                    <div class="form-row">
-                        <div class="col-12">
-                            <p class="mt-3 font-weight-600">Quantity:</p>
-                            <div class="form-group w-100">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-black rounded-0"
-                                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                            <span class="icon">
-                                                <i class="fas fa-minus"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <input class="form-control qty_input text-center" type="number" name="quantity"
-                                        value="1" min="1" max="99" data-item_id="{{ product.id }}"
-                                        id="id_qty_{{ product.id }}">
-                                    <div class="input-group-append">
-                                        <button class="increment-qty btn btn-black rounded-0"
-                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                            <span class="icon">
-                                                <i class="fas fa-plus"></i>
-                                            </span>
-                                        </button>
+                        <form class="form" action="" method="POST">
+                            {% csrf_token %}
+
+                            {% if product.has_sizes %}
+                            <div class="form-row">
+                                {% if product.fields_size == 1 %}
+                                <div class="col-12">
+                                    <p class="mt-3 font-weight-600">Size:</p>
+                                    <select class="form-control rounded-0 w-100" name="product_size" id='id_product_size'>
+                                        <option value="xs">XS</option>
+                                        <option value="s">S</option>
+                                        <option value="m" selected>M</option>
+                                        <option value="l">L</option>
+                                        <option value="xl">XL</option>
+                                    </select>
+                                </div>
+                                {% elif product.fields_size == 2 %}
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                    <p class="mt-3 font-weight-600">Jacket:</p>
+                                    <select class="form-control rounded-0 w-100" name="jacket_size" id='id_jacket_size'>
+                                        <option value="xs">XS</option>
+                                        <option value="s">S</option>
+                                        <option value="m" selected>M</option>
+                                        <option value="l">L</option>
+                                        <option value="xl">XL</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                    <p class="mt-3 font-weight-600">Trouser:</p>
+                                    <select class="form-control rounded-0 w-100" name="trouser_size" id='id_trouser_size'>
+                                        <option value="xs">XS</option>
+                                        <option value="s">S</option>
+                                        <option value="m" selected>M</option>
+                                        <option value="l">L</option>
+                                        <option value="xl">XL</option>
+                                    </select>
+                                </div>
+                                {% elif product.fields_size == 3 %}
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                    <p class="mt-3 font-weight-600">Jacket:</p>
+                                    <select class="form-control rounded-0 w-100" name="jacket_size" id='id_jacket_size'>
+                                        <option value="xs">XS</option>
+                                        <option value="s">S</option>
+                                        <option value="m" selected>M</option>
+                                        <option value="l">L</option>
+                                        <option value="xl">XL</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                    <p class="mt-3 font-weight-600">Waistcoat:</p>
+                                    <select class="form-control rounded-0 w-100" name="waistcoat_size" id='id_waistcoat_size'>
+                                        <option value="xs">XS</option>
+                                        <option value="s">S</option>
+                                        <option value="m" selected>M</option>
+                                        <option value="l">L</option>
+                                        <option value="xl">XL</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                    <p class="mt-3 font-weight-600">Trouser:</p>
+                                    <select class="form-control rounded-0 w-100" name="trouser_size" id='id_trouser_size'>
+                                        <option value="xs">XS</option>
+                                        <option value="s">S</option>
+                                        <option value="m" selected>M</option>
+                                        <option value="l">L</option>
+                                        <option value="xl">XL</option>
+                                    </select>
+                                </div>
+                                {% endif %}
+                            </div>
+                            {% endif %}
+
+                            <div class="form-row">
+                                <div class="col-12">
+                                    <p class="mt-3 font-weight-600">Quantity:</p>
+                                    <div class="form-group w-100">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-black rounded-0"
+                                                    data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-minus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <input class="form-control qty_input text-center" type="number" name="quantity"
+                                                value="1" min="1" max="99" data-item_id="{{ product.id }}"
+                                                id="id_qty_{{ product.id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-black rounded-0"
+                                                    data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-plus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-12 mt-2">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-3 w-100">
+                                                <span class="icon">
+                                                    <i class="fas fa-chevron-left"></i>
+                                                </span>
+                                                <span class="text-uppercase">Keep Shopping</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-3 w-100"
+                                                value="Add to Bag">
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="product-description-section" class="my-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav nav-tabs justify-content-center" id="product-info-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link links-text text-uppercase active" id="details-tab" data-toggle="tab" href="#description-tab-container" role="tab" aria-controls="description-tab-container"
+                                aria-selected="true">Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links-text text-uppercase" id="reviews-tab" data-toggle="tab" href="#reviews-tab-container" role="tab" aria-controls="reviews-tab-container"
+                                aria-selected="false">Reviews</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="product-detail-description-container" class="w-100">
+            <div class="container">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="description-tab-container" role="tabpanel" aria-labelledby="details-tab">
+                        <div class="row mt-3 py-5">
+                            <div class="col-12">
+                                <p class="brand-text">Description</p>
+                                <p class="content-text">{{ product.description }}</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="form-row">
-                        <div class="col-12 mt-2">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-3 w-100">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
+                    <div class="tab-pane fade" id="reviews-tab-container" role="tabpanel" aria-labelledby="reviews-tab">
+                        <div class="row mt-3 py-5">
+                            <div class="col-12">
+                                <p class="brand-text">Description</p>
+                                <p class="content-text">{{ product.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    {% if complete_the_look %}
+    <!-- Owl carousel Complete The Look Section -->
+        <section class="mb-5 pb-5">
+            <div class="container">
+                <h3 class="section-title">Complete The Look</h3>
+
+                <div class="owl-carousel owl-theme">
+                    {% for product in complete_the_look %}
+                        <div class="item carousel-product-item">
+                            <div class="card carousel-product-item-card border-0 rounded-0 h-100">
+                                        
+                                {% if product.image %}
+                                    <a href="{{ product.get_absolute_url }}">
+                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                     </a>
+                                {% else %}
+                                    <a href="{{ product.get_absolute_url }}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
+                                    </a>
+                                {% endif %}
+                                
+                                <div class="card-body pb-0">
+                                    <p class="brand-text">{{ product.brand }}</p>
+                                    <p class="mb-0">{{ product.name }}</p>
                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-3 w-100"
-                                        value="Add to Bag">
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="mb-0 text-left title-text">€ {{ product.price }}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row mt-5">
-        <div class="col-12">
-            <ul class="nav nav-tabs justify-content-center" id="product-info-tab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link links-text text-uppercase active" id="details-tab" data-toggle="tab" href="#description-tab-container" role="tab" aria-controls="description-tab-container"
-                        aria-selected="true">Details</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link links-text text-uppercase" id="reviews-tab" data-toggle="tab" href="#reviews-tab-container" role="tab" aria-controls="reviews-tab-container"
-                        aria-selected="false">Reviews</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div id="product-detail-description-container" class="w-100">
-    <div class="container">
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="description-tab-container" role="tabpanel" aria-labelledby="details-tab">
-                <div class="row mt-3 py-5">
-                    <div class="col-12">
-                        <p class="brand-text">Description</p>
-                        <p class="content-text">{{ product.description }}</p>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
+        </section>
+    {% endif %}
 
-            <div class="tab-pane fade" id="reviews-tab-container" role="tabpanel" aria-labelledby="reviews-tab">
-                <div class="row mt-3 py-5">
-                    <div class="col-12">
-                        <p class="brand-text">Description</p>
-                        <p class="content-text">{{ product.description }}</p>
-                    </div>
+    {% if you_might_also_like %}
+    <!-- Owl carousel Complete The Look Section -->
+        <section class="mb-5 pb-5">
+            <div class="container">
+                <h3 class="section-title">You Might Also Like</h3>
+
+                <div class="owl-carousel owl-theme">
+                    {% for product in you_might_also_like %}
+                        <div class="item carousel-product-item">
+                            <div class="card carousel-product-item-card border-0 rounded-0 h-100">
+                                        
+                                {% if product.image %}
+                                    <a href="{{ product.get_absolute_url }}">
+                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
+                                {% else %}
+                                    <a href="{{ product.get_absolute_url }}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
+                                    </a>
+                                {% endif %}
+                                
+                                <div class="card-body pb-0">
+                                    <p class="brand-text">{{ product.brand }}</p>
+                                    <p class="mb-0">{{ product.name }}</p>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="mb-0 text-left title-text">€ {{ product.price }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+        </section>
+    {% endif %}
 
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script src="{% static 'js/owl.initializer.js' %}"></script>
 {% endblock %}
