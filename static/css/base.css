@@ -309,6 +309,11 @@ a.category-badge > span.badge:hover {
 .breadcrumb-item a {
     text-decoration: none;
 }
+
+.breadcrumb-item a,
+.breadcrumb-item.active {
+    font-size: 12px !important;
+}
 /* ---------------------------------- End Breadcrumb Nav ------------------------------------------- */
 
 /* --------------------------------------- Nav Tabs ----------------------------------------------- */

@@ -27,8 +27,16 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{% url 'home' %}" class="title-text text-black">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{% url 'products' %}"
+                        <li class="breadcrumb-item"><a href="{% url 'products' %}" class="title-text text-black">All Products</a></li>
+                        {% if product.category.parent %}
+                            <li class="breadcrumb-item"><a href="{{ product.category.parent.get_absolute_url }}"
+                                    class="title-text text-black">{{ product.category.parent.friendly_name }}</a></li>
+                            <li class="breadcrumb-item"><a href="{{ product.category.get_absolute_url }}"
+                                    class="title-text text-black">{{ product.category.friendly_name }}</a></li>
+                        {% else %}
+                            <li class="breadcrumb-item"><a href="{{ product.category.get_absolute_url }}"
                                 class="title-text text-black">{{ product.category.friendly_name }}</a></li>
+                        {% endif %}
                         <li class="breadcrumb-item title-text active" aria-current="page">{{ product.name }}</li>
                     </ol>
                 </nav>
