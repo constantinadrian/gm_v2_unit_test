@@ -3,6 +3,7 @@ from .models import Product, Category
 from django.db.models import Q
 from random import shuffle
 from django.contrib import messages
+from django.db.models.functions import Lower
 
 
 def all_products(request, category_slug=None):
@@ -62,10 +63,8 @@ def all_products(request, category_slug=None):
             if category.parent is not None:
                 products = products.filter(category__name=category.name)
             else:
-                # products = products.filter(category__parent=category.id)
-                # check if category is a parrent or just a normal category
-                # if products.count() == 0:
-                #     products = Product.objects.all().filter(category__name=category.name)
+                # check if category is a parrent or
+                # just a normal category
                 parent_category = Category.objects.filter(
                         parent=category.id).count()
 
