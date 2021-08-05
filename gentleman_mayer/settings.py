@@ -76,6 +76,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'products.contexts.new_arrival',
                 'products.contexts.now_on_sale',
+                'products.contexts.nav_categories',
             ],
         },
     },

@@ -8,6 +8,9 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = "Categories"
 
+    parent = models.ForeignKey('self', related_name='child',
+                               null=True, blank=True,
+                               on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     slug = models.SlugField(max_length=254, unique=True, null=False)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
@@ -15,8 +18,19 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super(Category, self).save(*args, **kwargs)
+
     def get_friendly_name(self):
         return self.friendly_name
+
+    def get_absolute_url(self):
+        return reverse(
+            'products_from_category',
+            kwargs={'category_slug': self.slug}
+        )
 
 
 class Product(models.Model):
@@ -48,11 +62,13 @@ class Product(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
+        if not self.slug:
+            self.slug = slugify(self.name)
         super(Product, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse(
             'product_detail',
-            args=[self.category.slug, self.slug]
+            kwargs={'category_slug': self.category.slug,
+                    'product_slug': self.slug}
         )

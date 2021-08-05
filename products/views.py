@@ -5,13 +5,21 @@ from random import shuffle
 from django.contrib import messages
 
 
-def all_products(request):
+def all_products(request, category_slug=None):
     """" A view to show all products, including sorting and search queries """
 
     products = Product.objects.all()
     query = None
+    category = None
 
     if request.GET:
+
+        if category_slug is not None:
+            category = get_object_or_404(Category, slug=category_slug)
+            if category.parrent is not None:
+                products = products.filter(category__parrent__in=category.id)
+            else:
+                products = products.filter(category__name__in=category.name)
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -22,10 +30,26 @@ def all_products(request):
             queries = (Q(name__icontains=query) |
                        Q(description__icontains=query))
             products = products.filter(queries)
+    else:
+        if category_slug is not None:
+            category = get_object_or_404(Category, slug=category_slug)
+
+            if category.parent is not None:
+                products = products.filter(category__name=category.name)
+            else:
+                products = products.filter(category__parent=category.id)
+
+            category = Category.objects.filter(name=category.name)
+        else:
+            category = Category.objects.filter(parent=None)
+
+            products = list(products)
+            shuffle(products)
 
     context = {
         'products': products,
         'search_term': query,
+        'current_categories': category
     }
 
     return render(request, "products/products.html", context)
