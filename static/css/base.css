@@ -290,6 +290,15 @@ button[aria-expanded="true"] .bar2 {
     -o-transition: all 0.6s ease-in-out;
         transition: all 0.6s ease-in-out;
 }
+
+.btt-link {
+    cursor: pointer;
+}
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
 /* ---------------------------- End Buttons and Color Classes ------------------------------------- */
 
 /* ------------------------------------ Breadcrumb Nav -------------------------------------------- */
@@ -352,6 +361,10 @@ button[aria-expanded="true"] .bar2 {
 
 #product-detail-description-container {
     background: var(--light-periwinkle);
+}
+
+.no-available-products{
+    min-height: 350px;
 }
 /* ------------------------------- End Containers Classes ----------------------------------------- */
 

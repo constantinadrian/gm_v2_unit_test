@@ -11,8 +11,31 @@ def all_products(request, category_slug=None):
     products = Product.objects.all()
     query = None
     category = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            # to allow case insensitive on name field
+            # annotate all products with a new field
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+
+            if sortkey == 'category':
+                sortkey = 'category__name'
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                # if direction is desc reverse the order
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+
+            products = products.order_by(sortkey)
+
+            category = Category.objects.filter(parent=None)
 
         if category_slug is not None:
             category = get_object_or_404(Category, slug=category_slug)
@@ -20,6 +43,7 @@ def all_products(request, category_slug=None):
                 products = products.filter(category__parrent__in=category.id)
             else:
                 products = products.filter(category__name__in=category.name)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -30,14 +54,25 @@ def all_products(request, category_slug=None):
             queries = (Q(name__icontains=query) |
                        Q(description__icontains=query))
             products = products.filter(queries)
+
     else:
         if category_slug is not None:
             category = get_object_or_404(Category, slug=category_slug)
-
+            # check if category is a child of other category
             if category.parent is not None:
                 products = products.filter(category__name=category.name)
             else:
-                products = products.filter(category__parent=category.id)
+                # products = products.filter(category__parent=category.id)
+                # check if category is a parrent or just a normal category
+                # if products.count() == 0:
+                #     products = Product.objects.all().filter(category__name=category.name)
+                parent_category = Category.objects.filter(
+                        parent=category.id).count()
+
+                if parent_category:
+                    products = products.filter(category__parent=category.id)
+                else:
+                    products = products.filter(category__name=category.name)
 
             category = Category.objects.filter(name=category.name)
         else:
@@ -46,10 +81,13 @@ def all_products(request, category_slug=None):
             products = list(products)
             shuffle(products)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'products': products,
         'search_term': query,
-        'current_categories': category
+        'current_categories': category,
+        'current_sorting': current_sorting,
     }
 
     return render(request, "products/products.html", context)
