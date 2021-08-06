@@ -19,6 +19,17 @@ def all_products(request, category_slug=None):
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
+
+            # check if sort in one of the db fields
+            sortkey_check = getattr(Product, sortkey, False)
+
+            # if sortkey does not exist, redirect to the
+            # product page to avoid a 500 server error
+            if sortkey_check is False:
+                messages.error(request,
+                               "You sort criteria didn't match our records!")
+                return redirect(reverse('products'))
+
             # to allow case insensitive on name field
             # annotate all products with a new field
             if sortkey == 'name':
@@ -28,6 +39,9 @@ def all_products(request, category_slug=None):
             if sortkey == 'category':
                 sortkey = 'category__name'
 
+            if sortkey == 'brand':
+                sortkey = 'brand'
+
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 # if direction is desc reverse the order
@@ -36,15 +50,37 @@ def all_products(request, category_slug=None):
 
             products = products.order_by(sortkey)
 
-            category = Category.objects.filter(parent=None)
-
+        # check if user was on a specific category/subcategory
+        # then filter the all sorts products
+        # to show the products from that specific category/subcategory
         if category_slug is not None:
+            # check if category slug from url exist in category db
             category = get_object_or_404(Category, slug=category_slug)
-            if category.parrent is not None:
-                products = products.filter(category__parrent__in=category.id)
-            else:
-                products = products.filter(category__name__in=category.name)
 
+            # check if category is a child of other category
+            if category.parent is not None:
+                # if child show producs from this category
+                products = products.filter(category__name=category.name)
+            else:
+                # check if category is a parrent or
+                # just a normal category (no parent and no child category)
+                parent_category = Category.objects.filter(
+                        parent=category.id).count()
+
+                # if parent, show all products from his children
+                if parent_category:
+                    products = products.filter(category__parent=category.id)
+
+                # show products from requested normal category
+                else:
+                    products = products.filter(category__name=category.name)
+
+            # query again the category for
+            # badge button filter on product page
+            category = category = Category.objects.filter(name=category.name)
+
+        # if there is a search query attach to get method filter
+        # the products base on the search query
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -53,29 +89,40 @@ def all_products(request, category_slug=None):
                 return redirect(reverse('products'))
 
             queries = (Q(name__icontains=query) |
+                       Q(brand__icontains=query) |
                        Q(description__icontains=query))
             products = products.filter(queries)
 
     else:
+        # check if user navigate on a specific category/subcategory
+        # to show the products from that specific category/subcategory
         if category_slug is not None:
+            # check if category slug from url exist in category db
             category = get_object_or_404(Category, slug=category_slug)
+
             # check if category is a child of other category
             if category.parent is not None:
+                # if child show producs from this category
                 products = products.filter(category__name=category.name)
             else:
                 # check if category is a parrent or
-                # just a normal category
+                # just a normal category (no parent and no child category)
                 parent_category = Category.objects.filter(
                         parent=category.id).count()
 
+                # if parent, show all products from his children
                 if parent_category:
                     products = products.filter(category__parent=category.id)
+
+                # show products from requested normal category
                 else:
                     products = products.filter(category__name=category.name)
 
+            # query again the category for
+            # badge button filter on product page
             category = Category.objects.filter(name=category.name)
         else:
-            category = Category.objects.filter(parent=None)
+            # category = Category.objects.filter(parent=None)
 
             products = list(products)
             shuffle(products)
