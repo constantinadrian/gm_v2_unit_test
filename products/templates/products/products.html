@@ -14,7 +14,7 @@
 <div class="container {% if products %} mb-5 pb-5 {% endif %}">
     <div class="row">
         <div class="col text-center mt-4">
-            <h2 class="logo-font">Products</h2>
+            <h3 class="section-title m-0">Products</h3>
             {% for category in current_categories %}
                 {% if not category.child.all %}
                     <a class="category-badge text-decoration-none" href="{{ category.get_absolute_url }}">
@@ -30,7 +30,7 @@
                 {% endif %}
             {% empty %}
             {% endfor %}
-            <hr class="w-50 mb-1">
+            <hr class="mb-1">
         </div>
     </div>
 
