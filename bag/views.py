@@ -4,13 +4,21 @@ from django.contrib import messages
 
 
 def view_bag(request):
-    """" A view to return the bag contents page """
+    """"
+    A view to return the bag contents page.
+    This view has been copied from the Boutique
+    Ado project
+    """
 
     return render(request, 'bag/bag.html')
 
 
 def add_to_bag(request, item_id):
-    """" Add a quantity of the specified product to the shopping bag """
+    """"
+    Add a quantity of the specified product to the shopping bag.
+    This view has been copied, modified and adapted from the Boutique
+    Ado project
+    """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))

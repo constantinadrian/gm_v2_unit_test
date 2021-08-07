@@ -7,7 +7,11 @@ from django.db.models.functions import Lower
 
 
 def all_products(request, category_slug=None):
-    """" A view to show all products, including sorting and search queries """
+    """"
+    A view to show all products, including sorting and search queries.
+    This view has been copied, modified and adapted from the Boutique
+    Ado project
+    """
 
     products = Product.objects.all()
     query = None
@@ -140,7 +144,11 @@ def all_products(request, category_slug=None):
 
 
 def product_detail(request, category_slug, product_slug):
-    """" A view to show individual product details """
+    """"
+    A view to show individual product details.
+    This view has been copied, modified and adapted from the Boutique
+    Ado project
+    """
 
     category = get_object_or_404(Category, slug=category_slug)
     product = get_object_or_404(Product, category__slug=category_slug,

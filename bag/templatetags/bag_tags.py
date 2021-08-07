@@ -17,6 +17,6 @@ def split(value, arg):
 def calc_subtotal(price, quantity):
     """
     Returns total price for each product accordingly
-    to the quantity
+    to the quantity. Filter copy from the Boutique Ado project
     """
     return price * quantity

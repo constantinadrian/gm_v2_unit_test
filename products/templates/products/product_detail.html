@@ -67,7 +67,7 @@
                             {% csrf_token %}
 
                             {% if product.has_sizes %}
-                                {% include 'products/product_size.html' %}
+                                {% include 'products/includes/product_size.html' %}
                             {% endif %}
 
                             <div class="form-row">
@@ -254,4 +254,6 @@
 {% block postloadjs %}
     {{ block.super }}
     <script src="{% static 'js/owl.initializer.js' %}"></script>
+
+    {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}

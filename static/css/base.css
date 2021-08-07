@@ -35,6 +35,7 @@ body.disable-scroll-on-body {
                     overflow-y: auto;
 }
 
+/* Code copied and adapted from the Boutique Ado Project */
 /* from Bulma */
 .icon {
     align-items: center;
@@ -56,6 +57,7 @@ body.disable-scroll-on-body {
 .main-logo-link img {
     vertical-align: unset;
 }
+/* ./End Code copied and adapted from the Boutique Ado Project */
 
 button:focus {
     outline: none;
@@ -241,6 +243,7 @@ button[aria-expanded="true"] .bar2 {
     transition: all .4s ease-in-out;
 }
 
+/* Code copied and adapted from the Boutique Ado Project */
 .btn-black {
     background: black;
     color: white;
@@ -300,6 +303,7 @@ a.category-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
 }
+/* ./End Code copied and adapted from the Boutique Ado Project */
 /* ---------------------------- End Buttons and Color Classes ------------------------------------- */
 
 /* ------------------------------------ Breadcrumb Nav -------------------------------------------- */
@@ -457,6 +461,7 @@ a.category-badge > span.badge:hover {
 /* -------------------------- End Collection Card section ----------------------------------------- */
 
 /* --------------------------------------- Footer ------------------------------------------------- */
+/* Footer code copied and adapted from Caterpillar_Montessori_MS_1 project */
 #footer {
     width: 100%;
     padding: 4rem 0 4rem;
@@ -543,9 +548,11 @@ a.category-badge > span.badge:hover {
 #footer input.links-text {
     min-height: 38px !important;
 }
+/* ./End Footer code copied and adapted from Caterpillar_Montessori_MS_1 project */
 /* -------------------------------------- End Footer ---------------------------------------------- */
 
 /* ------------------------------------ Media Query ----------------------------------------------- */
+/* Code copied and adapted from the Boutique Ado Project */
 /* Slightly larger container on xl screens */
 @media only screen and (min-width: 1200px) {
     .container {
@@ -562,6 +569,7 @@ a.category-badge > span.badge:hover {
         left: 0;
         z-index: 1030;
     }
+/* ./End code copied and adapted from the Boutique Ado Project */
 
     .btn--shop-now-text,
     .card-collection-text {
