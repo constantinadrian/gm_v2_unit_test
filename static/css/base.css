@@ -372,6 +372,13 @@ a.category-badge > span.badge:hover {
 .no-available-products{
     min-height: 350px;
 }
+
+.bag-totals {
+    position: -webkit-sticky;
+    position: sticky;
+    top: calc(var(--header-container-lg-padding) + 1rem);
+    margin: 0 0.8rem 1rem;  
+}
 /* ------------------------------- End Containers Classes ----------------------------------------- */
 
 /* --------------------------------- Background Classes ------------------------------------------- */
