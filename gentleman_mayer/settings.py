@@ -80,6 +80,9 @@ TEMPLATES = [
                 'products.contexts.nav_categories',
                 'bag.contexts.bag_contexts',
             ],
+            'libraries':{
+               'bag_tags': 'bag.templatetags.bag_tags',
+            }
         },
     },
 ]
