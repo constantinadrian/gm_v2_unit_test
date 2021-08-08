@@ -1,5 +1,11 @@
-from django.shortcuts import render, redirect, get_object_or_404, reverse, HttpResponse
-from products.models import Product, Category
+from django.shortcuts import (
+    render,
+    redirect,
+    get_object_or_404,
+    reverse,
+    HttpResponse
+)
+from products.models import Product
 from django.contrib import messages
 
 
@@ -137,11 +143,16 @@ def remove_from_bag(request, item_id):
             del bag[item_id]['items_by_size'][size]
             if not bag[item_id]['items_by_size']:
                 bag.pop(item_id)
+            messages.success(request,
+                             (f'Removed size {size.upper()} '
+                              f'{product.name} from your bag'))
         else:
             bag.pop(item_id)
+            messages.success(request, f'Removed {product.name} from your bag')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
 
     except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
