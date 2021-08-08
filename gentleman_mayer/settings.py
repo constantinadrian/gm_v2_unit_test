@@ -79,13 +79,15 @@ TEMPLATES = [
                 'products.contexts.now_on_sale',
                 'products.contexts.nav_categories',
                 'bag.contexts.bag_contexts',
-            ],
-            'libraries':{
-               'bag_tags': 'bag.templatetags.bag_tags',
-            }
+            ],      
+            'builtins': [
+                'bag.templatetags.bag_tags',
+            ]
         },
     },
 ]
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`

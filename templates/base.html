@@ -1,4 +1,5 @@
 {% load static %}
+{% load bag_tags %}
 
 <!doctype html>
 <html lang="en">
@@ -156,9 +157,25 @@
         </header>
         <!-- ./End of The header section copied and adapted from the Boutique Ado Project -->
 
+        <!-- The message container copied and adapted from the Boutique Ado Project -->
         {% if messages %}
-            <div class="message-container"></div>
+            <div class="message-container">
+                {% for message in messages %}
+                    {% with message.level as level %}
+                        {% if level == 40 %}
+                            {% include 'includes/toasts/toast_error.html' %}
+                        {% elif level == 30 %}
+                            {% include 'includes/toasts/toast_warning.html' %}
+                        {% elif level == 25 %}
+                            {% include 'includes/toasts/toast_success.html' %}
+                        {% else %}
+                            {% include 'includes/toasts/toast_info.html' %}
+                        {% endif %}
+                    {% endwith %}
+                {% endfor %}
+            </div>
         {% endif %}
+        <!-- ./End the message container copied and adapted from the Boutique Ado Project -->
 
         {% block page_header %}
         {% endblock %}
@@ -178,6 +195,9 @@
 
         {% block postloadjs %}
         <script type="text/javascript">
+            // Call the toast method
+             $('.toast').toast('show');
+
             // Back to Top Button
             // Button copied from the Boutique Ado Project
             $('.btt-link').click(function(e) {
