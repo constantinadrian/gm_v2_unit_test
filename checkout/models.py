@@ -74,11 +74,11 @@ class OrderLineItem(models.Model):
     product_size = models.CharField(max_length=4, null=True,
                                     blank=True)
     jacket_size = models.CharField(max_length=4, null=True,
-                                    blank=True)
+                                   blank=True)
     waistcoat_size = models.CharField(max_length=4, null=True,
-                                    blank=True)
+                                      blank=True)
     trouser_size = models.CharField(max_length=4, null=True,
-                                    blank=True)                                
+                                    blank=True)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2,
                                          null=False, blank=False,
