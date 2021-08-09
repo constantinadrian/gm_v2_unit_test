@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'checkout',
+
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -60,6 +62,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'gentleman_mayer.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -80,9 +84,11 @@ TEMPLATES = [
                 'products.contexts.now_on_sale',
                 'products.contexts.nav_categories',
                 'bag.contexts.bag_contexts',
-            ],      
+            ],
             'builtins': [
                 'bag.templatetags.bag_tags',
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
             ]
         },
     },
