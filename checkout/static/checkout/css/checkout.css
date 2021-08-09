@@ -39,3 +39,25 @@
     border: 1px solid #000;
 }
 /* ----------------------------- End Style for checkout form -------------------------------------- */
+
+/* ------------------------------------ Loading spinner ------------------------------------------- */
+#loading-overlay {
+	display: none;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(165 179 205 / 78%);
+    
+    z-index: 99999;
+}
+
+.loading-spinner {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+}
+/* ------------------------------------ End Loading spinner -------------------------------------- */

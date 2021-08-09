@@ -15,8 +15,8 @@
 
 {% block content %}
 
-    <!-- Bag section -->
-    <section id="bag-section" class="d-flex">
+    <!-- Checkout section -->
+    <section id="checkout-section" class="d-flex">
         <div class="container h-100">
             <div class="row">
                 <div class="col mt-4">
@@ -157,6 +157,14 @@
 
         </div>
     </section>
+
+    <div id="loading-overlay">
+        <h1 class="text-light logo-font loading-spinner">
+            <span class="icon">
+                <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+            </span>
+        </h1>
+    </div>
    
 {% endblock %}
 
