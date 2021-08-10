@@ -18,7 +18,8 @@ class OrderAdmin(admin.ModelAdmin):
     # Readonly fields to not compromise the integrity of an order
     readonly_fields = ('order_number', 'date',
                        'delivery_cost', 'order_total',
-                       'grand_total',)
+                       'grand_total', 'original_bag',
+                       'stripe_pid',)
 
     # Fiedls option to specified the order of the fields in admin
     # interface to avoid the fields adjusted by django due to the
@@ -27,7 +28,8 @@ class OrderAdmin(admin.ModelAdmin):
               'email', 'phone_number', 'country',
               'postcode', 'town_or_city', 'street_address1',
               'street_address2', 'county', 'delivery_cost',
-              'order_total', 'grand_total',)
+              'order_total', 'grand_total', 'original_bag',
+              'stripe_pid',)
 
     # Restrict the columns that show up in the order list
     list_display = ('order_number', 'date', 'full_name',
