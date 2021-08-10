@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -27,4 +27,55 @@
         </div>
     </section>
 
+    <section id="profile-nav-detail-section" class="my-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav nav-tabs justify-content-center" id="product-info-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link links-text text-uppercase active" id="details-tab" data-toggle="tab" href="#description-tab-container" role="tab" aria-controls="description-tab-container"
+                                aria-selected="true">Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links-text text-uppercase" id="reviews-tab" data-toggle="tab" href="#reviews-tab-container" role="tab" aria-controls="reviews-tab-container"
+                                aria-selected="false">History</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="description-tab-container" role="tabpanel" aria-labelledby="details-tab">
+                    <div class="row mt-3 py-5">
+                        <div class="col-12">
+                            <p class="brand-text">Default Delivery Information</p>
+                            <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                                {% csrf_token %}
+                                {{ form|crispy }}
+                                <button class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="reviews-tab-container" role="tabpanel" aria-labelledby="reviews-tab">
+                    <div class="row mt-3 py-5">
+                        <div class="col-12">
+                            <p class="brand-text">Order History</p>
+                            <p class="content-text">{{ orders }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
