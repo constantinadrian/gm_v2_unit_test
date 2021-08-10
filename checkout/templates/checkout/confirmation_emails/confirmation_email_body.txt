@@ -1,0 +1,31 @@
+Hello {{ order.full_name }}!
+
+This is a confirmation of your order at Gentleman Mayer. Your order information is below:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: €{{ order.order_total }}
+Delivery: €{{ order.delivery_cost }}
+Grand Total: €{{ order.grand_total }}
+
+Your order will be shipped to: 
+
+{{ order.street_address1 }}{% if order.street_address2 %}
+{{ order.street_address1 }}{% endif %}
+{{ order.town_or_city }}{% if order.county %}
+{{ order.county }}{% endif %}{% if order.postcode %}
+{{ order.postcode }}{% endif %}
+{{ order.country }}
+
+We've got your phone number on file as {{ order.phone_number }}.
+
+You can expect your order to be delivered within 3-5 working days.
+
+If you have any questions, feel free to contact us at {{ contact_email }}.
+
+Thank you for your order!
+
+Sincerely,
+
+Gentleman Mayer

@@ -174,8 +174,6 @@ def checkout(request):
                     'street_address2': profile.default_street_address2,
                     'county': profile.default_county,
                 })
-                print('got profile order form')
-                print(profile)
             except UserProfile.DoesNotExist:
                 order_form = OrderForm()
         else:
