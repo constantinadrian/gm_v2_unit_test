@@ -63,6 +63,13 @@
                         <p class="title-text">{{ product.name }}</p>
                         <p class="mb-0 text-left title-text font-weight-500">€ {{ product.price }}</p>
 
+                        <p class="mt-4">
+                            <small>
+                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                            </small>
+                        </p>
+
                         <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                             {% csrf_token %}
 
