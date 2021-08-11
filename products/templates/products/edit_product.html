@@ -23,18 +23,18 @@
 
             <div class="row mb-5">
                 <div class="col-12">
-                    <p class="title-text text-center text-black">Add Product</p>
+                    <p class="title-text text-center text-black">Edit a Product</p>
                 </div>
             </div>
 
             <div class="row justify-content-center align-items-center">
                 <div class="col-12 col-lg-6">
-                    <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                    <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form | crispy }}
                         <div class="text-right">
                             <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                            <button class="btn btn-black rounded-0" type="submit">Add Product</button>
+                            <button class="btn btn-black rounded-0" type="submit">Update Product</button>
                         </div>
                     </form>
                 </div>
