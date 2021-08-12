@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<section id="reviews-section" class="d-flex">
+    <div class="container h-100">
+        <div class="row">
+            <div class="col mt-4">
+                <h3 class="section-title m-0">Reviews</h3>
+                <hr>
+            </div>
+        </div>
+        
+        <div class="row {% if bag_items %}mb-5 pb-5{% endif %}">
+            {% for product in products %}
+                
+            {% empty %}
+                <div class="col-12 no-available-products d-flex justify-content-center align-items-center">
+                    <p class="text-center title-text">No reviews available!</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
