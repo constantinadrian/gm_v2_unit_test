@@ -6,8 +6,6 @@ from django.contrib import messages
 from django.db.models.functions import Lower
 from .forms import ProductForm
 from django.contrib.auth.decorators import login_required
-from reviews.forms import ReviewForm
-from profiles.models import UserProfile
 
 
 def all_products(request, category_slug=None):
@@ -275,43 +273,3 @@ def delete_product(request, product_id):
     messages.success(request, 'Product deleted!')
 
     return redirect(reverse('products'))
-
-
-@login_required
-def add_review(request, product_slug):
-    """
-    Add review to a product to the store
-    """
-    user = UserProfile.objects.get(user=request.user)
-    product = get_object_or_404(Product, slug=product_slug)
-
-    if request.method == 'POST':
-        review_form = ReviewForm(request.POST)
-
-        if review_form.is_valid():
-            review = review_form.save(commit=False)
-            review.user = user
-            review.product = product
-            review.save()
-
-            messages.success(request, (f'Successfully added review '
-                                       f'to {product.name}'))
-            return redirect(
-                reverse('add_review',
-                        kwargs={'product_slug': product.slug}))
-        else:
-            messages.error(request,
-                           ('Failed to add review to product. '
-                            'Please ensure the form is valid.'))
-
-    else:
-        review_form = ReviewForm()
-
-    template = 'products/add_review.html'
-    context = {
-        'product': product,
-        'review_form': review_form,
-        'product_management': True,
-    }
-
-    return render(request, template, context)

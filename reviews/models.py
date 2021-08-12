@@ -46,7 +46,6 @@ class Review(models.Model):
     def get_display_average_rating(self):
         """
         Get the average rating in procentage for
-        rendering the 5 star raing
+        rendering the 5 star rating
         """
-
         return self.get_average_rating() * 100 / 5

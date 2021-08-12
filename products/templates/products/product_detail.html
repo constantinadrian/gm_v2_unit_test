@@ -63,12 +63,14 @@
                         <p class="title-text">{{ product.name }}</p>
                         <p class="mb-0 text-left title-text font-weight-500">€ {{ product.price }}</p>
 
+                        {% if request.user.is_superuser %}
                         <p class="mt-4">
                             <small>
                                 <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                <a class="text-danger" type="button" data-toggle="modal" data-target="#deleteModal" data-item="product" data-url="{% url 'delete_product' product.id %}">Delete</a>
                             </small>
                         </p>
+                        {% endif %}
 
                         <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                             {% csrf_token %}
@@ -166,39 +168,73 @@
                         <div class="row">
                             <div class="col-12">
                                 <p class="brand-text">Reviews {% if product.reviews.all %}({{ product.reviews.all|length }}){%endif%}</p>
-                                {% if product.reviews.all %}
-                                    {% for review in product.reviews.all %}
-                                    <p class="content-text">{{ review.user }}</p>
-                                    <p class="content-text">{{ review.date_posted }}</p>
-                                    <div class="star-ratings-css">
-                                        <div class="star-ratings-css-top" style="width: {{review.get_display_average_rating}}%">
-                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                                        <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                            </div>
+                        </div>
+
+                        
+                        {% if product.reviews.all %}
+                            {% for review in product.reviews.all %}
+                                <div class="row">
+                                    <div class="col-12 col-sm-8 order-sm-last mb-2">
+                                        <p class="content-text font-weight-700 mb-0">{{ review.title }}</p>
                                     </div>
-                                    <p class="content-text">{{ review.title }}</p>
-                                    <p class="content-text">{{ review.description }}</p>
-                                    
-                                    <p class="content-text">{{ review.get_average_rating }}</p>
-                                    <p class="content-text">{{ review.get_display_average_rating }}</p>
-                                    
+                                    <div class="col-12 col-sm-4 mb-2">
+                                        <div class="star-ratings-css">
+                                            <div class="star-ratings-css-top" style='width: {{review.get_display_average_rating}}%'>
+                                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                            <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                    {% endfor %}
-                                {% else %}
-                                    <p class="content-text">No reviews available</p>
-                                {% endif %}
-                            </div>
-                        </div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-8 order-sm-last mb-2">
+                                        <p class="content-text mb-0">{{ review.description }}</p>
+                                    </div>
+                                    <div class="col-12 col-sm-4 mb-2">
+                                        <p class="content-text font-weight-600 mb-0">{{ review.user }}</p>
+                                        <p class="content-text mb-0">{{ review.date_posted }}</p>
+                                    </div>
+                                </div>
 
+                                {% if request.user.is_authenticated and request.user.id == review.user.id %}
+                                <p class="mt-4">
+                                    <small>
+                                        <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                        <a class="text-danger" type="button" data-toggle="modal" data-target="#deleteModal" data-item="review" data-url="{% url 'delete_product' product.id %}">Delete</a>
+                                    </small>
+                                </p>
+                                    
+                                {% endif %}  
+                                
+                                <div class="row mb-5">
+                                    <div class="col-12">
+                                        <hr>
+                                    </div>
+                                </div>
+
+                            {% endfor %}
+                        {% else %}
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                                <a href="{% url 'add_review' product.slug %}" class="btn btn-black rounded-0 text-uppercase mt-3 w-100">
-                                    <span class="icon">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </span>
-                                    <span class="text-uppercase">Write a Review</span>
-                                </a>
+                            <div class="col-12">
+                                <p class="content-text">There are no reviews yet.</p>
                             </div>
                         </div>
+                        {% endif %}
+                        
+
+                        {% if request.user.is_authenticated %}
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                    <a href="{% url 'add_review' product.slug %}" class="btn btn-black rounded-0 text-uppercase mt-3 w-100">
+                                        <span class="icon">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </span>
+                                        <span class="text-uppercase">Write a Review</span>
+                                    </a>
+                                </div>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>

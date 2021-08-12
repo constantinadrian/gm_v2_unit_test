@@ -215,6 +215,10 @@ button[aria-expanded="true"] .bar2 {
 .font-weight-600 {
     font-weight: 600 !important;
 }
+
+.font-weight-700 {
+    font-weight: 700 !important;
+}
 /* ------------------------------- End Font Family Classes ---------------------------------------- */
 
 /* ------------------------------ Buttons and Color Classes --------------------------------------- */
@@ -638,17 +642,17 @@ input[name="q"]::placeholder {
 .star-ratings-css {
     unicode-bidi: bidi-override;
     color: #c5c5c5;
-    font-size: 25px;
+    font-size: 24px;
     height: 25px;
     width: 100px;
-    /* margin: 0 auto; */
     position: relative;
     padding: 0;
     text-shadow: 0px 1px 0 #a2a2a2;
+    line-height: 0.8;
 }
 
 .star-ratings-css-top {
-    color: #e7711b;
+    color: #000000;
     padding: 0;
     position: absolute;
     z-index: 1;
@@ -683,6 +687,45 @@ input[name="q"]::placeholder {
     display: block;
 }
 /* End of credit for rendering stars */
+
+/* ----------------------------------- Modal ----------------------------------------- */
+/* Code from Savour project and taken and adapted to this project */
+.modal {
+    padding-right: 0px !important;
+}
+
+.modal-content {
+    word-break: break-word;
+}
+
+.modal-header .modal-title {
+    margin-bottom: 0;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-title {
+    margin-bottom: 1.5rem;
+}
+
+.modal-body-info .fa-exclamation-triangle {
+    margin-right: .5rem;
+    color: #222;
+}
+
+.modal-footer {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-around;
+    -webkit-box-align: center;   
+        -ms-flex-align: center;   
+            align-items: center;
+}
+
+/* ./End Code from Savour project and taken and adapted to this project */
+/* --------------------------------- End of Modal ------------------------------------ */
 
 /* --------------------------------------- Footer ------------------------------------------------- */
 /* Footer code copied and adapted from Caterpillar_Montessori_MS_1 project */
