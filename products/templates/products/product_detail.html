@@ -150,11 +150,11 @@
             </div>
         </div>
 
-        <div id="product-detail-description-container" class="w-100">
+        <div id="product-detail-description-container" class="w-100 mt-3 py-5">
             <div class="container">
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="description-tab-container" role="tabpanel" aria-labelledby="details-tab">
-                        <div class="row mt-3 py-5">
+                        <div class="row">
                             <div class="col-12">
                                 <p class="brand-text">Description</p>
                                 <p class="content-text">{{ product.description }}</p>
@@ -163,10 +163,40 @@
                     </div>
 
                     <div class="tab-pane fade" id="reviews-tab-container" role="tabpanel" aria-labelledby="reviews-tab">
-                        <div class="row mt-3 py-5">
+                        <div class="row">
                             <div class="col-12">
-                                <p class="brand-text">Description</p>
-                                <p class="content-text">{{ product.description }}</p>
+                                <p class="brand-text">Reviews {% if product.reviews.all %}({{ product.reviews.all|length }}){%endif%}</p>
+                                {% if product.reviews.all %}
+                                    {% for review in product.reviews.all %}
+                                    <p class="content-text">{{ review.user }}</p>
+                                    <p class="content-text">{{ review.date_posted }}</p>
+                                    <div class="star-ratings-css">
+                                        <div class="star-ratings-css-top" style="width: {{review.get_display_average_rating}}%">
+                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                        <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                    </div>
+                                    <p class="content-text">{{ review.title }}</p>
+                                    <p class="content-text">{{ review.description }}</p>
+                                    
+                                    <p class="content-text">{{ review.get_average_rating }}</p>
+                                    <p class="content-text">{{ review.get_display_average_rating }}</p>
+                                    
+
+                                    {% endfor %}
+                                {% else %}
+                                    <p class="content-text">No reviews available</p>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                <a href="{% url 'add_review' product.slug %}" class="btn btn-black rounded-0 text-uppercase mt-3 w-100">
+                                    <span class="icon">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </span>
+                                    <span class="text-uppercase">Write a Review</span>
+                                </a>
                             </div>
                         </div>
                     </div>
