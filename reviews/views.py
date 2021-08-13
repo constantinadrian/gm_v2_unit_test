@@ -57,3 +57,28 @@ def add_review(request, product_slug):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """
+    Delete a review from the a specific product
+    """
+    # check if review exists
+    review = get_object_or_404(Review, pk=review_id)
+
+    # check is there is a userprofile attach to that review
+    user = get_object_or_404(UserProfile, pk=review.user.id)
+
+    # check is the product still exist in db
+    product = get_object_or_404(Product, pk=review.product.id)
+
+    # check is requested user is the owner of the rewiev
+    if not request.user.id == user.id:
+        messages.error(request, 'Sorry, this review does not belong to you.')
+        return redirect(reverse('home'))
+
+    review.delete()
+    messages.success(request, 'Review deleted!')
+
+    return redirect(reverse('reviews'))

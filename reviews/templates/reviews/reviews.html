@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-    <div class="container h-100 {% if bag_items %}mb-5 pb-5{% endif %}">
+    <div class="container h-100 {% if reviews %}mb-5 pb-5{% endif %}">
         {% for review in reviews %}
             <div class="row">
                 <div class="col-12 col-sm-8 order-sm-last mb-2">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="col-12 col-sm-4 mb-2">
                     <div class="star-ratings-css">
-                        <div class="star-ratings-css-top" style='width: {{review.get_display_average_rating}}%'>
+                        <div class="star-ratings-css-top" style='width: {{review.get_each_display_rating}}%'>
                             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
                         <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
                     </div>
@@ -48,7 +48,7 @@
             <p class="mt-4">
                 <small>
                     <a href="">Edit</a> | 
-                    <a class="text-danger" type="button" data-toggle="modal" data-target="#deleteModal" data-item="review" data-url="">Delete</a>
+                    <a class="text-danger" type="button" data-toggle="modal" data-target="#deleteModal" data-item="review" data-url="{% url 'delete_review' review.id %}">Delete</a>
                 </small>
             </p>
                 

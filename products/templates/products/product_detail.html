@@ -156,16 +156,20 @@
             <div class="container">
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="description-tab-container" role="tabpanel" aria-labelledby="details-tab">
-                        <div class="row">
+                        <div class="row mb-3">
                             <div class="col-12">
                                 <p class="brand-text">Description</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
                                 <p class="content-text">{{ product.description }}</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="tab-pane fade" id="reviews-tab-container" role="tabpanel" aria-labelledby="reviews-tab">
-                        <div class="row">
+                        <div class="row mb-3">
                             <div class="col-12">
                                 <p class="brand-text">Reviews {% if product.reviews.all %}({{ product.reviews.all|length }}){%endif%}</p>
                             </div>
@@ -180,7 +184,7 @@
                                     </div>
                                     <div class="col-12 col-sm-4 mb-2">
                                         <div class="star-ratings-css">
-                                            <div class="star-ratings-css-top" style='width: {{review.get_display_average_rating}}%'>
+                                            <div class="star-ratings-css-top" style='width: {{review.get_each_display_rating}}%'>
                                                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
                                             <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
                                         </div>
@@ -200,8 +204,8 @@
                                 {% if request.user.is_authenticated and request.user.id == review.user.id %}
                                 <p class="mt-4">
                                     <small>
-                                        <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                        <a class="text-danger" type="button" data-toggle="modal" data-target="#deleteModal" data-item="review" data-url="{% url 'delete_product' product.id %}">Delete</a>
+                                        <a href="">Edit</a> | 
+                                        <a class="text-danger" type="button" data-toggle="modal" data-target="#deleteModal" data-item="review" data-url="{% url 'delete_review' review.id %}">Delete</a>
                                     </small>
                                 </p>
                                     

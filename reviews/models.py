@@ -11,7 +11,7 @@ class Review(models.Model):
 
     class Meta:
         verbose_name_plural = "Reviews"
-        ordering = ("date_posted",)
+        ordering = ("-date_posted",)
 
     RATE = [
         (1, "★☆☆☆☆"),
@@ -45,7 +45,14 @@ class Review(models.Model):
 
     def get_display_average_rating(self):
         """
-        Get the average rating in procentage for
+        Get the average rating for
         rendering the 5 star rating
         """
         return self.get_average_rating() * 100 / 5
+
+    def get_each_display_rating(self):
+        """
+        Get the each rating for
+        rendering the 5 star rating
+        """
+        return self.rating * 100 / 5
