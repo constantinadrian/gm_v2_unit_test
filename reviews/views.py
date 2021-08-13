@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.db.models.functions import Lower
 
 from .forms import ReviewForm
 from .models import Review
@@ -12,8 +13,30 @@ def reviews(request):
     """" A view to return the index page """
     reviews = Review.objects.all()
 
+    sort = None
+    direction = None
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+
+            if sortkey == "name":
+                sortkey = "lower_name"
+                reviews = reviews.annotate(lower_name=Lower('product'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == "desc":
+                    sortkey = f'-{sortkey}'
+
+            reviews = reviews.order_by(sortkey)
+
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'reviews': reviews,
+        'current_sorting': current_sorting
     }
 
     return render(request, "reviews/reviews.html", context)
