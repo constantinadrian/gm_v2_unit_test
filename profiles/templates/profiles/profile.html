@@ -64,12 +64,63 @@
                 <div class="tab-pane fade" id="reviews-tab-container" role="tabpanel" aria-labelledby="reviews-tab">
                     <div class="row mt-3 py-5">
                         <div class="col-12">
-                            <p class="brand-text">Order History</p>
+                            <p class="brand-text mb-4">Order History</p>
                             {% if orders %}
-                                <div class="order-history table-responsive">
+                                <div class="d-block d-md-none">
+                                    {% for order in orders %}
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 mb-2">
+                                                <p class="title-text m-0">Order Number</p>
+                                            </div>
+                                            <div class="col-12 col-sm-6 mb-2">
+                                                <a href="{% url 'order_history' order.order_number %}"
+                                                        title="{{ order.order_number }}" class="text-break">
+                                                            {{ order.order_number|truncatechars:9 }}
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 mb-2">
+                                                <p class="title-text m-0">Date</p>
+                                            </div>
+                                            <div class="col-12 col-sm-6 mb-2">
+                                                {{ order.date }}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 mb-2">
+                                                <p class="title-text m-0">Items</p>
+                                            </div>
+                                            <div class="col-12 col-sm-6 mb-2">
+                                                <ul class="list-unstyled">
+                                                    {% for item in order.lineitems.all %}
+                                                        <li class="small">            
+                                                            {{ item.product.name }} x{{ item.quantity }}
+                                                        </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 mb-2">
+                                                <p class="title-text m-0">Order Total</p>
+                                            </div>
+                                            <div class="col-12 col-sm-6 mb-2">
+                                                €{{ order.grand_total }}
+                                            </div>
+                                        </div>
+                                        {% if forloop.counter != orders|length %}
+                                            <div class="row">
+                                                <div class="col"><hr></div>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+
+                                <div class="order-history table-responsive d-none d-md-block">
                                     <table class="table table-sm table-borderless">
                                         <thead>
-                                            <tr>
+                                            <tr class="border-bottom">
                                                 <th>Order Number</th>
                                                 <th>Date</th>
                                                 <th>Items</th>
@@ -78,15 +129,15 @@
                                         </thead>
                                         <tbody>
                                             {% for order in orders %}
-                                                <tr>
-                                                    <td>
+                                                <tr class="{% if forloop.counter != orders|length %}border-bottom{% endif %}">
+                                                    <td class="py-2">
                                                         <a href="{% url 'order_history' order.order_number %}"
                                                         title="{{ order.order_number }}">
-                                                            {{ order.order_number|truncatechars:6 }}
+                                                            {{ order.order_number|truncatechars:9 }}
                                                         </a>
                                                     </td>
-                                                    <td>{{ order.date }}</td>
-                                                    <td>
+                                                    <td class="py-2">{{ order.date }}</td>
+                                                    <td class="py-2">
                                                         <ul class="list-unstyled">
                                                             {% for item in order.lineitems.all %}
                                                                 <li class="small">            
@@ -95,7 +146,7 @@
                                                             {% endfor %}
                                                         </ul>
                                                     </td>
-                                                    <td>${{ order.grand_total }}</td>
+                                                    <td class="py-2">€{{ order.grand_total }}</td>
                                                 </tr>
                                             {% endfor %}
                                         </tbody>

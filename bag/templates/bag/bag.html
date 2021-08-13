@@ -15,7 +15,7 @@
     <section id="bag-section" class="d-flex">
         <div class="container h-100">
             <div class="row">
-                <div class="col mt-4">
+                <div class="col my-4">
                     <h3 class="section-title m-0">Shopping Bag</h3>
                     <hr>
                 </div>
@@ -25,12 +25,6 @@
                 {% if bag_items %}
                     <div class="col-12 col-lg-4 order-lg-last">
                         <div class="bag-totals">
-                            <div class="row mb-4">
-                                <div class="col-12">
-                                    <p class="links-text">Bag Totals</p>
-                                </div>
-                            </div>
-
                             <div class="row">
                                 <div class="col-12">
                                     <p class="title-text">Bag Total: €{{ total|floatformat:2 }}</p>
@@ -66,13 +60,12 @@
                     </div>
 
                     <div class="col-12 col-lg-8">
-                        <div class="row mb-2">
-                            <div class="col-12">
-                                <p class="links-text">Bag Items</p>
-                            </div>
-                        </div>
-
                         <div class="d-block d-md-none">
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <p class="text-muted">A summary of your bag items is below</p>
+                                </div>
+                            </div>
                             {% for item in bag_items %}
                                 <div class="row">
                                     <div class="col-12 col-sm-6 mb-2">
@@ -80,8 +73,8 @@
                                     </div>
                                     <div class="col-12 col-sm-6 mb-2">
                                         {% include 'bag/includes/product_info.html' %}
-                                        <p class="mt-0">Price each: ${{ item.product.price }}</p>
-                                        <p><strong>Subtotal:</strong> ${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                        <p class="mt-0">Price each: €{{ item.product.price }}</p>
+                                        <p><strong>Subtotal:</strong> €{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                         {% include 'bag/includes/quantity_form.html' %}
                                     </div>
                                 </div>
@@ -95,6 +88,15 @@
 
                         <div class="table-responsive rounded-0 d-none d-md-block">
                             <table class="table table-sm table-borderless">
+                                <thead class="text-black">
+                                    <tr>
+                                        <th scope="col">Product info</th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Qty</th>
+                                        <th scope="col">Subtotal</th>
+                                    </tr>
+                                </thead>
                                 {% for item in bag_items %}
                                     <tr class="{% if forloop.counter != bag_items|length %}border-bottom{% endif %}">
                                         <td class="p-3 w-25">
