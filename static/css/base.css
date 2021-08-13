@@ -567,7 +567,7 @@ input[name="q"]::placeholder {
     position: -webkit-sticky;
     position: sticky;
     top: calc(var(--header-container-lg-padding) + 1rem);
-    margin: 0 0.8rem 1rem;  
+    margin: 0 0 1rem;
 }
 /* ------------------------------- End Containers Classes ----------------------------------------- */
 
@@ -875,6 +875,10 @@ input[name="q"]::placeholder {
     .form-group-wrapper-submit {
         width: 40%;
         flex-grow: 1;
+    }
+
+    .bag-totals {
+        margin: 0 0.8rem 1rem;  
     }
 
     .review-border-right {
