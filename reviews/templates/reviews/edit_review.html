@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <!-- Add Product Review section -->
+    <section id="review-section" class="d-flex mb-5 pb-5">
+        <div class="container h-100">
+            <div class="row">
+                <div class="col mt-4">
+                    <h3 class="section-title m-0">Review</h3>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-lg-8">
+                    <div class="rating" id="rate-recipe">
+                        <p class="brand-text">Write a Review</p>
+                        <form class="rating-form" id="rating-form" method="POST" action="{% url 'edit_review' review.id %}">
+                            {% csrf_token %}
+                            {{ review_form  | crispy }}
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                    <a href="{{ review.product.get_absolute_url }}" class="btn btn-outline-black rounded-0 mt-3 w-100">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase">Back to Product</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-3 w-100"
+                                        value="submit Review">
+                                </div>
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+   
+{% endblock %}

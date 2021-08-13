@@ -47,7 +47,7 @@
             {% if request.user.is_authenticated and request.user.id == review.user.id %}
             <p class="mt-4">
                 <small>
-                    <a href="">Edit</a> | 
+                    <a href="{% url 'edit_review' review.id %}">Edit</a> | 
                     <a class="text-danger" type="button" data-toggle="modal" data-target="#deleteModal" data-item="review" data-url="{% url 'delete_review' review.id %}">Delete</a>
                 </small>
             </p>

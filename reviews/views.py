@@ -60,9 +60,60 @@ def add_review(request, product_slug):
 
 
 @login_required
+def edit_review(request, review_id):
+    """ Edit a review from a specific product """
+    # check if review exists
+    review = get_object_or_404(Review, pk=review_id)
+
+    # check is there is a userprofile attach to that review
+    user = get_object_or_404(UserProfile, pk=review.user.id)
+
+    # check is the product still exist in db
+    product = get_object_or_404(Product, pk=review.product.id)
+
+    # check is requested user is the owner of the rewiev
+    if not request.user.id == user.id:
+        messages.error(request, 'Sorry, this review does not belong to you.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST, instance=review)
+
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.user = user
+            review.product = product
+            review.save()
+
+            messages.success(request, (f'Successfully updated review '
+                                       f'to {product.name}'))
+            return redirect(
+                reverse('product_detail',
+                        kwargs={'category_slug': product.category.slug,
+                                'product_slug': product.slug}))
+        else:
+            messages.error(request,
+                           ('Failed to update review to product. '
+                            'Please ensure the form is valid.'))
+
+    else:
+        review_form = ReviewForm(instance=review)
+        messages.info(request, f'You are editing {product.name} review.')
+
+    template = 'reviews/edit_review.html'
+    context = {
+        'review': review,
+        'review_form': review_form,
+        'product_management': True,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
 def delete_review(request, review_id):
     """
-    Delete a review from the a specific product
+    Delete a review from a specific product
     """
     # check if review exists
     review = get_object_or_404(Review, pk=review_id)
