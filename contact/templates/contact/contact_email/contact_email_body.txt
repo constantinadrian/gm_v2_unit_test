@@ -1,0 +1,9 @@
+Hello Gentleman Mayer
+
+{{ message }}
+
+My contact email is {{ email }}.
+
+Sincerely,
+
+{{ name }}

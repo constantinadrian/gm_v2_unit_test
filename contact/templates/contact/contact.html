@@ -24,7 +24,23 @@
                 <p class="text-muted text-center">
                     Got a question? We'd love to hear from you. Send us a message and we'll get in touch with you shortly!
                 </p>
-                
+                <form action="{% url 'contact' %}" method="POST" id="contact-form">
+                    {% csrf_token %}
+                    {{ contact_form | crispy }}
+
+                    <div class="submit-button text-right mt-5 mb-5 pb-5">
+                        <div class="row justify-content-center justify-content-center">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <button id="submit-button" class="btn btn-black rounded-0 w-100">
+                                    <span class="font-weight-bold">Send</span>
+                                    <span class="icon">
+                                        <i class="far fa-paper-plane"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
