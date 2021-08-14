@@ -6,18 +6,19 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 mb-4">
                 <h3 class="title-text text-uppercase text-white mb-5">Get the latest fashion updates</h3>
 
-                <form class="mb-3" autocomplete="off" action="" method="POST">
+                <form class="mb-3" autocomplete="off" action="{% url 'newsletter_signup' %}" method="POST">
                     {% csrf_token %}
                     <div class="form-group">
                         <div class="form-group-wrapper d-flex flex-md-column flex-lg-row flex-wrap">
                             <div class="form-group-wrapper-input">
-                                <input type="email" class="form-control border-0 rounded-0 links-text py-2 h-100" id="exampleInputEmail1" placeholder="Email *" aria-describedby="emailHelp">
+                                <input type="email" name="email" maxlength="254" class="form-control border-0 rounded-0 links-text py-2 h-100" placeholder="Email *" required="" id="id_email">
                             </div>
                             <div class="form-group-wrapper-submit d-flex">
                                 <input type="submit" class="btn btn-white rounded-0 w-100 links-text font-weight-600 text-uppercase py-2 h-100" value="Subscribe">
                             </div>
                         </div>
                     </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
 
                 <ul class="list-inline social-icon-links">

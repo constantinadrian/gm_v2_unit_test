@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'profiles',
     'reviews',
     'contact',
+    'newsletter',
 
     'crispy_forms',
 ]
@@ -87,6 +88,7 @@ TEMPLATES = [
                 'products.contexts.now_on_sale',
                 'products.contexts.nav_categories',
                 'bag.contexts.bag_contexts',
+                'newsletter.contexts.newsletter_form',
             ],
             'builtins': [
                 'bag.templatetags.bag_tags',
