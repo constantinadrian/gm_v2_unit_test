@@ -92,6 +92,7 @@ TEMPLATES = [
             ],
             'builtins': [
                 'bag.templatetags.bag_tags',
+                'products.templatetags.url_param_replace',
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field',
             ]

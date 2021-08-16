@@ -127,7 +127,7 @@ button[aria-expanded="true"] .bar2 {
     font-weight: 500;
     font-style: normal;
     text-transform: uppercase;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     letter-spacing: 1.5px;
     text-align: center;
     margin-bottom: 60px;
@@ -211,6 +211,7 @@ button[aria-expanded="true"] .bar2 {
 
 .breadcrumb-item.title-text.active {
     font-weight: 400 !important;
+    line-height: 2.5;
 }
 
 .font-weight-500 {
@@ -503,7 +504,7 @@ input[name="q"]::placeholder {
 
 .breadcrumb-item a,
 .breadcrumb-item.active {
-    font-size: 12px !important;
+    font-size: 10px !important;
 }
 /* ---------------------------------- End Breadcrumb Nav ------------------------------------------- */
 
@@ -646,6 +647,7 @@ input[name="q"]::placeholder {
 }
 /* -------------------------- End Collection Card section ----------------------------------------- */
 
+/* ----------------------------- Rendering review stars ------------------------------------------- */
 /* https://stackoverflow.com/questions/59593884/django-rendering-a-number-as-a-5-stars-rating */
 .star-ratings-css {
     unicode-bidi: bidi-override;
@@ -694,7 +696,50 @@ input[name="q"]::placeholder {
     height: 21px;
     display: block;
 }
-/* End of credit for rendering stars */
+/* --------------------------- End Rendering review stars ----------------------------------------- */
+
+/* ----------------------------------- Pagination ------------------------------------------------- */
+.pagination-container .page-link {
+    color: #0c121c;
+    border: 1px solid #0c121c;
+    margin: 1rem .5rem;
+    font-weight: 600;
+}
+
+.pagination-container .page-item:first-child .page-link,
+.pagination-container .page-item:last-child .page-link {
+    border-radius: 0 !important;
+    margin: 1rem .5rem;
+}
+
+.pagination-container .page-item.active .page-link,
+.pagination-container .page-item.active .page-link:hover {
+    color: #fff;
+    background-color: #0c121c;
+    border-color: #0c121c;
+}
+
+.pagination-container .page-item.disabled .page-link,
+.pagination-container .page-item.disabled .page-link:hover {
+    color: #9b9b9b80;
+}
+
+.pagination-container .page-link:hover {
+    z-index: 2;
+    color: #0c121c;
+    text-decoration: none;
+    background: transparent;
+    border-color: #0c121c;
+}
+
+.pagination-container .page-link:focus {
+    box-shadow: none;
+}
+
+.pagination-container .page-link a {
+    color: #0c121c;
+}
+/* -------------------------------- End Pagination ------------------------------------------------ */
 
 /* ----------------------------------- Modal ----------------------------------------- */
 /* Code from Savour project and taken and adapted to this project */
@@ -943,5 +988,15 @@ input[name="q"]::placeholder {
     .dropdown-item {
         font-size: 14px;
         margin: 0;
+    }
+}
+
+@media only screen and (min-width:375px){
+    .breadcrumb-item.title-text.active {
+        line-height: 2;
+    }
+
+    .breadcrumb-item a, .breadcrumb-item.active {
+        font-size: 12px !important;
     }
 }

@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
-from .models import Product, Category
 from django.db.models import Q
 from random import shuffle
 from django.contrib import messages
 from django.db.models.functions import Lower
-from .forms import ProductForm
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
+from .models import Product, Category
+from .forms import ProductForm
 
 
 def all_products(request, category_slug=None):
@@ -127,16 +129,35 @@ def all_products(request, category_slug=None):
             # query again the category for
             # badge button filter on product page
             category = Category.objects.filter(name=category.name)
-        else:
-            # category = Category.objects.filter(parent=None)
-
-            products = list(products)
-            shuffle(products)
 
     current_sorting = f'{sort}_{direction}'
 
+    # Pagination show 12 products per page
+    paginator = Paginator(products, 12)
+
+    page = request.GET.get('page')
+    try:
+        all_products = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        all_products = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        all_products = paginator.page(paginator.num_pages)
+
+    # Pagination was inspired, modified and
+    # adapted to this project from from this
+    # # Credit code
+    # https://www.youtube.com/watch?v=MAIFJ3_bcCY
+    index = all_products.number - 1
+    max_index = len(paginator.page_range)
+    start_index = index - 2 if index >= 2 else 0
+    end_index = index + 3 if index <= max_index - 3 else max_index
+    page_range = paginator.page_range[start_index:end_index]
+
     context = {
-        'products': products,
+        'products': all_products,
+        'page_range': page_range,
         'search_term': query,
         'current_categories': category,
         'current_sorting': current_sorting,

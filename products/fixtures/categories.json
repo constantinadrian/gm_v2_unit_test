@@ -5,7 +5,8 @@
       "fields": {
         "name": "2_piece_suits",
         "slug": "2-piece-suits",
-        "friendly_name": "2 Piece Suits"
+        "friendly_name": "2 Piece Suits",
+        "parent": 18
       }
     },
     {
@@ -14,7 +15,8 @@
       "fields": {
         "name": "3_piece_suits",
         "slug": "3-piece-suits",
-        "friendly_name": "3 Piece Suits"
+        "friendly_name": "3 Piece Suits",
+        "parent": 18
       }
     },
     {
@@ -23,7 +25,8 @@
       "fields": {
         "name": "tuxedos",
         "slug": "tuxedos",
-        "friendly_name": "Tuxedos"
+        "friendly_name": "Tuxedos",
+        "parent": 18
       }
     },
     {
@@ -32,7 +35,8 @@
       "fields": {
         "name": "jackets",
         "slug": "jackets",
-        "friendly_name": "Jackets"
+        "friendly_name": "Jackets",
+        "parent": 19
       }
     },
     {
@@ -41,7 +45,8 @@
       "fields": {
         "name": "waistcoats",
         "slug": "waistcoats",
-        "friendly_name": "Waistcoats"
+        "friendly_name": "Waistcoats",
+        "parent": 19
       }
     },
     {
@@ -50,7 +55,8 @@
       "fields": {
         "name": "shirts",
         "slug": "shirts",
-        "friendly_name": "Shirts"
+        "friendly_name": "Shirts",
+        "parent": 19
       }
     },
     {
@@ -59,7 +65,8 @@
       "fields": {
         "name": "trousers",
         "slug": "trousers",
-        "friendly_name": "Trousers"
+        "friendly_name": "Trousers",
+        "parent": 19
       }
     },
     {
@@ -68,7 +75,8 @@
       "fields": {
         "name": "ties",
         "slug": "ties",
-        "friendly_name": "Ties"
+        "friendly_name": "Ties",
+        "parent": 20
       }
     },
     {
@@ -77,7 +85,8 @@
       "fields": {
         "name": "cufflinks",
         "slug": "cufflinks",
-        "friendly_name": "Cufflinks"
+        "friendly_name": "Cufflinks",
+        "parent": 20
       }
     },
     {
@@ -86,7 +95,8 @@
       "fields": {
         "name": "tie_clips",
         "slug": "tie-clips",
-        "friendly_name": "Tie Clips"
+        "friendly_name": "Tie Clips",
+        "parent": 20
       }
     },
     {
@@ -95,7 +105,8 @@
       "fields": {
         "name": "bow_ties",
         "slug": "bow-ties",
-        "friendly_name": "Bow Ties"
+        "friendly_name": "Bow Ties",
+        "parent": 20
       }
     },
     {
@@ -104,7 +115,8 @@
       "fields": {
         "name": "belts",
         "slug": "belts",
-        "friendly_name": "Belts"
+        "friendly_name": "Belts",
+        "parent": 20
       }
     },
     {
@@ -113,7 +125,8 @@
       "fields": {
         "name": "shoes",
         "slug": "shoes",
-        "friendly_name": "Shoes"
+        "friendly_name": "Shoes",
+        "parent": 20
       }
     },
     {
@@ -122,7 +135,8 @@
       "fields": {
         "name": "socks",
         "slug": "socks",
-        "friendly_name": "Socks"
+        "friendly_name": "Socks",
+        "parent": 20
       }
     },
     {
@@ -131,7 +145,8 @@
       "fields": {
         "name": "new_arrival",
         "slug": "new-arrival",
-        "friendly_name": "New Arrival"
+        "friendly_name": "New Arrival",
+        "parent": 21
       }
     },
     {
@@ -140,7 +155,8 @@
       "fields": {
         "name": "sale",
         "slug": "sale",
-        "friendly_name": "Sale"
+        "friendly_name": "Sale",
+        "parent": 21
       }
     },
     {
@@ -149,7 +165,48 @@
       "fields": {
         "name": "clearance",
         "slug": "clearance",
-        "friendly_name": "Clearance"
+        "friendly_name": "Clearance",
+        "parent": 21
+      }
+    },
+    {
+      "pk": 18,
+      "model": "products.category",
+      "fields": {
+        "name": "suits",
+        "slug": "suits",
+        "friendly_name": "Suits",
+        "parent": null
+      }
+    },
+    {
+      "pk": 19,
+      "model": "products.category",
+      "fields": {
+        "name": "formal",
+        "slug": "formal",
+        "friendly_name": "Formal",
+        "parent": null
+      }
+    },
+    {
+      "pk": 20,
+      "model": "products.category",
+      "fields": {
+        "name": "accessories",
+        "slug": "accessoriesl",
+        "friendly_name": "Accessories",
+        "parent": null
+      }
+    },
+    {
+      "pk": 21,
+      "model": "products.category",
+      "fields": {
+        "name": "special_offers",
+        "slug": "special-offers",
+        "friendly_name": "Special Offers",
+        "parent": null
       }
     }
 ]

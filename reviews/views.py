@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models.functions import Lower
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .forms import ReviewForm
 from .models import Review
@@ -34,10 +35,39 @@ def reviews(request):
 
     current_sorting = f'{sort}_{direction}'
 
+        # Pagination show 12 products per page
+    paginator = Paginator(reviews, 12)
+
+    page = request.GET.get('page')
+    try:
+        all_products = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        all_products = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        all_products = paginator.page(paginator.num_pages)
+
+    # Pagination was inspired, modified and
+    # adapted to this project from from this
+    # # Credit code
+    # https://www.youtube.com/watch?v=MAIFJ3_bcCY
+    index = all_products.number - 1
+    max_index = len(paginator.page_range)
+    start_index = index - 2 if index >= 2 else 0
+    end_index = index + 3 if index <= max_index - 3 else max_index
+    page_range = paginator.page_range[start_index:end_index]
+
     context = {
-        'reviews': reviews,
-        'current_sorting': current_sorting
+        'reviews': all_products,
+        'page_range': page_range,
+        'current_sorting': current_sorting,
     }
+
+    # context = {
+    #     'reviews': reviews,
+    #     'current_sorting': current_sorting
+    # }
 
     return render(request, "reviews/reviews.html", context)
 
