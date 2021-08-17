@@ -749,6 +749,22 @@ input[name="q"]::placeholder {
     font-weight: 900;
 }
 
+.wishlist-count {
+    position: absolute;
+    right: -14px;
+    top: -5px;
+    padding: 1.75px;
+    line-height: 1.7;
+    background: #fff;
+    color: #000 !important;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
 /* ----------------------------------- Pagination ------------------------------------------------- */
 .pagination-container .page-link {
     color: #0c121c;
@@ -1039,6 +1055,10 @@ input[name="q"]::placeholder {
     .dropdown-item {
         font-size: 14px;
         margin: 0;
+    }
+
+    .wishlist-count {
+        right: 4px;
     }
 }
 

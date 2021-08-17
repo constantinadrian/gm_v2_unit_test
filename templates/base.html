@@ -1,5 +1,6 @@
 {% load static %}
 {% load bag_tags %}
+{% load product_wishlist %}
 
 <!doctype html>
 <html lang="en">
@@ -90,9 +91,26 @@
                     </form>
                 </div>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">                      
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+
+                        <li class="list-inline-item">
+                            <a class="{% if wishlist %}text-info{% else %}text-black{% endif %} nav-link px-1" href="{% url 'wishlist' %}">
+                                <div class="text-center">
+                                    <div class="position-relative">
+                                        <i class="far fa-heart fa-lg"></i>
+                                        {% if wishlist %}
+                                        <span class="wishlist-count font-weight-bold">{{ wishlist.paginator.count }}</span>
+                                        {% endif %}
+                                    </div>
+                                    <p class="my-0">
+                                        Whislist
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    
                         <li class="list-inline-item dropdown">
-                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="text-black nav-link px-1" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
                                     <div><i class="fas fa-user fa-lg"></i></div>
                                     <p class="my-0">My Account</p>
@@ -112,7 +130,7 @@
                             </div>
                         </li>
                         <li class="list-inline-item">
-                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link px-1" href="{% url 'view_bag' %}">
                                 <div class="text-center">
                                     <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                     <p class="my-0">

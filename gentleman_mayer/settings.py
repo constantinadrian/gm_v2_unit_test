@@ -90,10 +90,12 @@ TEMPLATES = [
                 'products.contexts.nav_categories',
                 'bag.contexts.bag_contexts',
                 'newsletter.contexts.newsletter_form',
+                'wishlist.contexts.user_wishlist',
             ],
             'builtins': [
                 'bag.templatetags.bag_tags',
                 'products.templatetags.url_param_replace',
+                'wishlist.templatetags.product_wishlist',
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field',
             ]

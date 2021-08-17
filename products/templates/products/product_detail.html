@@ -56,6 +56,22 @@
                         </a>
                         {% endif %}
                     </div>
+
+                    <div class="position-relative pb-0">
+                        {% if request.user.is_authenticated %}
+                            <div class="wishlist-boby">
+                                <a class="btn-wishlist-heart d-flex h-100" data-product-id="{{ product.id }}">
+                                    <span class="wishlist-heart 
+                                                {% if product|check_wishlist:wishlist %} 
+                                                    wishlist-solid-heart 
+                                                {% else %}
+                                                    wishlist-regular-heart 
+                                                {% endif %}">
+                                    </span>
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
                 </div>
                 <div class="col-xs-12 col-md-7 col-lg-7">
                     <div class="product-details-container mb-3 mt-md-3">
@@ -333,4 +349,22 @@
     <script src="{% static 'js/owl.initializer.js' %}"></script>
 
     {% include 'products/includes/quantity_input_script.html' %}
+
+
+    <script>
+        // Add/Remove products from wishlist
+        $('.btn-wishlist-heart').click(function(e) {
+            e.preventDefault();
+            var csrfToken = "{{ csrf_token }}";
+            var productId = $(this).data('product-id')
+            var url = `/wishlist/add/${productId}/`;
+            var data = {'csrfmiddlewaretoken': csrfToken, 'product_id': productId};
+
+            $.post(url, data)
+                .done(function() {
+                    location.reload();
+                });
+        })
+    </script>
+
 {% endblock %}

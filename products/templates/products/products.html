@@ -83,11 +83,19 @@
                         {% endif %}
                         
                         <div class="card-body position-relative pb-0">
-                            <div class="wishlist-boby">
-                                <a class="btn-wishlist-heart d-flex h-100" data-product-id="{{ product.id }}">
-                                    <span class="wishlist-heart wishlist-regular-heart"></span>
-                                </a>
-                            </div>
+                            {% if request.user.is_authenticated %}
+                                <div class="wishlist-boby">
+                                    <a class="btn-wishlist-heart d-flex h-100" data-product-id="{{ product.id }}">
+                                        <span class="wishlist-heart 
+                                                    {% if product|check_wishlist:wishlist %} 
+                                                        wishlist-solid-heart 
+                                                    {% else %}
+                                                        wishlist-regular-heart 
+                                                    {% endif %}">
+                                        </span>
+                                    </a>
+                                </div>
+                            {% endif %}
                             <p class="brand-text">{{ product.brand }}</p>
                             <p class="mb-0">{{ product.name }}</p>
                         </div>

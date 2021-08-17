@@ -23,7 +23,7 @@
         {% if request.user.is_authenticated %}
             {% for product in wishlist %}
                 {% with wishlist|length as prod %}
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-2">
                         <div class="card border-0 rounded-0 h-100">
                                 
                             {% if product.image %}
@@ -37,11 +37,19 @@
                             {% endif %}
                             
                             <div class="card-body position-relative pb-0">
-                                <div class="wishlist-boby">
-                                    <a class="btn-wishlist-heart d-flex h-100" data-product-id="{{ product.id }}">
-                                        <span class="wishlist-heart wishlist-regular-heart"></span>
-                                    </a>
-                                </div>
+                                {% if request.user.is_authenticated %}
+                                    <div class="wishlist-boby">
+                                        <a class="btn-wishlist-heart d-flex h-100" data-product-id="{{ product.id }}">
+                                            <span class="wishlist-heart 
+                                                        {% if product|check_wishlist:wishlist %} 
+                                                            wishlist-solid-heart 
+                                                        {% else %}
+                                                            wishlist-regular-heart 
+                                                        {% endif %}">
+                                            </span>
+                                        </a>
+                                    </div>
+                                {% endif %}
                                 <p class="brand-text">{{ product.brand }}</p>
                                 <p class="mb-0">{{ product.name }}</p>
                             </div>
