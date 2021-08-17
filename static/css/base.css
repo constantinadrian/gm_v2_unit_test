@@ -698,6 +698,57 @@ input[name="q"]::placeholder {
 }
 /* --------------------------- End Rendering review stars ----------------------------------------- */
 
+.wishlist-boby {
+    position:absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1rem;
+}
+
+.wishlist-boby a,
+.wishlist-boby a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.btn-wishlist-heart {
+    cursor: pointer;
+}
+
+.wishlist-heart {
+    position: relative;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free"; 
+    font-size: 1.1rem;
+}
+
+.wishlist-regular-heart::before {
+    content: "\f004";
+    font-weight: 200;
+}
+
+.wishlist-regular-heart::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 200;
+    padding: 0;
+}
+
+.wishlist-solid-heart::before {
+    content: "\f004";
+    font-weight: 900;
+}
+
+.wishlist-regular-heart:hover:after {
+    content: "\f004";
+    font-weight: 900;
+}
+
 /* ----------------------------------- Pagination ------------------------------------------------- */
 .pagination-container .page-link {
     color: #0c121c;

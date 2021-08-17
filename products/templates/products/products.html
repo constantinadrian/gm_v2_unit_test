@@ -82,7 +82,12 @@
                             </a>
                         {% endif %}
                         
-                        <div class="card-body pb-0">
+                        <div class="card-body position-relative pb-0">
+                            <div class="wishlist-boby">
+                                <a class="btn-wishlist-heart d-flex h-100" data-product-id="{{ product.id }}">
+                                    <span class="wishlist-heart wishlist-regular-heart"></span>
+                                </a>
+                            </div>
                             <p class="brand-text">{{ product.brand }}</p>
                             <p class="mb-0">{{ product.name }}</p>
                         </div>
@@ -169,6 +174,22 @@
 
                 window.location.replace(currentUrl);
             }
+        })
+
+
+
+        // Add/Remove products from wishlist
+        $('.btn-wishlist-heart').click(function(e) {
+            e.preventDefault();
+            var csrfToken = "{{ csrf_token }}";
+            var productId = $(this).data('product-id')
+            var url = `/wishlist/add/${productId}/`;
+            var data = {'csrfmiddlewaretoken': csrfToken, 'product_id': productId};
+
+            $.post(url, data)
+                .done(function() {
+                    location.reload();
+                });
         })
     </script>
 
