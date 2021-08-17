@@ -18,8 +18,9 @@ def wishlist(request):
 
 
 def add_to_wishlist(request, product_id):
-    print('wishlist view')
-
+    """"
+    A view that add / remove products from wishlist page
+    """
     if request.method == 'POST':
         # check if product exist in our database
         product = get_object_or_404(Product, pk=product_id)

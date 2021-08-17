@@ -1064,7 +1064,7 @@ input[name="q"]::placeholder {
 
 @media only screen and (min-width:375px){
     .breadcrumb-item.title-text.active {
-        line-height: 2;
+        line-height: 1.9;
     }
 
     .breadcrumb-item a, .breadcrumb-item.active {

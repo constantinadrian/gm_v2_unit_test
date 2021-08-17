@@ -100,7 +100,7 @@
             {% endfor %}
         {% else %}
             <div class="col-12 no-available-products d-flex justify-content-center align-items-center">
-                <p class="text-center title-text">Wanna create a wishlist? Then please <a href="{{ login_url }}">sign in</a>. Or, <a href="{{ signup_url }}">sign up</a></p>
+                <p class="text-center title-text">Wanna create a wishlist? Then please <a href="{% url 'account_login' %}">sign in</a>. Or, <a href="{% url 'account_signup' %}">sign up</a></p>
             </div>
         {% endif %}
     </div>

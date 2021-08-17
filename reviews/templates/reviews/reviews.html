@@ -20,19 +20,21 @@
         </div>
     </div>
     <div class="container h-100 {% if reviews %}mb-5 pb-5{% endif %}">
-        <div class="row mt-1 mb-4 justify-content-center justify-content-md-end">
-            <div class="col-12 col-md-5 my-auto d-flex justify-content-center justify-content-md-end">
-                <div class="sort-select-wrapper w-75 my-auto">
-                    <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                        <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                        <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating(high to low)</option>
-                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                    </select>
+        {% if reviews %}
+            <div class="row mt-1 mb-4 justify-content-center justify-content-md-end">
+                <div class="col-12 col-md-5 my-auto d-flex justify-content-center justify-content-md-end">
+                    <div class="sort-select-wrapper w-75 my-auto">
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating(high to low)</option>
+                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-        </div>
+        {% endif %}
 
         <div class="row m-0">
             {% for review in reviews %}
