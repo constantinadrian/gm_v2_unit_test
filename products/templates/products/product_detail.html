@@ -133,12 +133,12 @@
                     {% if request.user.is_authenticated %}
                         <a class="btn btn-wishlist-heart border-black rounded-0 w-100" data-product-id="{{ product.id }}">
                             {% if product|check_wishlist:wishlist %} 
-                                <span class="wishlist-heart wishlist-regular-heart">
-                                    <span class="logo-font">Add to wishlist</span>
-                                </span> 
-                            {% else %}
                                 <span class="wishlist-heart wishlist-solid-heart w-100">
                                     <span class="logo-font">Remove from wishlist</span>
+                                </span> 
+                            {% else %}
+                                <span class="wishlist-heart wishlist-regular-heart">
+                                    <span class="logo-font">Add to wishlist</span>
                                 </span> 
                             {% endif %}
                         </a>
