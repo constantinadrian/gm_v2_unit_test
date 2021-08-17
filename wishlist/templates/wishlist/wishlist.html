@@ -20,78 +20,84 @@
     </div>
     
     <div class="row mt-1">
-        {% for product in wishlist %}
-            {% with wishlist|length as prod %}
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card border-0 rounded-0 h-100">
+        {% if request.user.is_authenticated %}
+            {% for product in wishlist %}
+                {% with wishlist|length as prod %}
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card border-0 rounded-0 h-100">
+                                
+                            {% if product.image %}
+                                <a href="{{ product.get_absolute_url }}">
+                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                </a>
+                            {% else %}
+                                <a href="{{ product.get_absolute_url }}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
+                                </a>
+                            {% endif %}
                             
-                        {% if product.image %}
-                            <a href="{{ product.get_absolute_url }}">
-                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                            </a>
-                        {% else %}
-                            <a href="{{ product.get_absolute_url }}">
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
-                            </a>
-                        {% endif %}
-                        
-                        <div class="card-body pb-0">
-                            <p class="brand-text">{{ product.brand }}</p>
-                            <p class="mb-0">{{ product.name }}</p>
-                        </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="mb-0 text-left title-text">€ {{ product.price }}</p>
-                                    
-                                    <p class="small mt-1 mb-0">
-                                        <a class="text-muted" href="{{ product.category.get_absolute_url }}">
-                                            <i class="fas fa-tag mr-1" aria-hidden="true"></i>{{ product.category.friendly_name }}
+                            <div class="card-body position-relative pb-0">
+                                <div class="wishlist-boby">
+                                    <a class="btn-wishlist-heart d-flex h-100" data-product-id="{{ product.id }}">
+                                        <span class="wishlist-heart wishlist-regular-heart"></span>
+                                    </a>
+                                </div>
+                                <p class="brand-text">{{ product.brand }}</p>
+                                <p class="mb-0">{{ product.name }}</p>
+                            </div>
+                            <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="mb-0 text-left title-text">€ {{ product.price }}</p>
+                                        
+                                        <p class="small mt-1 mb-0">
+                                            <a class="text-muted" href="{{ product.category.get_absolute_url }}">
+                                                <i class="fas fa-tag mr-1" aria-hidden="true"></i>{{ product.category.friendly_name }}
+                                            </a>
+                                        </p>    
+                                        <a href="{{ product.get_absolute_url }}" class="btn btn-black rounded-0 my-2 w-100">
+                                            <span class="logo-text">View Product</span>
                                         </a>
-                                    </p>    
-                                    {% if request.user.is_superuser %}
-                                        <p class="mt-4">
-                                            <small class="ml-3">
-                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                <a class="text-danger" type="button" data-toggle="modal" data-target="#deleteModal" data-item="product" data-url="{% url 'delete_product' product.id %}">Delete</a>
-                                            </small>
-                                        </p>
-                                    {% endif %}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+                    {% if forloop.counter|divisibleby:1 and forloop.counter != prod %}
+                        <div class="col-12 d-sm-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}                        
+                    {% if forloop.counter|divisibleby:2 and forloop.counter != prod %}
+                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:3 and forloop.counter != prod %}
+                        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:4 and forloop.counter != prod %}
+                        <div class="col-12 d-none d-xl-block mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}
+                {% endwith %}
+            {% empty %}
+                <div class="col-12 no-available-products d-flex justify-content-center align-items-center">
+                    <p class="text-center title-text">No available wishlist</p>
                 </div>
-                
-                {% if forloop.counter|divisibleby:1 and forloop.counter != prod %}
-                    <div class="col-12 d-sm-none mb-5">
-                        <hr>
-                    </div>
-                {% endif %}                        
-                {% if forloop.counter|divisibleby:2 and forloop.counter != prod %}
-                    <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                        <hr>
-                    </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:3 and forloop.counter != prod %}
-                    <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                        <hr>
-                    </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:4 and forloop.counter != prod %}
-                    <div class="col-12 d-none d-xl-block mb-5">
-                        <hr>
-                    </div>
-                {% endif %}
-            {% endwith %}
-        {% empty %}
+            {% endfor %}
+        {% else %}
             <div class="col-12 no-available-products d-flex justify-content-center align-items-center">
-                <p class="text-center title-text">No available wishlist</p>
+                <p class="text-center title-text">Wanna create a wishlist? Then please <a href="{{ login_url }}">sign in</a>. Or, <a href="{{ signup_url }}">sign up</a></p>
             </div>
-        {% endfor %}
+        {% endif %}
     </div>
 
-    {% include 'products/includes/pagination.html' %}
+    {% include 'products/includes/pagination.html' with products=wishlist %}
 </div>
 
 {% endblock %}
