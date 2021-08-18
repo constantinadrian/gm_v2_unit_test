@@ -1,0 +1,1 @@
+web: gunicorn gentleman_mayer.wsgi.application
