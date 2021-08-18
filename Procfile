@@ -1,1 +1,1 @@
-web: gunicorn gentleman_mayer.wsgi.application
+web: gunicorn gentleman_mayer.wsgi:application
