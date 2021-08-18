@@ -6,6 +6,7 @@
     --font-family-oswald: 'Oswald', sans-serif;
     --font-family-raleway: 'Raleway', sans-serif;
     --light-periwinkle: #c7cfdd;
+    --rich-black-fogra: #0c121c;
 }
 
 html {
@@ -581,9 +582,6 @@ input[name="q"]::placeholder {
             background-size: cover;
     background-position-x: 65%;
     background-position-y: 10%;
-    /* height: -moz-calc(100vh - var(--header-container-xs-padding));
-    height: -webkit-calc(100vh - var(--header-container-xs-padding));
-    height: calc(100vh - var(--header-container-xs-padding)); */
     min-height: -moz-calc(100vh - var(--header-container-xs-padding));
     min-height: -webkit-calc(100vh - var(--header-container-xs-padding));
     min-height: calc(100vh - var(--header-container-xs-padding));
@@ -698,6 +696,7 @@ input[name="q"]::placeholder {
 }
 /* --------------------------- End Rendering review stars ----------------------------------------- */
 
+/* ------------------------------------ Wishlist -------------------------------------------------- */
 .wishlist-boby {
     position:absolute;
     top: 5px;
@@ -744,6 +743,7 @@ input[name="q"]::placeholder {
     font-weight: 900;
 }
 
+.btn-wishlist-heart:hover .wishlist-regular-heart:after,
 .wishlist-regular-heart:hover:after {
     content: "\f004";
     font-weight: 900;
@@ -764,11 +764,12 @@ input[name="q"]::placeholder {
     text-align: center;
     letter-spacing: 1px;
 }
+/* ---------------------------------- End Wishlist ------------------------------------------------ */
 
 /* ----------------------------------- Pagination ------------------------------------------------- */
 .pagination-container .page-link {
-    color: #0c121c;
-    border: 1px solid #0c121c;
+    color: var(--rich-black-fogra);
+    border: 1px solid var(--rich-black-fogra);
     margin: 1rem .5rem;
     font-weight: 600;
 }
@@ -782,8 +783,8 @@ input[name="q"]::placeholder {
 .pagination-container .page-item.active .page-link,
 .pagination-container .page-item.active .page-link:hover {
     color: #fff;
-    background-color: #0c121c;
-    border-color: #0c121c;
+    background-color: var(--rich-black-fogra);
+    border-color: var(--rich-black-fogra);
 }
 
 .pagination-container .page-item.disabled .page-link,
@@ -793,10 +794,10 @@ input[name="q"]::placeholder {
 
 .pagination-container .page-link:hover {
     z-index: 2;
-    color: #0c121c;
+    color: var(--rich-black-fogra);
     text-decoration: none;
     background: transparent;
-    border-color: #0c121c;
+    border-color: var(--rich-black-fogra);
 }
 
 .pagination-container .page-link:focus {
@@ -804,7 +805,7 @@ input[name="q"]::placeholder {
 }
 
 .pagination-container .page-link a {
-    color: #0c121c;
+    color: var(--rich-black-fogra);
 }
 /* -------------------------------- End Pagination ------------------------------------------------ */
 
@@ -852,7 +853,7 @@ input[name="q"]::placeholder {
 #footer {
     width: 100%;
     padding: 4rem 0 4rem;
-    background: #0c121c;
+    background: var(--rich-black-fogra);
 }
 
 .footer-links {
@@ -910,7 +911,7 @@ input[name="q"]::placeholder {
 
 .btn-white {
     background: #fff;
-    color: #0c121c;
+    color: var(--rich-black-fogra);
     border: none;
 }
 
@@ -918,7 +919,7 @@ input[name="q"]::placeholder {
 .btn-white:active,
 .btn-white:focus {
     background: #fff;
-    color: #0c121c;
+    color: var(--rich-black-fogra);
     border: none;
     box-shadow: none;
     outline: none;
@@ -968,9 +969,6 @@ input[name="q"]::placeholder {
     }
 
     .bg-homepage-section{
-        /* height: -moz-calc(100vh - var(--header-container-lg-padding));
-        height: -webkit-calc(100vh - var(--header-container-lg-padding));
-        height: calc(100vh - var(--header-container-lg-padding)); */
         min-height: -moz-calc(100vh - var(--header-container-lg-padding));
         min-height: -webkit-calc(100vh - var(--header-container-lg-padding));
         min-height: calc(100vh - var(--header-container-lg-padding));
@@ -1017,9 +1015,6 @@ input[name="q"]::placeholder {
     }
 
     .bg-homepage-section{
-        /* height: -moz-calc(100vh - var(--header-container-sm-md-padding));
-        height: -webkit-calc(100vh - var(--header-container-sm-md-padding));
-        height: calc(100vh - var(--header-container-sm-md-padding)); */
         min-height: -moz-calc(100vh - var(--header-container-sm-md-padding));
         min-height: -webkit-calc(100vh - var(--header-container-sm-md-padding));
         min-height: calc(100vh - var(--header-container-sm-md-padding));

@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'wishlist',
 
     'crispy_forms',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -201,3 +202,28 @@ STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY", '')
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", '')
 STRIPE_WH_SECRET = os.environ.get("STRIPE_WH_SECRET", '')
 DEFAULT_FROM_EMAIL = 'gentleman.mayer@example.com'
+
+# Configuration for AWS
+if "USE_AWS" in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = "gentleman-mayer"
+    AWS_S3_REGION_NAME = "eu-west-1"
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
