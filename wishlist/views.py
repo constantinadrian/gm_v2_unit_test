@@ -1,7 +1,6 @@
 from django.shortcuts import (
     render,
     get_object_or_404,
-    redirect, reverse,
     HttpResponse
 )
 from django.http import Http404
@@ -32,14 +31,16 @@ def add_to_wishlist(request, product_id):
         if product not in wishlist.products.all():
             wishlist.products.add(product)
             messages.success(request,
-                             f"{product.name} has been added to your wishlist.")
+                             (f'{product.name} has been '
+                              'added to your wishlist.'))
             return HttpResponse(status=200)
         # remove the product if is on the list
         else:
             try:
                 wishlist.products.remove(product)
                 messages.success(request,
-                                 f"{product.name} has been remove to your wishlist.")
+                                 (f'{product.name} has been '
+                                  'remove to your wishlist.'))
                 return HttpResponse(status=200)
             except Exception as error:
                 messages.error(request, f"Error removing product {error}")

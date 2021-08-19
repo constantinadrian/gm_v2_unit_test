@@ -35,7 +35,7 @@ def reviews(request):
 
     current_sorting = f'{sort}_{direction}'
 
-        # Pagination show 12 products per page
+    # Pagination show 12 products per page
     paginator = Paginator(reviews, 12)
 
     page = request.GET.get('page')

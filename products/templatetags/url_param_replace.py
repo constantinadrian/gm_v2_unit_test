@@ -3,6 +3,7 @@ from django import template
 
 register = template.Library()
 
+
 # credit code
 # https://stackoverflow.com/questions/54808110/django-combining-search-view-with-pagination
 @register.simple_tag(takes_context=True)
