@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY", '')
+SECRET_KEY = os.environ.get("MAYER_SECRET_KEY", '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
@@ -132,9 +132,9 @@ WSGI_APPLICATION = 'gentleman_mayer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
+if 'MAYER_DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse(os.environ.get('MAYER_DATABASE_URL'))
     }
 else:
     DATABASES = {
@@ -196,12 +196,12 @@ STANDARD_DELIVERY_PERCENTAGE = 10
 
 # Stripe
 STRIPE_CURRENCY = 'eur'
-STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY", '')
-STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", '')
-STRIPE_WH_SECRET = os.environ.get("STRIPE_WH_SECRET", '')
+STRIPE_PUBLIC_KEY = os.environ.get("MAYER_STRIPE_PUBLIC_KEY", '')
+STRIPE_SECRET_KEY = os.environ.get("MAYER_STRIPE_SECRET_KEY", '')
+STRIPE_WH_SECRET = os.environ.get("MAYER_STRIPE_WH_SECRET", '')
 
 # Configuration for AWS
-if "USE_AWS" in os.environ:
+if "MAYER_USE_AWS" in os.environ:
     # Cache control
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
@@ -211,8 +211,8 @@ if "USE_AWS" in os.environ:
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = "gentleman-mayer"
     AWS_S3_REGION_NAME = "eu-west-1"
-    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_ACCESS_KEY_ID = os.environ.get('MAYER_AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('MAYER_AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
     # Static and media files
@@ -226,7 +226,7 @@ if "USE_AWS" in os.environ:
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 # Configuration for send email
-if 'DEVELOPMENT' in os.environ:
+if 'DEVELOPMENTtt' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'gentleman.mayer@example.com'
 else:

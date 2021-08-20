@@ -12,7 +12,7 @@ from products.models import Product
 
 def reviews(request):
     """" A view to return the index page """
-    reviews = Review.objects.all()
+    reviews = Review.objects.all().order_by('id')
 
     sort = None
     direction = None
@@ -40,34 +40,29 @@ def reviews(request):
 
     page = request.GET.get('page')
     try:
-        all_products = paginator.page(page)
+        all_reviews = paginator.page(page)
     except PageNotAnInteger:
         # If page is not an integer, deliver first page.
-        all_products = paginator.page(1)
+        all_reviews = paginator.page(1)
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
-        all_products = paginator.page(paginator.num_pages)
+        all_reviews = paginator.page(paginator.num_pages)
 
     # Pagination was inspired, modified and
     # adapted to this project from from this
     # # Credit code
     # https://www.youtube.com/watch?v=MAIFJ3_bcCY
-    index = all_products.number - 1
+    index = all_reviews.number - 1
     max_index = len(paginator.page_range)
     start_index = index - 2 if index >= 2 else 0
     end_index = index + 3 if index <= max_index - 3 else max_index
     page_range = paginator.page_range[start_index:end_index]
 
     context = {
-        'reviews': all_products,
+        'reviews': all_reviews,
         'page_range': page_range,
         'current_sorting': current_sorting,
     }
-
-    # context = {
-    #     'reviews': reviews,
-    #     'current_sorting': current_sorting
-    # }
 
     return render(request, "reviews/reviews.html", context)
 

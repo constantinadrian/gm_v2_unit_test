@@ -17,7 +17,7 @@ def all_products(request, category_slug=None):
     Ado project
     """
 
-    products = Product.objects.all()
+    products = Product.objects.all().order_by('id')
     query = None
     category = None
     sort = None
