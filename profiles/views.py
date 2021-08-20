@@ -29,6 +29,9 @@ def profile(request):
     # return the order related to the profile
     orders = profile.orders.all()
 
+    # return all the query that the user has
+    queries = profile.userquery.all()
+
     # populate the form with the user profile current information
     form = UserProfileForm(instance=profile)
 
@@ -36,6 +39,7 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
+        'queries': queries,
         'on_profile_page': True,
     }
 

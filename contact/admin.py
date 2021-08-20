@@ -3,10 +3,10 @@ from .models import Contact
 
 
 class ContactAdmin(admin.ModelAdmin):
-    readonly_fields = ('name', 'email', 'message',
+    readonly_fields = ('name', 'email', 'subject', 'message',
                        'sent_date',)
 
-    list_display = ('name', 'email', 'message',
+    list_display = ('name', 'email', 'subject', 'message',
                     'sent_date',)
 
     ordering = ('-sent_date',)

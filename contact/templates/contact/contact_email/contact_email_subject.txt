@@ -1,1 +1,1 @@
-New message from {{ name }}
+New message: {{ query }}

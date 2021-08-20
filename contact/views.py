@@ -5,6 +5,7 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 
 from .forms import ContactForm
+from profiles.models import UserProfile
 
 
 def contact(request):
@@ -15,15 +16,25 @@ def contact(request):
     if request.method == "POST":
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
-            contact_form.save()
+            if request.user.is_authenticated:
+                contact = contact_form.save(commit=False)
+                # get the user profile
+                profile = UserProfile.objects.get(user=request.user)
+
+                # Attach the user's profile to the contact query
+                contact.user_profile = profile
+                contact.save()
+            else:
+                contact_form.save()
 
             name = contact_form.cleaned_data.get('name')
             email = contact_form.cleaned_data.get('email')
+            query = contact_form.cleaned_data.get('subject')
             message = contact_form.cleaned_data.get('message')
 
             subject = render_to_string(
                 'contact/contact_email/contact_email_subject.txt',
-                {'name': name})
+                {'query': query})
             body = render_to_string(
                 'contact/contact_email/contact_email_body.txt',
                 {'message': message, 'email': email, 'name': name})
