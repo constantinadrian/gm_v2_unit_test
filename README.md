@@ -546,7 +546,20 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
             ALLOWED_HOSTS = ['<app-name>.herokuapp.com', 'localhost']
             ```
 
-        20. Now we can push to github with:
+
+        20. Now add variable into Heroku app, settings under Reveal Config Vars:
+
+            | Key                            |    Value                    |
+            | :----------------------------- | :-------------------------: |
+            | HOST_EMAIL_PASS                |  < Gmail app password >     |
+            | HOST_EMAIL_USER                |  < Gmail email address >    |
+            | SECRET_KEY                     |  < Django Secret key >      |
+            | STRIPE_PUBLIC_KEY              |  < Stripe Public key >      |
+            | STRIPE_SECRET_KEY              |  < Stripe Secret key >      |
+            | STRIPE_WH_SECRET               |  < Stripe Webhook key >     |
+
+
+        21. Now we can push to github with:
 
             ```
             git add .
@@ -556,7 +569,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
             git push
             ```      
 
-        21. And to finally push to Heroku:
+        22. And to finally push to Heroku:
 
             ```
             heroku git:remote -a <heroku app-name>
@@ -643,9 +656,9 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
             
             Access control list (ACL) - click edit
 
-                - and on the ```Everyone (public access)``` click on List and click save
+            - and on the ```Everyone (public access)``` click on List and click save
 
-        3. Set Identity and Access Management (IAM) - by searching ```IAM``` on the Services Menu
+        4. Set Identity and Access Management (IAM) - by searching ```IAM``` on the Services Menu
         
             - From ```Access management``` menu
 
@@ -693,6 +706,82 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
                 - Now ```download .csv``` which will contain the access key and secret access key which we will use to authenticate from our Django app
 
                     IMPORTANT NOTE: You need to download this ```.csv``` because want we are gone through this process we can't download again
+
+        5. Connect Django app to S3 Bucket 
+
+            1. In order to connect Django app to S3 we need to install the two dependencies:
+
+                ```
+                pip3 install boto3
+                pip3 install django-storages
+                ```
+
+            2. Now we need to freeze that packages in our requirements file:
+            
+                ```
+                pip3 freeze --local > requirements.txt
+                ```
+
+            3. Now add storages to our install apps in ```settings.py``` since django needs to now about it
+
+            4. Now we need to set up Django so that in production we use S3 to store our static files and the product images to go there also
+
+                - In project root level create a file call ```custom_storages.py```
+
+
+                    ```
+                    from django.conf import settings
+                    from storages.backends.s3boto3 import S3Boto3Storage
+
+
+                    class StaticStorage(S3Boto3Storage):
+                        location = settings.STATICFILES_LOCATION
+
+
+                    class MediaStorage(S3Boto3Storage):
+                        location = settings.MEDIAFILES_LOCATION
+
+                    ```
+
+
+            5. Now to connect Django to S3 we need to add some settings which will tell it which bucket needs to communicate with
+
+                ````
+                if "USE_AWS" in os.environ:
+                    # Cache control
+                    AWS_S3_OBJECT_PARAMETERS = {
+                        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+                        'CacheControl': 'max-age=94608000',
+                    }
+
+                    # Bucket Config
+                    AWS_STORAGE_BUCKET_NAME = "buckect-name"
+                    AWS_S3_REGION_NAME = "eu-west-1"
+                    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+                    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+                    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+                    # Static and media files
+                    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+                    STATICFILES_LOCATION = 'static'
+                    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+                    MEDIAFILES_LOCATION = 'media'
+
+                    # Override static and media URLs in production
+                    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+                    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+                ```
+
+            6. Now add variable into Heroku app, settings under Reveal Config Vars:
+
+                | Key                            |    Value                    |
+                | :----------------------------- | :-------------------------: |
+                | USE_AWS                        |  True                       |
+                | AWS_ACCESS_KEY_ID              |  < AWS Access key ID >      |
+                | AWS_SECRET_ACCESS_KEY          |  < AWS Secret access key >  |
+
+            7. Now we can remove the ```DISABLE_COLLECSTATIC``` variable since Django will collect static files automatically and upload them to S3
+
 
   - #### Local Clone
 
