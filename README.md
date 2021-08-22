@@ -785,6 +785,145 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
   - #### Local Clone
 
+    ##### In order to run this project locally you should have installed:
+
+    1. [VS Code](https://code.visualstudio.com/) - IDE or your personal preference
+        
+    2. [Pyhton3](https://www.python.org/) - to run the application on your local machine
+
+    3. [PIP](https://pypi.org/project/pip/) for installation of tools needed in this project.
+        
+    4. [Stripe](https://dashboard.stripe.com/register) Account
+       
+        Optional: you can install 
+        
+        - [Git](https://git-scm.com/) - used for version control
+
+    ##### Steps to follow
+
+    1. At the top of the repository click on Code and click on download zip and extract the zip file to your chosen folder or keep the same name
+
+        ![Download zip](readme_file/code-clone.png)
+
+        Optional: if you have [Git](https://git-scm.com/) install on your machine you can type
+
+        ```
+        git clone https://github.com/constantinadrian/gentleman_mayer
+        ```
+
+        or to clone the repository into a different name on the folder you can run 
+
+        ```
+        git clone https://github.com/constantinadrian/gentleman_mayer folder_name
+        ```
+
+        more info about cloning with git [here](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository).
+
+    2. Create a virtual environment within the project directory to keep dependencies required by the project separate from other projects by creating an isolated Python virtual environment.
+
+        ```
+        py -3 -m venv venv
+        ```
+
+    3. Activate the environment
+
+        ```
+        venv\Scripts\activate
+        ```
+
+    4. Install all dependencies from requirements.txt:
+
+        ```
+        pip3 install -r requirements.txt
+        ```
+
+        Note: For upgrade PIP type this command ```pip3 install --upgrade pip```
+
+    5. Declare default environment variables in a file ```env.py``` 
+
+        ```
+        import os  
+        os.environ["DEVELOPMENT"] = "True"    
+        os.environ["SECRET_KEY"] = "< Django Secret key >"
+        os.environ["STRIPE_PUBLIC_KEY"] = "< Stripe Public key >"    
+        os.environ["STRIPE_SECRET_KEY"] = "< Stripe Secret key >"    
+        os.environ["STRIPE_WH_SECRET"] = "< Stripe Webhook key >" 
+        ```
+
+    6. Add ```env.py``` to your ```.gitignore``` file.
+
+    7. In ```settings.py``` after the imports add the following code:
+
+        ```
+        if os.path.exists("env.py"):
+            import env
+        ```
+
+    8. To create the db.slite3 file run
+
+        ```  
+        python manage.py runserver
+        ```
+
+        NOTE: At this point you should see that you have unapplied migration(s).
+
+    9. Now you can stop the server with: ```Ctrl + C```
+
+    10. Now run the following command to apply all the migrations:
+
+        ```
+        python manage.py migrate
+        ```
+
+    11. Now we can use our fixture by loading the categories:
+
+        ```
+        python manage.py loaddata categories
+        ```
+
+    12. Following by loading the products:
+
+        ```
+        python manage.py loaddata products
+        ```
+
+        IMPORTANT NOTE: We need to load data in this order because the products depend on the categories already existing
+
+    13. Now we can create a superuser so we can login with
+
+        ```
+        python manage.py createsuperuser
+        ```
+
+    14. To run the project run
+
+        ```
+        python manage.py runserver
+        ```
+
+    15. Website is now available at: http://localhost:8000
+
+
+        NOTE: If you open the website by clicking on the terminal on http://127.0.0.1:8000/ you will get a error from Django 
+
+        ```
+        Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+        ```
+
+        Now the last setting added to ```settings.py``` in ```ALLOWED_HOSTS```:
+
+        ```
+        ALLOWED_HOSTS = ['gentleman-mayer.herokuapp.com', 'localhost', '127.0.0.1']
+        ```
+
+        Now the Website is available at: http://localhost:8000 and at http://127.0.0.1:8000/
+
+    16. After closing the server to close the virtual environment type in the terminal:
+
+        ```
+        deactivate
+        ```
+
 [Back to Top](#table-of-contents)
 
 -----
