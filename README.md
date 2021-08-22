@@ -301,9 +301,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
     -  ##### Imagery
 
-        - Because imagery is important I have carefully chosen the background hero image on the landing page, so can easily reflect the website purpose 
-        
-        right from the start
+        - Because imagery is important I have carefully chosen the background hero image on the landing page, so can easily reflect the website purpose right from the start
 
 [Back to Top](#table-of-contents)
 
@@ -579,6 +577,122 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
             c. ```Automatic deploys``` - Enable Automatic Deploys
       
+  - #### Amazon AWS
+
+    - For this project Amazon AWS was used to store static and media files.
+
+        1. Create an account to [Amazon AWS](https://portal.aws.amazon.com/billing/signup#/start)
+ 
+            a. Fill in the email, password and choose an username for the account and select ```Continue```
+            
+            b. Choose the ```Account type``` Personal and fill in the requiremnts information and select ```Create Account and Continue```
+
+            c. Fill in the Credit card details which will be use for billing in case you go above the free usage limits, but you want go anywhere near them with this project
+
+            NOTE: Amazon AWS is not a free service if you go above the free usage limits
+
+        2. Create S3 Bucket
+
+            a. After you login you can find the S3 by searching on the ```Services``` Menu
+
+            b. Open the S3 and create a Bucket by name it to much your Heroku app name, select a region closest to you and uncheck the ```Block all public access``` and acknowledge that the bucket will be public since we are allowing public access to our static and media file
+
+            c. Now click ```Create Bucket``` 
+
+        3. Set S3 Bucket
+
+            a. Go into the S3 Bucket that you just created
+
+            b. Go on the ```Properties``` tab and click edit on ```Static website hosting```, enable the Static website hosting and fill in the default values for index and error document and Save
+
+            c. Now go on the ```Permissions``` tab
+
+            - Cross-origin resource sharing (CORS) - click edit and paste the following code, which is gone set require access between Heroku app and S3 Bucket:
+
+
+                ```
+                [
+                    {
+                        "AllowedHeaders": [
+                            "Authorization"
+                        ],
+                        "AllowedMethods": [
+                            "GET"
+                        ],
+                        "AllowedOrigins": [
+                            "*"
+                        ],
+                        "ExposeHeaders": []
+                    }
+                ]
+                ```
+
+            - Bucket policy - click the policy generator to create a secure policy for this bucket
+
+                - ```Select Type of Policy``` is S3 Bucket Policy
+
+                - ```Principal``` - is star ```*```, to allow all principals
+
+                - ```Actions``` - is GetObject
+
+                - ```Amazon Resource Name (ARN)``` - we will copy from the other tab under ```Bucket ARN```, paste it in, click Add Statement, click Generate Policy and copy the policy into the Bucket Policy Tab
+
+                    - Before we click save to allow access to all our resources in this bucket we add at the end of Resource key ```/*```
+
+                    - "Resource": "arn:aws:s3:::bucket_name```/*```"
+            
+            Access control list (ACL) - click edit
+
+                - and on the ```Everyone (public access)``` click on List and click save
+
+        3. Set Identity and Access Management (IAM) - by searching ```IAM``` on the Services Menu
+        
+            - From ```Access management``` menu
+
+                a. Create a group for the user - by clicking on ```User groups``` and Create Group 
+
+                - Create Gourp by giving a name related to the Heroku app and click next until you create the group as we don't have a policy to attach for this group yet
+
+                b. Create access policy - to give the group access to the s3 bucket we created by clicking on ```Policies``` and Create Policy
+
+                - Now we go to JSON and select ```Import manged policy``` and import a free policy that AWS has pre-build for full access for S3
+
+                - We search fo S3 and select ```ÀmazonS3FullAccess``` and click Import
+
+                - Now here I don't want to allow full access to our new bucket with everything in it, so we go to our S3 Bucket on the ```Permissions``` tab on the Bucket policy click edit and copy the ARN under ```Bucket ARN``` and paste it in the Resource as list:
+
+                    ```
+                    "Resource": [
+                        "arn:aws:s3:::bucket_name",
+                        "arn:aws:s3:::bucket_name/*"
+                    ]
+                    ```
+
+                    NOTE: First item in the list is the bucket itselt and the second, with the ```/*``` at the end, adds another rule for all files/folders in the bucket
+
+                - Now we can give it a name and a description by clicking ```Review policy```
+
+                c. Attach the policy to the group - by go back to ```User groups```
+
+                - Click on the group that we create earlier
+
+                - Go on the ```Permissions``` tab and click the add permissions and select ```Attach Policies```
+
+                - Search for the policy that we just created and select it
+
+                - Click ```Attach policy``` to attach it to the group
+
+                d. Create a user for the group - by clicking on ```Users```
+
+                - On the users page click on ```Add users```
+
+                - Give a name and ```Programmatic access```
+
+                - Select Next and put the user in our Group by selecting the group and click till the end to create user
+
+                - Now ```download .csv``` which will contain the access key and secret access key which we will use to authenticate from our Django app
+
+                    IMPORTANT NOTE: You need to download this ```.csv``` because want we are gone through this process we can't download again
 
   - #### Local Clone
 
