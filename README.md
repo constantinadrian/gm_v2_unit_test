@@ -1,6 +1,6 @@
 # Gentleman Mayer
 
-![Gentleman Mayer](readme-file/gentleman-mayer.png)
+![Gentleman Mayer](readme_file/gentleman-mayer.png)
 
 Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's accessories. The website is focus on high quality products to maintain customer satisfaction and loyalty and reduce the risk and cost of the replacement of a faulty product.
 
@@ -50,15 +50,21 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
     - To be able to quickly identify new products and sales.
 
+    - To be able to know if there is a free delivery
+
+    - To be able to know if there is a free return
+
     - To be able to view a specific category of products and use filters inside that category.
 
     - To be able to view product details and reviews from other customers.
 
+    - To be able to adjust the product quantity from shopping bag
+
+    - To be able to remove a product from shopping bag
+
     - To be able to receive confirmation after purchase a product.
 
-    - To be able to know if there is a free delivery
-
-    - To be able to know if there is a free return
+    - To be able to contact the company and subscribe to newsletter to receive the latest offers
 
     II.	Returning User Goals:
 
@@ -67,8 +73,6 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
     - To be able to easy loggin, logout and easily recover my password
 
     - To have a user profile where I keep track of my orders, my query and update personal information
-
-    - To be able to contact the company and subscribe to newsletter to receive the latest offers
 
     - To be able to create a wishlist so I can review it later
 
@@ -85,7 +89,6 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
     - Have a secure online payment
 
     - Send confirmation order for each purchase with order and customer details
-
 
  - #### Strategy
 
@@ -188,7 +191,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
             - Add / Edit / Delete review functionality for loggin users
           
-            - Depending from waht category the product is, along the page there is two or one carousel with suggested product to complete the look
+            - Depending from what category the product is, along the page there is two or one carousel with suggested product to complete the look
 
         4. Register
 
@@ -233,6 +236,18 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
             - Can sort the reviews from rating or product name
 
             - If user is loggin and has left some reviews he can edit/delete their own reviews
+
+        11. Contact Page
+
+            - Where the user can contact the owner for different queries
+
+        12. Footer section
+
+            - Where the users can find newsletter subscription form
+
+            - Where the users can find informativ links 
+            
+            - Where the users can find links to the business social media pages
  
       - ##### Future Features to Implement:
 
@@ -270,7 +285,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
             - The colors from palette colors was selected to much the Hero image background from Home page
 
-            ![Palette Colors](readme-file/Palette-Coolors.png)
+            ![Palette Colors](readme_file/Palette-Coolors.png)
 
     -  ##### Typography
 
@@ -375,7 +390,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
         - Database Diagram was created with [dbdiagram.io](https://dbdiagram.io/d)
 
-        ![Database Diagram](readme-file/db-diagram.jpg)
+        ![Database Diagram](readme_file/db-diagram.jpg)
 
 [Back to Top](#table-of-contents)
 
@@ -392,6 +407,178 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 - ### Deployment
 
   - #### Heroku
+
+    - The project was deployed to Heroku using the following steps:
+
+        1. In order to deploy to Heroku you need an [account](https://signup.heroku.com/login?redirect-url=https%3A%2F%2Fid.heroku.com%2Foauth%2Fauthorize%3Fclient_id%3Dd2ef2b24-e72c-4adf-8506-28db2218547d%26response_type%3Dcode%26scope%3Dglobal%252Cplatform%26state%3DSFMyNTY.g2gDbQAAADFodHRwczovL2Rhc2hib2FyZC5oZXJva3UuY29tL2F1dGgvaGVyb2t1L2NhbGxiYWNrbgYAnwF4L3kBYgABUYA.q2PQc0k53ICJ0LR6VFKbOkyuEqmEtG0iuVzTM38UNAI)
+
+        2. Now you can create a new app from the dashboard ```New``` Menu
+        ![](static/readme/heroku-app.jpg)
+
+        3. Now you need to set up a name and select a region closest to you
+
+            NOTE: Remember the name has to be unique and generally use a dash and lowercase letters
+
+        4. On the ```Resources``` tab we gonna provision a new Postgres Database that will gone use for this project:
+
+            a. On the ```Add-ons``` search for Heroku Postgres and click on it
+
+            b. On the pop-up windown select the free plan ```Hobby Dev - Free``` and click ```Submit Order Form```
+
+        5. To use Heroku Postgres go back to the project install the two dependencies:
+
+            ```
+              pip3 install dj_database_url
+              pip3 install psycopg2-binary
+            ```
+
+        6. On your project create ```requirements.txt``` file that contains a list of our Python dependencies by typing in the terminal 
+        
+            ```
+            pip3 freeze --local > requirements.txt
+            ```
+
+        7. Now on your ```settings.py``` file  ```import dj_database_url``` and in the database settings comment out the current DATABASES settings and replace the default DATABASES with following settings:
+
+            ```
+            DATABASES = {
+                'default': dj_database_url.parse('DATABASE_URL')
+            }
+            ```
+
+            NOTE: The ```DATABASE_URL``` we can get from Heroku, app that you just created, under the ```Settings``` tab on ```Reveal Config Vars```
+
+        8. Since now we are connected to Heroku Postgres we need to run migrations again, and we can see that with:
+
+
+            ```
+            python3 manage.py showmigrations
+            ```
+
+              NOTE: At this stage you might get a error 
+            
+            ```
+            django.db.utils.OperationalError: FATAL:  role "" does not exist on heroku postgres
+            ```
+
+              since in the Full Template, from Code Institute, there is a PGHOSTADDR local variable that has been added to accommodate for the new SQLAlchemy lessons. In order to run showmigrations and migrate after we need to run the terminal this command:
+
+            ```
+            unset PGHOSTADDR
+            ```
+
+            and after run again to see that none of the migrations are mark off:
+
+            ```
+            python3 manage.py showmigrations
+            ```
+
+        9. Now run the following command to apply all the migrations and get our Heroku Postgres database set up:
+
+            ```
+            python3 manage.py migrate
+            ```
+
+        10. Now we can use our fixture again by loading the categories:
+
+            ```
+            python3 manage.py loaddata categories
+            ```
+
+        11. Following by loading the products:
+
+            ```
+            python3 manage.py loaddata products
+            ```
+
+            IMPORTANT NOTE: We need to load data in this order because the products depend on the categories already existing
+
+        12. Now we can create a superuser so we can login with
+
+            ```
+            python3 manage.py createsuperuser
+            ```
+
+        13. Since our database in Heroku is all set up, we gonna have an if statement in ```setting.py``` to set the ```DATABASES```
+        so when we run on Heroku we gone use the environment variable ```DATABASE_URL``` to connect to Postgres else we gonna connect for SQLite
+
+            ```
+            if 'DATABASE_URL' in os.environ:
+                DATABASES = {
+                    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+                }
+            else:
+                DATABASES = {
+                    'default': {
+                        'ENGINE': 'django.db.backends.sqlite3',
+                        'NAME': BASE_DIR / 'db.sqlite3',
+                    }
+                }
+            ```
+
+        14. In order for the deploy to work we need to install another package qunicorn, which will act as our web server:
+
+
+            ```
+            pip3 install gunicorn
+            ```
+
+        15. Now we need to freeze that package in our requirements file:
+        
+            ```
+            pip3 freeze --local > requirements.txt
+            ```
+
+        16. Create ```Procfile``` file that tells Heroku to create a web Dyno which will run gunicorn and serv our Django app
+            ```
+            echo web: gunicorn <app-name>.wsgi:application > Procfile
+            ```
+
+        17. Now we need to connect to Heroku from the terminal: 
+            ```
+            heroku login -i
+            ```
+        18. Temporaly disable COLLECTSTATIC, because we don't want our static file when we deploy, since we are gone use AWS for that
+            ```
+            heroku config:set DISABLE_COLLECTSTATIC=1 --app <app-name>
+            ```
+        19. Now we need to add the hostname of our Heroku app to allowed hosts in ```setting.py```
+
+            ```
+            ALLOWED_HOSTS = ['<app-name>.herokuapp.com', 'localhost']
+            ```
+
+        20. Now we can push to github with:
+
+            ```
+            git add .
+
+            git commit -m "[Heroku] Deploy to Heroku"
+
+            git push
+            ```      
+
+        21. And to finally push to Heroku:
+
+            ```
+            heroku git:remote -a <heroku app-name>
+            git push heroku master
+            ```
+
+            NOTE: We needed to initialize our heroku git remote because we created our app on the website 
+
+    - Set up the app for automatic deployed for when we push to github:
+
+        1. Go to your app in Heroku
+
+        2. On the ```Deploy``` tab and on each section: 
+        
+            a. ```Deployment method``` - set it to Connect to Github
+
+            b. ```Connect to Github``` - search for your repository and click connect
+
+            c. ```Automatic deploys``` - Enable Automatic Deploys
+      
 
   - #### Local Clone
 

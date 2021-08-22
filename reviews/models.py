@@ -33,23 +33,6 @@ class Review(models.Model):
     def __str__(self):
         return f"{self.user}: {self.product}"
 
-    def get_average_rating(self):
-        """
-        Get the average ratings of each product
-        """
-        ratings = Review.objects.filter(product=self.product).aggregate(
-            avg_rating=Avg("rating")
-        )
-
-        return ratings["avg_rating"] or 0
-
-    def get_display_average_rating(self):
-        """
-        Get the average rating for
-        rendering the 5 star rating
-        """
-        return self.get_average_rating() * 100 / 5
-
     def get_each_display_rating(self):
         """
         Get the each rating for
