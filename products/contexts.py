@@ -2,7 +2,13 @@ from .models import Product, Category
 
 
 def new_arrival(request):
-    """ Context processor to access all items from new_arrival category """
+    """
+    Context processor to access all items from new_arrival category
+    Args:
+        request : django request object
+    Returns:
+        context
+    """
     new_arrival = Product.objects.all().filter(category__name="new_arrival")
 
     context = {
@@ -13,7 +19,13 @@ def new_arrival(request):
 
 
 def now_on_sale(request):
-    """ Context processor to access all items from sale category """
+    """
+    Context processor to access all items from sale category
+    Args:
+        request : django request object
+    Returns:
+        context
+    """
     now_on_sale = Product.objects.all().filter(category__name="sale")
 
     context = {
@@ -24,7 +36,13 @@ def now_on_sale(request):
 
 
 def nav_categories(request):
-    """ Context processor for categories for navigation menu """
+    """
+    Context processor for categories for navigation menu
+    Args:
+        request : django request object
+    Returns:
+        context
+    """
     nav_categories = Category.objects.filter(parent=None)
 
     context = {

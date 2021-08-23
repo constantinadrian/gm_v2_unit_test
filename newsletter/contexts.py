@@ -3,8 +3,12 @@ from .forms import NewsletterForm
 
 def newsletter_form(request):
     """
-    Context processor that return
-    the newsletter form on all pages
+    Context processor for the
+    newsletter form on all pages
+    Args:
+        request : django request object
+    Returns:
+        context
     """
     newsletter_form = NewsletterForm()
 

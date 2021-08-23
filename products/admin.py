@@ -1,4 +1,3 @@
-# This code was copied and adapted from Boutique Ado.
 from django.contrib import admin
 from .models import Product, Category
 

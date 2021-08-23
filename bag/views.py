@@ -11,9 +11,11 @@ from django.contrib import messages
 
 def view_bag(request):
     """"
-    A view to return the bag contents page.
-    This view has been copied from the Boutique
-    Ado project
+    A view to return the shopping bag page.
+    Args:
+        request : django request object
+    Returns:
+        rendered bag html
     """
 
     return render(request, 'bag/bag.html')
@@ -21,14 +23,19 @@ def view_bag(request):
 
 def add_to_bag(request, item_id):
     """"
-    Add a quantity of the specified product to the shopping bag.
-    This view has been copied, modified and adapted from the Boutique
-    Ado project
+    A view that add a quantity of the specified product to the shopping bag.
+    Args:
+        request : django request object
+        item_id : slug is the part of the URL that is unique
+                  for each and every page of a website which
+                  identifies a particular product id
+    Returns:
+        redirect to redirect_url
     """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
-    reddirect_url = request.POST.get('redirect_url')
+    redirect_url = request.POST.get('redirect_url')
     size = None
 
     if product.has_sizes is True and product.fields_size == 1:
@@ -78,14 +85,20 @@ def add_to_bag(request, item_id):
 
     request.session['bag'] = bag
 
-    return redirect(reddirect_url)
+    return redirect(redirect_url)
 
 
 def adjust_bag(request, item_id):
     """"
-    Adjust the quantity of the specified product to the shopping bag.
-    This view has been copied, modified and adapted from the Boutique
-    Ado project
+    A view that adjust the quantity of the
+    specified product to the shopping bag.
+    Args:
+        request : django request object
+        item_id : slug is the part of the URL that is unique
+                  for each and every page of a website which
+                  identifies a particular product id
+    Returns:
+        redirect reverse view_bag
     """
 
     product = get_object_or_404(Product, pk=item_id)
@@ -127,9 +140,16 @@ def adjust_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     """"
-    Remove the specified product to the shopping bag.
-    This view has been copied, modified and adapted from the Boutique
-    Ado project
+    A view that remove the specified product to the shopping bag.
+    Args:
+        request : django request object
+        item_id : slug is the part of the URL that is unique
+                  for each and every page of a website which
+                  identifies a particular product id
+    Returns:
+        HttpResponse status=200
+    Except:
+        HttpResponse status=500
     """
 
     try:

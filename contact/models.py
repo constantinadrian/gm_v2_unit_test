@@ -5,7 +5,8 @@ from profiles.models import UserProfile
 
 class Contact(models.Model):
     """
-    Contact model so users can contact the store owner
+    Model that stores a contact message from the users,
+    related to :model:`profiles.userprofile`
     """
 
     class Meta:

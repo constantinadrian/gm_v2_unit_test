@@ -7,6 +7,10 @@ from .models import Wishlist
 def user_wishlist(request):
     """
     Context processor to access all products from user wishlist
+    Args:
+        request : django request object
+    Returns:
+        context
     """
     if request.user.is_authenticated:
         wishlist = get_object_or_404(Wishlist, user=request.user)

@@ -12,8 +12,8 @@ from profiles.models import UserProfile
 
 class Order(models.Model):
     """
-    This model has been copied and adapted
-    from the Boutique Ado project
+    Model that stores a order from the users,
+    related to :model:`profiles.userprofile`
     """
 
     order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -75,6 +75,10 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    Model that stores a line item from the order,
+    related to :model:`checkout.order`
+    """
     order = models.ForeignKey(Order, null=False, blank=False,
                               on_delete=models.CASCADE,
                               related_name='lineitems')

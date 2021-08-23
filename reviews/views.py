@@ -11,7 +11,13 @@ from products.models import Product
 
 
 def reviews(request):
-    """" A view to return the index page """
+    """"
+    A view to return the reviews page
+    Args:
+        request : django request object
+    Returns:
+        rendered reviews html
+    """
     reviews = Review.objects.all().order_by('id')
 
     sort = None
@@ -70,7 +76,14 @@ def reviews(request):
 @login_required
 def add_review(request, product_slug):
     """
-    Add review to a product to the store
+    A view to add review to a product to the store
+    Args:
+        request : django request object
+        product_slug : slug is the part of the URL that is unique
+                       for each and every page of a website which
+                       identifies a particular product
+    Returns:
+        rendered add_review html
     """
     user = UserProfile.objects.get(user=request.user)
     product = get_object_or_404(Product, slug=product_slug)
@@ -109,7 +122,16 @@ def add_review(request, product_slug):
 
 @login_required
 def edit_review(request, review_id):
-    """ Edit a review from a specific product """
+    """
+    A view to edit a review from a specific product
+    Args:
+        request : django request object
+        product_id : slug is the part of the URL that is unique
+                     for each and every page of a website which
+                     identifies a particular product id
+    Returns:
+        rendered edit_review html
+    """
     # check if review exists
     review = get_object_or_404(Review, pk=review_id)
 
@@ -161,7 +183,14 @@ def edit_review(request, review_id):
 @login_required
 def delete_review(request, review_id):
     """
-    Delete a review from a specific product
+    a view to delete a review from a specific product
+    Args:
+        request : django request object
+        product_id : slug is the part of the URL that is unique
+                     for each and every page of a website which
+                     identifies a particular product id
+    Returns:
+        redirect reverse reviews
     """
     # check if review exists
     review = get_object_or_404(Review, pk=review_id)

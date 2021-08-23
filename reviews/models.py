@@ -1,12 +1,13 @@
 from django.db import models
 from profiles.models import UserProfile
 from products.models import Product
-from django.db.models import Avg
 
 
 class Review(models.Model):
     """
-    Review model for each user on a specific product
+    Model that stores a review,
+    related to :model:`profiles.userprofile`
+    and to :model:`products.product`
     """
 
     class Meta:

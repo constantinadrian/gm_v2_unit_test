@@ -13,8 +13,12 @@ from .forms import ProductForm
 def all_products(request, category_slug=None):
     """"
     A view to show all products, including sorting and search queries.
-    This view has been copied, modified and adapted from the Boutique
-    Ado project
+    Args:
+        request : django request object
+        category_slug : part of a URL that is unique which
+                        identifies a particular group of related products
+    Returns:
+        rendered products html
     """
 
     products = Product.objects.all().order_by('id')
@@ -169,8 +173,15 @@ def all_products(request, category_slug=None):
 def product_detail(request, category_slug, product_slug):
     """"
     A view to show individual product details.
-    This view has been copied, modified and adapted from the Boutique
-    Ado project
+    Args:
+        request : django request object
+        category_slug : part of a URL that is unique which
+                        identifies a particular group of related products
+        product_slug : slug is the part of the URL that is unique
+                       for each and every page of a website which
+                       identifies a particular product
+    Returns:
+        rendered product_detail html
     """
 
     category = get_object_or_404(Category, slug=category_slug)
@@ -210,7 +221,11 @@ def product_detail(request, category_slug, product_slug):
 @login_required
 def add_product(request):
     """
-    Add a product to the store
+    A view to add a product to the store
+    Args:
+        request : django request object
+    Returns:
+        rendered add_product html
     """
 
     if not request.user.is_superuser:
@@ -245,7 +260,17 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product in the store """
+    """
+    A view to edit a product in the store
+    Args:
+        request : django request object
+        product_id : slug is the part of the URL that is unique
+                     for each and every page of a website which
+                     identifies a particular product id
+    Returns:
+        rendered edit_product html
+    """
+
     product = get_object_or_404(Product, pk=product_id)
 
     if not request.user.is_superuser:
@@ -283,7 +308,14 @@ def edit_product(request, product_id):
 @login_required
 def delete_product(request, product_id):
     """
-    Delete a product from the store
+    A view to delete a product from the store
+    Args:
+        request : django request object
+        product_id : slug is the part of the URL that is unique
+                     for each and every page of a website which
+                     identifies a particular product id
+    Returns:
+        redirect reverse products
     """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')

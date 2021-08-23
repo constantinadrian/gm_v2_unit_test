@@ -11,7 +11,13 @@ from .models import Wishlist
 
 
 def wishlist(request):
-    """" A view to return the wishlist page """
+    """"
+    A view to return the wishlist page
+    Args:
+        request : django request object
+    Returns:
+        rendered wishlist html
+    """
 
     return render(request, "wishlist/wishlist.html")
 
@@ -19,7 +25,17 @@ def wishlist(request):
 def add_to_wishlist(request, product_id):
     """"
     A view that add / remove products from wishlist page
+    Args:
+        request : django request object
+        product_id : slug is the part of the URL that is unique
+                     for each and every page of a website which
+                     identifies a particular product id
+    Returns:
+        HttpResponse status=200
+    Raises:
+        Http404: Page not found.
     """
+
     if request.method == 'POST':
         # check if product exist in our database
         product = get_object_or_404(Product, pk=product_id)

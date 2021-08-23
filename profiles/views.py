@@ -11,7 +11,11 @@ from checkout.models import Order
 @login_required
 def profile(request):
     """
-    Display the user's profile.
+    A view to display the user's profile.
+    Args:
+        request : django request object
+    Returns:
+        rendered profile html
     """
     profile = get_object_or_404(UserProfile, user=request.user)
 
@@ -49,7 +53,13 @@ def profile(request):
 @login_required
 def order_history(request, order_number):
     """
-    Display the user's individual order.
+    A view to display the user's individual order.
+    Args:
+        request : django request object
+        order_number : unique string which identifies
+                       a particular order number
+    Returns:
+        rendered checkout_success html
     """
     order = get_object_or_404(Order, order_number=order_number)
 

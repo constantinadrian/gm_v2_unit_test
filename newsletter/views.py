@@ -11,9 +11,13 @@ from .models import Newsletter
 def newsletter_signup(request):
     """"
     A view that handles the subscriptions
+    Args:
+        request : django request object
+    Returns:
+        redirect redirect_url
     """
     if request.method == "POST":
-        reddirect_url = request.POST.get('redirect_url')
+        redirect_url = request.POST.get('redirect_url')
         subscription_form = NewsletterForm(request.POST)
 
         if subscription_form.is_valid():
@@ -22,7 +26,7 @@ def newsletter_signup(request):
             if Newsletter.objects.filter(email=form.email).exists():
                 messages.info(request, ('This email address is already '
                                         'subscribed to our newsletter.'))
-                return redirect(reddirect_url)
+                return redirect(redirect_url)
             else:
                 form.save()
 
@@ -46,9 +50,9 @@ def newsletter_signup(request):
                                  (f'Thank you. You are now subscribed '
                                   f'to our newsletter. A confirmation '
                                   f'email will be sent to {email}.'))
-                return redirect(reddirect_url)
+                return redirect(redirect_url)
         else:
             messages.error(request,
                            ('Please ensure the email '
                             'address on the form is valid.'))
-            return redirect(reddirect_url)
+            return redirect(redirect_url)

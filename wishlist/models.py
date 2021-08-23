@@ -8,7 +8,9 @@ from products.models import Product
 
 class Wishlist(models.Model):
     """
-    Wishlist Class model base on the profile model
+    Model that stores wislist,
+    related to :model:`auth.User`
+    and :model:`products.product`
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     products = models.ManyToManyField(Product, blank=True)

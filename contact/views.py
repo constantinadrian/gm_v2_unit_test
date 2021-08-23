@@ -10,7 +10,11 @@ from profiles.models import UserProfile
 
 def contact(request):
     """"
-    A view to return the contact page
+    A view to for the contact page
+    Args:
+        request : django request object
+    Returns:
+        rendered contact html
     """
 
     if request.method == "POST":

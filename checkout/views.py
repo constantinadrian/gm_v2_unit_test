@@ -21,7 +21,13 @@ from profiles.models import UserProfile
 @require_POST
 def cache_checkout_data(request):
     """
-    Cache data when the checkout form is submitted
+    A view that cache data when the checkout form is submitted
+    Args:
+        request : django request object
+    Returns:
+        HttpResponse status=200
+    Except:
+        HttpResponse status=400
     """
     try:
         payment_intent_id = request.POST.get(
@@ -41,7 +47,11 @@ def cache_checkout_data(request):
 
 def checkout(request):
     """
-    Handle checkout verification
+    A view that handle checkout verification
+    Args:
+        request : django request object
+    Returns:
+        rendered checkout html
     """
 
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -195,7 +205,13 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts
+    A view that handle successful checkouts
+    Args:
+        request : django request object
+        order_number : unique string which identifies
+                       a particular order number
+    Returns:
+        rendered checkout_success html
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)

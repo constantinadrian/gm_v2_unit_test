@@ -5,8 +5,8 @@ from django.urls import reverse
 
 class Category(models.Model):
     """
-    This model has been copied, modified and
-    adapted from the Boutique Ado project
+    Model that stores a category,
+    related to :model:`products.category`
     """
 
     class Meta:
@@ -39,8 +39,8 @@ class Category(models.Model):
 
 class Product(models.Model):
     """
-    This model has been copied, modified and
-    adapted from the Boutique Ado project
+    Model that stores a product,
+    related to :model:`products.category`
     """
 
     class Meta:

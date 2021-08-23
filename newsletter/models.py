@@ -3,7 +3,7 @@ from django.db import models
 
 class Newsletter(models.Model):
     """
-    Newsletter model so users can get the latest offers
+    Newsletter model that stores users email
     """
     class Meta:
         verbose_name_plural = "Newsletters"
