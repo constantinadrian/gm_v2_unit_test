@@ -956,7 +956,37 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
   - #### Content
 
-    - 
+    - All Content from the products was taken from this websites
+
+    - [https://www.mossbros.ie/](https://www.mossbros.ie/)
+
+    - [https://www.louiscopeland.com/](https://www.louiscopeland.com/)
+
+    - [https://www.thetiebar.com/](https://www.thetiebar.com/)
+
+    - [https://www.nimble-made.com/](https://www.nimble-made.com/)
+
+    - [https://www.tailorstore.com/](https://www.tailorstore.com/)
+
+    - [https://www.oliverwicks.com/](https://www.oliverwicks.com/)
+
+    - [https://www.johnlewis.com/](https://www.johnlewis.com/)
+
+    - [https://www.twillory.com/](https://www.twillory.com/)
+
+    - [https://nifty-genius.com/](https://nifty-genius.com/)
+
+    - [https://eu.crockettandjones.com/](https://eu.crockettandjones.com/)
+
+    - [https://brotherfrere.com/](https://brotherfrere.com/)
+
+    - [https://www.paulevansny.com/](https://www.paulevansny.com/)
+
+    - [https://www.allenedmonds.com/](https://www.allenedmonds.com/)
+
+    - [https://www.fields.ie/](https://www.fields.ie/)
+
+    - [https://www.next.co.uk/](https://www.next.co.uk/)
 
   - #### Media
 
