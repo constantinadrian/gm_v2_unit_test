@@ -21,7 +21,7 @@
 
 {% block content %}
 
-    <section id="product-info-section">
+    <div id="product-info-section">
         <div class="container">
             <div class="row mt-3 d-none d-sm-block">
                 <nav aria-label="breadcrumb">
@@ -146,7 +146,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <section id="product-description-section" class="my-5 pb-5">
         <div class="container">
@@ -172,7 +172,7 @@
                     <div class="tab-pane fade show active" id="description-tab-container" role="tabpanel" aria-labelledby="details-tab">
                         <div class="row mb-3">
                             <div class="col-12">
-                                <p class="brand-text">Description</p>
+                                <h3 class="brand-text">Description</h3>
                             </div>
                         </div>
                         <div class="row">
@@ -185,7 +185,7 @@
                     <div class="tab-pane fade" id="reviews-tab-container" role="tabpanel" aria-labelledby="reviews-tab">
                         <div class="row mb-3">
                             <div class="col-12">
-                                <p class="brand-text">Reviews {% if product.reviews.all %}({{ product.reviews.all|length }}){%endif%}</p>
+                                <h3 class="brand-text">Reviews {% if product.reviews.all %}({{ product.reviews.all|length }}){%endif%}</h3>
                             </div>
                         </div>
 

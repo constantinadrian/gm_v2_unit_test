@@ -6,7 +6,7 @@ $(document).ready(function(){
         loop:true,
         margin:30,
         nav:true,
-        navText:["<div class='carousel-nav-btn prev-slide'></div>","<div class='carousel-nav-btn next-slide'></div>"],
+        navText:["<span class='carousel-nav-btn prev-slide'></span>","<span class='carousel-nav-btn next-slide'></span>"],
         responsive:{
             0:{
                 items:1
