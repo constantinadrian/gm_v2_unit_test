@@ -16,7 +16,7 @@ def user_wishlist(request):
         wishlist = get_object_or_404(Wishlist, user=request.user)
 
         # Pagination show 12 products per page
-        paginator = Paginator(wishlist.products.all(), 12)
+        paginator = Paginator(wishlist.products.all().order_by('id'), 12)
 
         page = request.GET.get('page')
         try:

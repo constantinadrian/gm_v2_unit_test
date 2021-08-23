@@ -932,7 +932,27 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
   - #### Code
 
-    -
+    - [Caterpillar Montessori](https://github.com/constantinadrian/Caterpillar_Montessori_MS_1) - Footer code taken, modified and adapted from Caterpillar_Montessori_MS_1 project
+
+    - [Trivia Quiz](https://github.com/constantinadrian/Trivia_Quiz) - Hamburger Menu for mobile view taken, modified and adapted from Trivia Quiz project
+
+    - [Savour](https://github.com/constantinadrian/savour) - Modal for delete confirmation taken, modified and adapted from Savour project
+
+    - [Savour](https://github.com/constantinadrian/savour) -Close the collapse navbar menu when click outside the navbar, and also adapted the code for collapse when other links on the mobile menu are press
+
+    - [Master Code Online](https://www.youtube.com/watch?v=MAIFJ3_bcCY) - Pagination for product, review and wishlist page was inspired from this tutorial, modified and adapted to this project
+
+    - [StackOverflow](https://stackoverflow.com/questions/54808110/django-combining-search-view-with-pagination) - Change parameter on the URL for Pagination
+
+    - [StackOverflow](https://stackoverflow.com/questions/59593884/django-rendering-a-number-as-a-5-stars-rating) - Rendering five stars rating on reviews page and product detail on review section
+
+    - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - Header section on base template, main and mobile menu, product page, product detail page, shopping bag, checkout, and success checkout - each of them with few or more modifications and make them also fully responsive on every device.
+
+    - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - All widgets and custom widgets, webhook and webhook handler(with few additions for different sizes in) 
+
+    - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - For functionality of stripe, shoping bag and checkout.
+
+    - [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/) - for the carousel used on this project
 
   - #### Content
 
