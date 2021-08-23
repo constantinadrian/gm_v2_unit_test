@@ -954,43 +954,61 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
     - [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/) - for the carousel used on this project
 
+    - [Bootstrap](https://getbootstrap.com/) – CSS framework used to help contact form, cards, modal, table and other classes that were used to make the app responsive.
+
   - #### Content
 
     - All Content from the products was taken from this websites
 
-    - [https://www.mossbros.ie/](https://www.mossbros.ie/)
+        - [https://www.mossbros.ie/](https://www.mossbros.ie/)
 
-    - [https://www.louiscopeland.com/](https://www.louiscopeland.com/)
+        - [https://www.louiscopeland.com/](https://www.louiscopeland.com/)
 
-    - [https://www.thetiebar.com/](https://www.thetiebar.com/)
+        - [https://www.thetiebar.com/](https://www.thetiebar.com/)
 
-    - [https://www.nimble-made.com/](https://www.nimble-made.com/)
+        - [https://www.nimble-made.com/](https://www.nimble-made.com/)
 
-    - [https://www.tailorstore.com/](https://www.tailorstore.com/)
+        - [https://www.tailorstore.com/](https://www.tailorstore.com/)
 
-    - [https://www.oliverwicks.com/](https://www.oliverwicks.com/)
+        - [https://www.oliverwicks.com/](https://www.oliverwicks.com/)
 
-    - [https://www.johnlewis.com/](https://www.johnlewis.com/)
+        - [https://www.johnlewis.com/](https://www.johnlewis.com/)
 
-    - [https://www.twillory.com/](https://www.twillory.com/)
+        - [https://www.twillory.com/](https://www.twillory.com/)
 
-    - [https://nifty-genius.com/](https://nifty-genius.com/)
+        - [https://nifty-genius.com/](https://nifty-genius.com/)
 
-    - [https://eu.crockettandjones.com/](https://eu.crockettandjones.com/)
+        - [https://eu.crockettandjones.com/](https://eu.crockettandjones.com/)
 
-    - [https://brotherfrere.com/](https://brotherfrere.com/)
+        - [https://brotherfrere.com/](https://brotherfrere.com/)
 
-    - [https://www.paulevansny.com/](https://www.paulevansny.com/)
+        - [https://www.paulevansny.com/](https://www.paulevansny.com/)
 
-    - [https://www.allenedmonds.com/](https://www.allenedmonds.com/)
+        - [https://www.allenedmonds.com/](https://www.allenedmonds.com/)
 
-    - [https://www.fields.ie/](https://www.fields.ie/)
+        - [https://www.fields.ie/](https://www.fields.ie/)
 
-    - [https://www.next.co.uk/](https://www.next.co.uk/)
+        - [https://www.next.co.uk/](https://www.next.co.uk/)
+
+    - This two website wre used as a general inspiration:
+
+        - [https://www.mossbros.ie/](https://www.mossbros.ie/)
+
+        - [https://davidwej.com/uk/](https://davidwej.com/uk/)
 
   - #### Media
 
-    - 
+    - The hero image from landing page was taken from:
+
+        - [ShutterStock](https://www.shutterstock.com/image-photo/portrait-handsome-stylish-man-elegant-black-124851772) - Royalty-free stock photo ID: 124851772
+
+    - All the images from the products and card section on landing page were taken from:
+
+        - [https://www.pexels.com/](https://www.pexels.com/)
+
+        - [https://pixabay.com/](https://pixabay.com/)
+
+        - [https://unsplash.com/](https://unsplash.com/)
 
   - #### Acknowledgements
 
@@ -998,7 +1016,9 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
     - Slack community
 
-    - My mentor Oluwafemi Medale for his support and feedback that he has given me for this milestone project.
+    - To my previous mentor Oluwafemi Medale for the support and feedback that he has given me for the entire course on milestone projects and the first session of milestone four before he has taken a break from mentoring.
+
+    - My mentor Rohit Sharma for his support and feedback that he has given me for this milestone project
 
 [Back to Top](#table-of-contents)
 
