@@ -572,6 +572,63 @@
 
         ![](readme_file/product-delete-own-review-success.jpg)
 
+    - Testing admin add product
+
+        - Expected: After the admin fills the add product form with all requirements details, the product should appear in products page, on search and on the category the was selected and be able to see the product detail page.
+
+        - Result: As expected the product was uploaded successufull
+
+        ![](readme_file/admin-add-product.jpg)
+
+        ![](readme_file/admin-add-product-search.jpg)
+
+    - Testing admin edit product
+
+        - Expected 1: Change the price of the product to more then 6 digits and click update product. The form should raise an error 
+
+        - Expected 2: Change the price of the product to more less than initial price and update product. The form should validate
+
+        - Result: As expected in both cases the result is working correctly.
+
+        ![](readme_file/admin-edit-product-error.jpg)
+
+        ![](readme_file/admin-edit-product-success.jpg)
+
+    - Testing admin delete product
+
+        - Expected 1: When the admin wants to delete a product a modal is shown and ask for confirmation before actially deleting the product
+
+        - Expected 2: After the admin confirm the delete product the product should delete from our database and the page should redirect to products page
+
+        - Result: As expected in both cases the result is working correctly.
+
+        ![](readme_file/admin-delete-product-confirmation-box.jpg)
+
+        ![](readme_file/admin-delete-product-message.jpg)
+
+        ![](readme_file/admin-delete-product-search-box.jpg)
+
+    - Testing stripe payment with [Stripe testing cards](https://stripe.com/docs/testing)
+
+        - Expected 1: First we choose not to autheticate and the payment should faild
+
+        - Expected 2: Now we authenticate and the payment should not be process due to insuficient funds
+
+        - Result: As expected the payment faild
+
+        Fail authentication
+
+        ![](readme_file/stripe-payment-fail-authentication.jpg)
+
+        ![](readme_file/stripe-payment_intent.payment_failed.jpg)
+
+        ![](readme_file/stripe-no-authenticate.jpg)
+
+        Complete authentication
+
+        ![](readme_file/stripe-charge-faild.jpg)
+
+        ![](readme_file/stripe-insuficient-funds.jpg)
 
 
 [Back to Top](#table-of-contents)
