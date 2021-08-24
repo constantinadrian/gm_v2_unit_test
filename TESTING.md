@@ -363,6 +363,112 @@
 
         - Result: All links were working correctly.
 
+    - Testing all call to actions links from the ```Home``` page
+
+        - Expected: Each link that is pressed it has to redirect to each specific page.
+
+        - Result: All call to actions links are working correctly.
+
+    - Testing product links from each carousel
+
+        - Expected: Each product that is pressed has to redirect to his specific product detail page.
+
+        - Result: As expected the product redirects to his specific product detail page.
+
+    - Testing sort on all products page
+
+        - Expected: The products are to be sorted by each filter accordingly and in the direction that the user has choosing, ascending or descending
+
+        - Result: As expected the sorting filter, either by name, category, brand, or price, and the direction chosen by users are displayed correctly
+
+    - Testing search form
+
+        - Expected: Return all products that contain the query word in: product brand, name or description 
+
+        - Result: The query result is as expected
+
+    - Testing sort on search query
+
+        - Expected: Sort the query result without loosing the search query
+
+        - Result: The sort is working as expected
+
+    - Testing pagination with sort on search query
+
+        - Expected: Have the same query search with the sort filter use the paginations with loosing the search query or sort filter
+
+        - Result: The paginations is working as expected without loosing any search or sort parameter
+
+    - Testing all links from the breadcrumb
+
+        - Expected: Once each link is pressed from the navigational hierarchy it has to redirect to each specific page
+
+        - Result: All links were working correctly.
+
+    - Testing ```Keep shopping``` and ```Add to bag``` buttons from product detail page
+
+        - Expected 1: The ```Keep shopping``` button should redirect to products page
+
+        - Expected 2: The ```Add to bag``` button should add the product to shopping bag
+
+        - Result: As expected the ```Keep shopping``` and ```Add to bag``` buttons are working correctly.
+
+    - Testing adjust quantity from product detail and shopping bag page
+
+        - Expected: The product quantity should increase/decrease in quantity when user uses the increase/decrease buttons
+
+        - Result: As expected the increase/decrease buttons on both pages are working correctly.
+
+    - Testing review sections for unregister users:
+
+        - Expected: The unregister users can see all the reviews that other users write for a particular product, but then can write any reviews until they sign in. Two links will be display the unregister users: ```sign in``` or ```sign up```
+
+        - Result: As expected the unregister users can see only the reviews for the specific product and the two links for ```sign in``` or ```sign up```, the button for write a review is not display.
+
+        ![](readme_file/product-detail-review-unregister-user.jpg)
+
+    - Testing wishlist page and wishlist buttons from products page and product detail page for unregister users:
+
+        - Expected: All button for Add to wishlist from product page and product detail page are not display for unregister user, and on wishlist page the two links for ```sign in``` or ```sign up``` will be displayed.
+
+        - Result: As expected the unregister users can see only the add to sihlist buttons and on the wishlist page the two links for ```sign in``` or ```sign up``` are displayed.
+
+        ![](readme_file/wishlist-unregister-user.jpg)
+
+    - Testing update quantity on shopping bag
+
+        - Expected 1: Once the quantity on product is increase/decrease and the update button is pressed the subtotal and total price on the shopping bag should reflect the price base on the new quantity
+
+        - Expected 2: If the user wants to add to the bag a product that already is in the bag the quantity is increasing accordingly
+
+        - Result: As expected the update quantity on shopping bag page are working correctly.
+
+    - Testing remove specific product from shopping bag
+
+        - Expected: Once the remove button from a specific product is press that product will be remove from shopping bag
+
+        - Result: As expected when remove button is press the right product is remove from the bag
+
+    - Testing Complete order for unregister users
+
+        - Expected: Once the order is complete and it's successuful an success message will be show to the user that an email cofirmation it's send to the email address provided on the checkout form.
+
+        - Result: As expected an message will confirm to the user that the order complete and the email it's send to the address provided
+    
+        ![](readme_file/order-confirmation.jpg)
+        
+        ![](readme_file/email-confirmation.jpg)
+
+        ![](readme_file/stripe-payment-intent.succeeded.jpg)
+
+        ![](readme_file/order-confirmation-admin-dashboard.jpg)
+        
+
+    - Testing 
+
+        - Expected:
+
+        - Result:
 
 [Back to Top](#table-of-contents)
 -----

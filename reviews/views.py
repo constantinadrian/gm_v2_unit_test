@@ -114,7 +114,6 @@ def add_review(request, product_slug):
     context = {
         'product': product,
         'review_form': review_form,
-        'product_management': True,
     }
 
     return render(request, template, context)
@@ -174,7 +173,6 @@ def edit_review(request, review_id):
     context = {
         'review': review,
         'review_form': review_form,
-        'product_management': True,
     }
 
     return render(request, template, context)

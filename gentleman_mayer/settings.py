@@ -226,7 +226,7 @@ if "MAYER_USE_AWS" in os.environ:
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 # Configuration for send email
-if 'DEVELOPMENT' in os.environ:
+if 'DEVELOPMENTsss' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'gentleman.mayer@example.com'
 else:

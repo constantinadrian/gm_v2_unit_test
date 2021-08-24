@@ -143,5 +143,9 @@
     {{ block.super }}
     {% include 'products/includes/quantity_input_script.html' %}
 
+    <script>
+        var csrfToken = "{{ csrf_token }}";
+    </script>
+    
     <script src="{% static 'bag/js/bag.js' %}"></script>
 {% endblock %}

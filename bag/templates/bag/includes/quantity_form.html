@@ -27,6 +27,7 @@
             {% endif %}
         </div>
     </div>
+
+    <button type="submit" class="update-link border-0 bg-transparent text-info"><small>Update</small></button>
+    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
 </form>
-<a class="update-link text-info"><small>Update</small></a>
-<a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
