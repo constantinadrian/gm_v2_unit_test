@@ -230,58 +230,6 @@
 
         {% block postloadjs %}
         <script src="{% static 'js/base.js' %}"></script>
-        <script>
-            // Call the toast method
-             $('.toast').toast('show');
-
-            // Back to Top Button
-            $('.btt-link').click(function(e) {
-                window.scrollTo(0,0)
-            })
-
-            // Toggle Back to Top button when the user scrolls down 20px from the top
-            window.onscroll = function() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    $('.btt-button').css('display', 'block');
-                } else {
-                    $('.btt-button').css('display', 'none');
-                }
-            };
-            
-            // Make the collapse navbar menu scroll on mobile, tablets, if needed, and disable the scroll on body
-            $("button.navbar-toggler").on("click touchstart", function(event){
-                if ($("button.navbar-toggler").attr("aria-expanded") == "false") {
-                    $(".navbar").addClass("enable-scroll-mobile-menu");
-                    $("html body").addClass("disable-scroll-on-body");
-
-                }
-                else {
-                    $(".navbar").removeClass("enable-scroll-mobile-menu");
-                    $("html body").removeClass("disable-scroll-on-body");
-                }
-            });
-
-            // Toggle the navbar menu, if open, with search form
-            $("a#mobile-search").on("click touchstart", function(event){
-                if ($("a#mobile-search").attr("aria-expanded") == "false" && ($("button.navbar-toggler").attr("aria-expanded") == "true")) {
-                    $("button.navbar-toggler").click();
-                }
-            });
-
-            // Toggle the navbar menu, if open, with user-options
-            $("a#user-options").on("click touchstart", function(event){
-                if ($("a#user-options").attr("aria-expanded") == "false" && ($("button.navbar-toggler").attr("aria-expanded") == "true")) {
-                    $("button.navbar-toggler").click();
-                }
-            });
-
-            // Close the collapse navbar menu when click outside the navbar
-            $(document).on("click touchstart", function(event){
-                if ($("button.navbar-toggler").attr("aria-expanded") == "true" && $(event.target).closest(".navbar").length == 0) {
-                    $("button.navbar-toggler").click();
-                }
-            });
-        </script>
         {% endblock %}
     </body>
 </html>

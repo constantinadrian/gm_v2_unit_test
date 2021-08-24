@@ -24,11 +24,13 @@ class NewsletterForm(forms.ModelForm):
             'email': 'Email',
         }
 
+        field_classes = 'form-control border-0 rounded-0 links-text py-2 h-100'
+
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
             else:
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'form-control border-0 rounded-0 links-text py-2 h-100'
+            self.fields[field].widget.attrs['class'] = field_classes
             self.fields[field].label = False
