@@ -630,7 +630,7 @@ input[name="q"]::placeholder {
 .bag-totals {
     position: -webkit-sticky;
     position: sticky;
-    top: calc(var(--header-container-lg-padding) + 1rem);
+    top: 166px;
     margin: 0 0 1rem;
 }
 /* ------------------------------- End Containers Classes ----------------------------------------- */
@@ -641,7 +641,7 @@ input[name="q"]::placeholder {
     background-size: cover;
     background-position-x: 65%;
     background-position-y: 10%;
-    min-height: calc(100vh - var(--header-container-xs-padding));
+    min-height: calc(100vh - 78.4px);
 }
 /* ------------------------------ End Background Classes ------------------------------------------ */
 
@@ -1034,7 +1034,7 @@ input[name="q"]::placeholder {
     }
 
     .bg-homepage-section{
-        min-height: calc(100vh - var(--header-container-lg-padding));
+        min-height: calc(100vh - 150.4px);
     }
 
     .form-group-wrapper {
@@ -1080,7 +1080,7 @@ input[name="q"]::placeholder {
     }
 
     .bg-homepage-section{
-        min-height: calc(100vh - var(--header-container-sm-md-padding));
+        min-height: calc(100vh - 104px);
     }
 
     .header-text {
