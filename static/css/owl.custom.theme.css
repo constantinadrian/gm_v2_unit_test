@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 8 version
+*/
+
 /* ------------------------------ Owl Carousel Custom --------------------------------------------- */
 .owl-carousel .owl-stage {
     display: -webkit-box;
