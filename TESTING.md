@@ -267,11 +267,89 @@
 
 - ### Testing User Stories
 
-    I. First Time Visitor Goals
+    I.	First Time Visitor Goals:
+
+    - To be able to quickly understand the purpose of the website. 
+
+        - Immediatly after the home page loads the user quickly understands the purpose of the website from the welcome text, call to action button and even the hero image 
+
+    - To be able to quickly identify new products and sales.
+
+        - On the home page, there are two carousels one with New Arrival products and one with Now on Sale. Also on the navigation menu on special offers, users can find New arrival or Sale products
+
+    - To be able to know if there is a free delivery
+
+        - Under the navigations menu there is a banner that informs the users about the free delivery
+
+    - To be able to know if there is a free return
+
+        - Under the navigations menu there is a banner that informs the users about the free return
+
+    - To be able to view a specific category of products and use filters inside that category.
+
+        - On the navigation menu, there are many categories from which the user can choose. Once they navigate to a specific category the user can use the ```sort menu``` the filter the products
+
+    - To be able to view product details and reviews from other customers.
+
+        - Once the user clicks on a product it will be redirect to product detail page where they can find the product description, and from the tab menu the user can choose to read the product reviews
+
+    - To be able to adjust the product quantity from shopping bag
+
+        - There is implemented functionality so that users can adjust the quantity of each product from the shopping bag
+
+    - To be able to remove a product from shopping bag
+
+        - There is implemented functionality so that users can remove each product from the shopping bag
+
+    - To be able to receive confirmation after purchase a product.
+
+        - After the user complete the secure checkout successuful an confimation email with user detail and order detail is send to the email that was used on complete purchase form
+
+    - To be able to contact the company and subscribe to newsletter to receive the latest offers
+
+        - On the footer of each page the user can subscribe the our newsletter and can use the link to contact page for any query
 
     II.	Returning User Goals:
-   
-    III. Site Owner Goals:
+
+    - To be able to register for an account and receive confirmations after.
+
+        - The website has the functionality for the user to register for an account and they will receive and email for confirmation. Once they will confirm the email the account will be ready to use.
+
+    - To be able to easy loggin, logout and easily recover my password
+
+        - The user can loggin very easy and quickly with no hassle and they can use the ```Forget Password``` link from login page to reset their password
+
+    - To have a user profile where I keep track of my orders, my query and update personal information
+
+        - Once the user register for an account they will have a profile page from where they can update the personal details, view order history(if any) and view all the queries that they send thru contact form(if any)
+
+    - To be able to create a wishlist so I can review it later
+
+        - Once the user register for an account they can now add products to their wishlist
+
+    - To be able to leave reveiw for specific product, and be able to edit or delete the review
+
+    III.	Site Owner Goals:
+
+    - To be able to add, edit and delete products
+
+        - The site owner, once he is login, can add product from the product management page, they can edit each product either by pressing the edit button on the products page or from product detail page. They also can delete a product from the products page or product detail page once they can confirm the delete.
+
+    - To be able to add, edit and delete categories.
+
+        - The site owner can add, edit or delete categories only from the admin dashboard.
+
+    - Be able to have access to admin section
+
+        - The site owner will have access to the admin dashboard, but some features will be read-only like the order number, order price and few more
+
+    - Have a secure online payment
+
+        - The secure checkout payment is build with Stripe Payments which is a payment processing platform
+
+    - Send confirmation order for each purchase with order and customer details
+
+        - After each purchase an confirmation email it's send with user and order details
     
 
 [Back to Top](#table-of-contents)
