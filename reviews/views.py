@@ -18,7 +18,7 @@ def reviews(request):
     Returns:
         rendered reviews html
     """
-    reviews = Review.objects.all().order_by('id')
+    reviews = Review.objects.all().order_by('-date_posted')
 
     sort = None
     direction = None
@@ -201,7 +201,7 @@ def delete_review(request, review_id):
 
     # check is requested user is the owner of the rewiev
     if not request.user.id == user.id:
-        messages.error(request, 'Sorry, this review does not belong to you.')
+        messages.error(request, 'Sorry, only the owner can delete his review.')
         return redirect(reverse('home'))
 
     review.delete()

@@ -464,11 +464,115 @@
         ![](readme_file/order-confirmation-admin-dashboard.jpg)
         
 
-    - Testing 
+    - Testing register to website
 
-        - Expected:
+        - Expected: When a user is registered to the website a message with the confirmation that the verification email has been sending to his address will be shown on the screen and an email sent to his address
 
-        - Result:
+        - Result: As expected after filling the sign up form a message pop up on the screen with the confirmation that the email for verify has been send to my address
+
+        ![](readme_file/register-verify-email-address.jpg)
+
+        ![](readme_file/register-email-address.jpg)
+        
+
+    - Testing show the wishlist buttons
+
+        - Expected: Once the user is sign in on the products and product detail page show the wishlist button, and the links to sign in and sign up from wishlist are now hidden and the user can start create his wishlist
+
+        - Result: As expected after user sign in the button are visible for the user to create his wishist
+
+        ![](readme_file/wishlist-btn-products-page.jpg)
+        
+        ![](readme_file/wishlist-btn-product-detail.jpg)
+
+        ![](readme_file/wishlist-new-user.jpg)
+
+    - Testing adding to wishlist
+
+        - Expected: Once the user adds a product to wishlist a confirmation message is show on the screen and the wishlist icon is displaying how many products he has in the list
+
+        - Result: As expected the confirmation message is shown and on the icon is display the numbers of product in his wishlist
+
+        ![](readme_file/wishlist-add-product.jpg)
+
+        ![](readme_file/wishlist-page.jpg)
+
+    - Testing removing from wishlist
+
+        - Expected: The user can remove products from wishlist from: products page, product detail and wishlist page by pressing the wishlist button and on the screen is show a message that the product has been remove
+
+        - Result: As expected the confirmation message is shown that the product has been removed, and the wishlist and display number on the wishlist icon reflects that
+
+        ![](readme_file/wishlist-remove-product.jpg)
+
+
+    - Testing order history in user profile
+
+        - Expected: After the user purchase a product, a confirmation message on the screen it shown, an email it send and the order is save on the user profile for his history
+
+        - Result: As expected everything is working correctly message are been display and email send and the profile order history is reflecting the purchase order.
+
+        ![](readme_file/profile-order-history.jpg)
+
+    - Testing link to order detail from order history
+
+        - Expected: When user click on the order detail it will redirect to the specific order detail page and a message is display that this is a past confirmation
+
+        - Result: Everything is working as expected
+
+    - Testing adding review for login users
+
+        - Expected: After user is login he can leave a review for each specific product from product detail page from the review tab. After review is submited a message is show that a review has been added to that product, user can go back using back to product button, and now he can see his review on the tab reviews with the functionality to edit or delete the review.
+
+        - Result: Everything is working as expected
+
+        ![](readme_file/product-add-review.jpg)
+
+    - Testing editing other users review
+
+        - Expected: When the user is trying to edit other users review and error message is show on the screen and the request is stopped immediatly.
+
+        - Testing: Login on different brower with the user gmayer2021 and taken the edit link from the first review 
+
+        - Result: After paste in the link into initial browser an error message is show on the screen and the request is stopped immediatly.
+
+        ![](readme_file/product-edit-other-user-review.jpg)
+
+
+    - Testing deleting other users review
+
+        - Expected: When the user is trying to delete other users review and error message is show on the screen and the request is stopped immediatly.
+
+        - Testing: Login on different brower with the user gmayer2021 and taken the delete link from the first review 
+
+        - Result: After paste in the link into initial browser an error message is show on the screen and the request is stopped immediatly.
+
+        ![](readme_file/product-delete-other-user-review.jpg)
+
+        - Testing user editing his own review
+
+        - Expected: When the user press the edit link on his review he his redirect to edit review page and a alert message on the screen that his edditing a review is shown. After submitting is successufull the user is redirect back to product detail page where he can see his review and a confirmation message is show on the screen also
+
+        - Result: Everything is working as expected
+
+        ![](readme_file/product-edit-own-review.jpg)
+
+        ![](readme_file/product-update-own-review.jpg)
+
+
+    - Testing user deleting his own review
+
+        - Expected: When the user is trying to delete other users review and error message is show on the screen and the request is stopped immediatly.
+
+        - Testing: Login on different brower with the user gmayer2021 and taken the delete link from the first review 
+
+        - Result: After paste in the link into initial browser an error message is show on the screen and the request is stopped immediatly.
+
+        ![](readme_file/product-delete-own-review-confirmation.jpg)
+
+        ![](readme_file/product-delete-own-review-success.jpg)
+
+
 
 [Back to Top](#table-of-contents)
 -----
