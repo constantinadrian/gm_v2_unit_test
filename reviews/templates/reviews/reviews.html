@@ -105,7 +105,7 @@
                                     <p class="mt-4">
                                         <small>
                                             <a href="{% url 'edit_review' review.id %}">Edit</a> | 
-                                            <a class="text-danger" type="button" data-toggle="modal" data-target="#deleteModal" data-item="review" data-url="{% url 'delete_review' review.id %}">Delete</a>
+                                            <button type="button" class="update-link border-0 bg-transparent text-danger" data-toggle="modal" data-target="#deleteModal" data-item="review" data-url="{% url 'delete_review' review.id %}">Delete</button>
                                         </small>
                                     </p>
                                 </div>

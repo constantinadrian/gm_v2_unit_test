@@ -113,7 +113,7 @@
                                         <p class="mt-4">
                                             <small class="ml-3">
                                                 <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                <a class="text-danger" type="button" data-toggle="modal" data-target="#deleteModal" data-item="product" data-url="{% url 'delete_product' product.id %}">Delete</a>
+                                                <button type="button" class="update-link border-0 bg-transparent text-danger" data-toggle="modal" data-target="#deleteModal" data-item="product" data-url="{% url 'delete_product' product.id %}">Delete</button>
                                             </small>
                                         </p>
                                     {% endif %}
