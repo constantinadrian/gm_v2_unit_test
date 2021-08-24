@@ -194,6 +194,41 @@
 
     - Desktop test
 
+        | Pages                                | Performance | Accessibility | Best Practices | SEO |
+        | :----------------------------------- | :---------: | :-----------: | :------------: | :-: |
+        | Home Page                            |     63      |       93      |        93      |  90 |
+        | Products Page                        |     94      |       90      |        93      |  90 |
+        | Product Detail Page                  |     88      |       73      |        93      |  90 |
+        | Wishlist Page                        |     98      |       89      |        93      |  90 |
+        | Review Page                          |     91      |       92      |        93      |  90 |
+        | Register Page                        |     98      |       89      |        93      |  90 |
+        | Login Page                           |     98      |       89      |        93      |  90 |
+        | Profile Page                         |     89      |       78      |        93      |  90 |
+        | Product Management Page              |     97      |       81      |        93      |  90 |
+        | Edit Product Page                    |     97      |       81      |        93      |  90 |
+        | Shopping Bag Page                    |     92      |       80      |        93      |  90 |
+        | Checkout Page                        |     81      |       88      |        93      |  90 |
+        | Checkout Success Page                |     90      |       89      |        93      |  90 |
+        | Contact Page                         |     98      |       92      |        93      |  90 |
+
+    - Mobile test
+
+        | Pages                                | Performance | Accessibility | Best Practices | SEO |
+        | :----------------------------------- | :---------: | :-----------: | :------------: | :-: |
+        | Home Page                            |     62      |       91      |        93      |  90 |
+        | Products Page                        |     73      |       95      |        87      |  89 |
+        | Product Detail Page                  |     56      |       70      |        87      |  92 |
+        | Wishlist Page                        |     76      |       98      |        87      |  90 |
+        | Review Page                          |     77      |       95      |        87      |  92 |
+        | Register Page                        |     83      |       95      |        93      |  91 |
+        | Login Page                           |     79      |       95      |        93      |  89 |
+        | Profile Page                         |     69      |       83      |        93      |  91 |
+        | Product Management Page              |     79      |       88      |        93      |  91 |
+        | Edit Product Page                    |     79      |       88      |        93      |  92 |
+        | Shopping Bag Page                    |     79      |       76      |        87      |  90 |
+        | Checkout Page                        |     58      |       96      |        87      |  92 |
+        | Checkout Success Page                |     74      |       97      |        93      |  91 |
+        | Contact Page                         |     83      |       97      |        93      |  91 |
 
 
 [Back to Top](#table-of-contents)
@@ -205,13 +240,13 @@
 
     - The following web browsers were used for testing the browser compatibility and responsiveness (System: Windows 10 64-bit).
 
-        1. Chrome - Version 89.0.4389.90 (Official Build) (64-bit)
+        1. Chrome - Version 92.0.4515.159 (Official Build) (64-bit)
 
-        2. Firefox - 87.0 (64-bit)
+        2. Firefox - 91.0.1 (64-bit)
 
-        3. Edge - Version 89.0.774.57 (Official build) (64-bit)
+        3. Edge - Version 92.0.902.78 (Official build) (64-bit)
 
-        4. Opera - Version:74.0.3911.232
+        4. Opera - Version:78.0.4093.147
 
         All test was good. 
 
