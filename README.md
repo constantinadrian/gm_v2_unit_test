@@ -500,10 +500,12 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
         13. Since our database in Heroku is all set up, we gonna have an if statement in ```setting.py``` to set the ```DATABASES```
         so when we run on Heroku we gone use the environment variable ```DATABASE_URL``` to connect to Postgres else we gonna connect for SQLite
 
+            NOTE: That at I remane the ```DATABASE_URL``` variable to ```MAYER_DATABASE_URL``` near the end of the project. Check settings.py
+
             ```
-            if 'DATABASE_URL' in os.environ:
+            if 'MAYER_DATABASE_URL' in os.environ:
                 DATABASES = {
-                    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+                    'default': dj_database_url.parse(os.environ.get('MAYER_DATABASE_URL'))
                 }
             else:
                 DATABASES = {
@@ -553,10 +555,10 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
             | :----------------------------- | :-------------------------: |
             | HOST_EMAIL_PASS                |  < Gmail app password >     |
             | HOST_EMAIL_USER                |  < Gmail email address >    |
-            | SECRET_KEY                     |  < Django Secret key >      |
-            | STRIPE_PUBLIC_KEY              |  < Stripe Public key >      |
-            | STRIPE_SECRET_KEY              |  < Stripe Secret key >      |
-            | STRIPE_WH_SECRET               |  < Stripe Webhook key >     |
+            | MAYER_SECRET_KEY               |  < Django Secret key >      |
+            | MAYER_STRIPE_PUBLIC_KEY        |  < Stripe Public key >      |
+            | MAYER_STRIPE_SECRET_KEY        |  < Stripe Secret key >      |
+            | MAYER_STRIPE_WH_SECRET         |  < Stripe Webhook key >     |
 
 
         21. Now we can push to github with:
@@ -747,7 +749,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
             5. Now to connect Django to S3 we need to add some settings which will tell it which bucket needs to communicate with
 
                 ````
-                if "USE_AWS" in os.environ:
+                if "MAYER_USE_AWS" in os.environ:
                     # Cache control
                     AWS_S3_OBJECT_PARAMETERS = {
                         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
@@ -755,10 +757,10 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
                     }
 
                     # Bucket Config
-                    AWS_STORAGE_BUCKET_NAME = "buckect-name"
+                    AWS_STORAGE_BUCKET_NAME = "gentleman-mayer"
                     AWS_S3_REGION_NAME = "eu-west-1"
-                    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-                    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+                    AWS_ACCESS_KEY_ID = os.environ.get('MAYER_AWS_ACCESS_KEY_ID')
+                    AWS_SECRET_ACCESS_KEY = os.environ.get('MAYER_AWS_SECRET_ACCESS_KEY')
                     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
                     # Static and media files
@@ -776,9 +778,9 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
                 | Key                            |    Value                    |
                 | :----------------------------- | :-------------------------: |
-                | USE_AWS                        |  True                       |
-                | AWS_ACCESS_KEY_ID              |  < AWS Access key ID >      |
-                | AWS_SECRET_ACCESS_KEY          |  < AWS Secret access key >  |
+                | MAYER_USE_AWS                  |  True                       |
+                | MAYER_AWS_ACCESS_KEY_ID        |  < AWS Access key ID >      |
+                | MAYER_AWS_SECRET_ACCESS_KEY    |  < AWS Secret access key >  |
 
             7. Now we can remove the ```DISABLE_COLLECSTATIC``` variable since Django will collect static files automatically and upload them to S3
 
@@ -844,10 +846,10 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
         ```
         import os  
         os.environ["DEVELOPMENT"] = "True"    
-        os.environ["SECRET_KEY"] = "< Django Secret key >"
-        os.environ["STRIPE_PUBLIC_KEY"] = "< Stripe Public key >"    
-        os.environ["STRIPE_SECRET_KEY"] = "< Stripe Secret key >"    
-        os.environ["STRIPE_WH_SECRET"] = "< Stripe Webhook key >" 
+        os.environ["MAYER_SECRET_KEY"] = "< Django Secret key >"
+        os.environ["MAYER_STRIPE_PUBLIC_KEY"] = "< Stripe Public key >"    
+        os.environ["MAYER_STRIPE_SECRET_KEY"] = "< Stripe Secret key >"    
+        os.environ["MAYER_STRIPE_WH_SECRET"] = "< Stripe Webhook key >" 
         ```
 
     6. Add ```env.py``` to your ```.gitignore``` file.
