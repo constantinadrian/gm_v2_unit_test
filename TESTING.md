@@ -636,10 +636,111 @@
 
 - ### Bugs and Fixes
 
-    - 
+    - During the set up of the project for deploy to heroku after I set up the ```DATABASE_URL``` in ```settings.py``` I got an error on the terminal: 
 
-        - To fix: 
+        ```
+        django.db.utils.OperationalError: FATAL:  role "" does not exist on heroku postgres
+        ```
 
+        - To fix: After I did few reasearh on the SLACK Community I found that in the Full Template, from Code Institute, there is a PGHOSTADDR local variable that has been added to accommodate for the new SQLAlchemy lessons. In order to run showmigrations and migrate after we need to run the terminal this command:
+
+        ```
+        unset PGHOSTADDR
+        ```
+
+        - After that I could complete set up the Heroku Postgres
+
+    - After I deploy to heroku I got an application error from heroku check your logs
+
+         After I check the logs and see the build I see that the Procfile was not set up correctly and was an error on the Procfile itself: 
+
+        ```
+        web: gunicorn gentleman_mayer.wsgi.application
+        ```
+
+        - To Fix: It sems that was a typo in Procfile as before application suppose to be ```:``` and not a dot ```.```
+
+        ```
+        web: gunicorn gentleman_mayer.wsgi:application
+        ```
+
+
+    - After deploy to Heroku I got error 400 when open the application
+
+        - To fix: I set up the Debug to True on the Heroku Config Vars and restart the application. It semse that the error was from base.js script as it had a trailling slash in front of the path. 
+
+        - After I remove the slash the aplication was working fine
+
+    - During Development after creating the Contact and Newsletter app after few test and set up, when I change the DATABASE_URL for Heroku Postgres to run the migrations with if statemenet I got an error when trying to run ```showmigrations```:
+
+        ```
+        django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the NAME value.
+        ```
+
+        - The site was loading fine on Gitpod with SQLite3 but would start with DATABASE_URL variable to connect to heroku.
+
+            - After I did few reasearh on the SLACK Community it simce that if I run 
+        
+        ```
+        echo $DATABASE_URL
+        ```
+        in the terminal we get back an response that gitpod already set the 
+        
+        ```
+        postgresql://gitpod@localhost
+        ```
+
+        and was given an error because was not a Postgres URL
+
+        - To fix: run in the terminal
+
+            ```
+            unset DATABASE_URL
+            ```
+
+    - After set up the Gmail account to send email I receive two email at once every times when was doing the test
+
+        - ![](readme_file/double-emails-error.jpg)
+
+        - It seems that in the Heroku website I had the same variable names in Config Vars on two apps.
+
+        To Fix: I have change all the variable name from the current project to make sure there is no conflict and after I test send emails again
+
+        As expected I receive only one email from the current project
+
+    - After making few more test on the reviews page I notice that was a flaw in my UX design and the design it breaking apart
+
+        As you can see my initial UX design was not quite fully tested and I was happy how it looks
+
+        - ![](readme_file/reviews-page-initial-design.jpg)
+
+        After user is login the UX design it starts to break
+
+        - ![](readme_file/reviews-page-flow-in-ux-design-2.jpg)
+
+        And if I added a long review to the product it breaks apart
+
+        - ![](readme_file/reviews-page-flow-in-ux-design.jpg)
+
+        To Fix: After the main col that was render by the forloop I have added another div with display flex so I can make some elements within the colunm streach to take the parent full height:
+
+        - First I added:
+        ```
+        <div class="position-relative d-flex flex-column border-0 rounded-0 h-100">
+        ```
+        - Second I wrapped the row that hold the description, user and date into another div:
+
+        ```
+        <div class="card-body p-0">
+        ```
+        - Third I have added to the row that was wrapped by card-body the class h-100
+
+        ```
+        <div class="row h-100
+        ```
+       - ![](readme_file/review-page-ux-fix.jpg) 
+
+       NOTE: Basically, it is the same approach that a card has but the reason that I used the ```position-relative d-flex flex-column``` classes instead of the ```card``` class which basically contains all three plus more, is because of  ```word-wrap: break-word;``` which basically break the stars design, and that was taken from see credit, and to fix I suppose to add another class with property   ```word-wrap: inherit;``` to override the one on the card, which was too much
     
     > NOTE: No other bugs that I'm aware of were left unsolved.
 
