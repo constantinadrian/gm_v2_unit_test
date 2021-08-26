@@ -221,7 +221,7 @@ def product_detail(request, category_slug, product_slug):
 @login_required
 def add_product(request):
     """
-    A view to add a product to the store
+    A view to show the added product to the store
     Args:
         request : django request object
     Returns:
@@ -234,15 +234,17 @@ def add_product(request):
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
-            product = form.save()
+        # Check if the form is valid with helper function
+        response = check_form(request)
+        if response['valid']:
             messages.success(request, 'Successfully added product!')
             return redirect(
                 reverse('product_detail',
-                        kwargs={'category_slug': product.category.slug,
-                                'product_slug': product.slug}))
+                        kwargs={
+                            'category_slug': response['product'].category.slug,
+                            'product_slug': response['product'].slug}))
         else:
+            form = response['form']
             messages.error(request,
                            ('Failed to add product. '
                             'Please ensure the form is valid.'))
@@ -261,7 +263,7 @@ def add_product(request):
 @login_required
 def edit_product(request, product_id):
     """
-    A view to edit a product in the store
+    A view to show the updated product to the store
     Args:
         request : django request object
         product_id : slug is the part of the URL that is unique
@@ -279,15 +281,17 @@ def edit_product(request, product_id):
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES, instance=product)
-        if form.is_valid():
-            form.save()
+        # Check if the form is valid with helper function
+        response = check_form(request, product)
+        if response['valid']:
+            print('SUCCESS!!!')
             messages.success(request, 'Successfully updated product!')
             return redirect(
                 reverse('product_detail',
                         kwargs={'category_slug': product.category.slug,
                                 'product_slug': product.slug}))
         else:
+            form = response['form']
             messages.error(request,
                            ('Failed to update product. '
                             'Please ensure the form is valid.'))
@@ -303,6 +307,37 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
+
+def check_form(request, product=None):
+    """
+    A helper function that checks if the
+    form is valid on POST request for add product
+    and edit product views
+    Args:
+        request : django request object
+        product : product instance that needs to be
+        validated with the form
+    Returns:
+        True: For edit product view: return a dict with valid response
+              For add product view: return a dict with valid response
+                                    and instance of product
+        False: Return a dict with invalid response and the form instance
+               for both of the add and edit views
+    """
+    if product:
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            return {'valid': True}
+
+    else:
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            return {'valid': True, 'product': product}
+
+    return {'valid': False, 'form': form}
 
 
 @login_required
