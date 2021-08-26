@@ -196,9 +196,6 @@ def delete_review(request, review_id):
     # check is there is a userprofile attach to that review
     user = get_object_or_404(UserProfile, pk=review.user.id)
 
-    # check is the product still exist in db
-    product = get_object_or_404(Product, pk=review.product.id)
-
     # check is requested user is the owner of the rewiev
     if not request.user.id == user.id:
         messages.error(request, 'Sorry, only the owner can delete his review.')
