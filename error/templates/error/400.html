@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-4">
+            <h3 class="section-title m-0">400</h3>
+             <hr class="mb-1">
+        </div>
+    </div>
+    
+    <div class="row mt-1">
+        <div class="col-12 no-available-products d-flex flex-column justify-content-center align-items-center">
+            <p class="text-center title-text">You have sent a bad request</p>
+                    
+            <a href="{% url 'home' %}" class="btn btn-black rounded-0 my-2">
+                <span class="logo-font">Return Home</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

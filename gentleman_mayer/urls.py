@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include("allauth.urls")),
@@ -31,3 +32,8 @@ urlpatterns = [
     path('newsletter/', include('newsletter.urls')),
     path('wishlist/', include('wishlist.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler400 = 'error.views.bad_request_400'
+handler403 = 'error.views.permission_denied_403'
+handler404 = 'error.views.page_not_found_404'
+handler500 = 'error.views.internal_server_error_500'
