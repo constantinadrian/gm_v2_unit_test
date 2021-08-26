@@ -741,7 +741,44 @@
        - ![](readme_file/review-page-ux-fix.jpg) 
 
        NOTE: Basically, it is the same approach that a card has but the reason that I used the ```position-relative d-flex flex-column``` classes instead of the ```card``` class which basically contains all three plus more, is because of  ```word-wrap: break-word;``` which basically break the stars design, and that was taken from see credit, and to fix I suppose to add another class with property   ```word-wrap: inherit;``` to override the one on the card, which was too much
+
+    - Stars from the review not showing the correct rating on tablets and phone
+
+        As you can see on the desktop the stars are showing with no flaw what so ever, but on tablet and phone the design starts to break as the tip of the stars on top and bottom does not show and the color of rating is not showing the correct star rating
+
+        Desktop/laptop
+
+        - ![](readme_file/rating-stars-desktop.jpg)
+
+        Tablet
+
+        - ![](readme_file/rating-stars-tablet.jpg)
+
+        Phone
+
+        - ![](readme_file/rating-stars-phone.jpg)
+
+        To Fix: I have remove from base.css on the class .star-ratings-css the following
+
+        ```
+            height: 25px;
+            width: 100px;
+            line-height: 0.8;
+        ```
+
+        and added instead 
+
+        ```
+            width: -webkit-min-content;
+            width: -moz-min-content;
+            width: min-content;
+        ```
+
+        To keep the stars in the same line with the title review I have added ```pt-2``` class to the title review column
+
+        NOTE: To keep the star design clean and match with the site I have remove ```text-shadow: 0px 1px 0 #a2a2a2;``` from .star-ratings-css as well
+  
     
-    > NOTE: No other bugs that I'm aware of were left unsolved.
+> NOTE: No other bugs that I'm aware of were left unsolved.
 
 Return to [README.md](README.md)

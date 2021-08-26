@@ -693,12 +693,11 @@ input[name="q"]::placeholder {
     unicode-bidi: bidi-override;
     color: #c5c5c5;
     font-size: 24px;
-    height: 25px;
-    width: 100px;
     position: relative;
     padding: 0;
-    text-shadow: 0px 1px 0 #a2a2a2;
-    line-height: 0.8;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
 }
 
 .star-ratings-css-top {
@@ -716,25 +715,6 @@ input[name="q"]::placeholder {
     padding: 0;
     display: block;
     z-index: 0;
-}
-
-.star-ratings-sprite {
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
-    font-size: 0;
-    height: 21px;
-    line-height: 0;
-    overflow: hidden;
-    text-indent: -999em;
-    width: 110px;
-    margin: 0 auto;
-}
-
-.star-ratings-sprite-rating {
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
-    background-position: 0 100%;
-    float: left;
-    height: 21px;
-    display: block;
 }
 /* --------------------------- End Rendering review stars ----------------------------------------- */
 
