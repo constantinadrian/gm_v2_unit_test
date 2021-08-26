@@ -778,6 +778,13 @@
 
         NOTE: To keep the star design clean and match with the site I have remove ```text-shadow: 0px 1px 0 #a2a2a2;``` from .star-ratings-css as well
   
+    - After I implemented ```404 page not found``` when I tested the page I got an error in the console every time the page not found occured
+
+        - ![](readme_file/404-console-error.jpg)
+
+        To Fix: I have remove from template base directory the 404 html and I have created an ```error``` app that will hold all the custom error pages.
+
+        After I created the app an test the 404, page not found, I didn't get any errors in the console
     
 > NOTE: No other bugs that I'm aware of were left unsolved.
 

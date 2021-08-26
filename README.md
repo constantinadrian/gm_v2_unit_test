@@ -950,13 +950,19 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
     - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - Header section on base template, main and mobile menu, product page, product detail page, shopping bag, checkout, and success checkout - each of them with few or more modifications and make them also fully responsive on every device.
 
-    - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - All widgets and custom widgets, webhook and webhook handler(with few additions for different sizes in) 
+    - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - All widgets and custom widgets, webhook and webhook handler(with few additions for different sizes in)
 
-    - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - For functionality of stripe, shoping bag and checkout.
+    - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - For functionality of stripe, shoping bag and checkout, and select quantity input
 
     - [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/) - for the carousel used on this project
 
     - [Bootstrap](https://getbootstrap.com/) – CSS framework used to help contact form, cards, modal, table and other classes that were used to make the app responsive.
+
+    - [Django Customizing error views](https://docs.djangoproject.com/en/3.2/topics/http/views/#customizing-error-views) and [handler urls](https://docs.djangoproject.com/en/3.2/ref/urls/#handler404) used for creating the error app and redefine handler400, handler403, handler404, handler500
+
+    - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - UserProfile form and models, checkout, checkout success views, forms, bag context
+
+    NOTE: [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) was used the most and used as an example when implementing models and form for other apps that I created
 
   - #### Content
 
@@ -993,6 +999,8 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
         - [https://www.next.co.uk/](https://www.next.co.uk/)
 
     - This two website wre used as a general inspiration:
+
+        - [Code Institute - Boutique Ado]()
 
         - [https://www.mossbros.ie/](https://www.mossbros.ie/)
 
