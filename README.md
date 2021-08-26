@@ -267,11 +267,11 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
 - #### Skeleton
 
-    -  Phone Wireframes: [Home]() 
+    -  [Phone Wireframes](readme_file/wireframes/phone.pdf)
 
-    -  Tablet Wireframes: [Home]() 
+    -  [Tablet Wireframes](readme_file/wireframes/tablet.pdf)
 
-    -  Desktop Wireframes: [Home]()
+    -  [Desktop Wireframes](readme_file/wireframes/desktop.pdf)
 
 [Back to Top](#table-of-contents)
 
