@@ -2,7 +2,7 @@
 
 ![Gentleman Mayer](readme_file/gentleman-mayer.png)
 
-Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's accessories. The website is focus on high quality products to maintain customer satisfaction and loyalty and reduce the risk and cost of the replacement of a faulty product.
+Gentleman Mayer an e-commerce site offer suits, tuxedo, and all other men's accessories. The website is focused on high-quality products to maintain customer satisfaction and loyalty and reduce the risk and cost of the replacement of a faulty product.
 
 [View live project here]()
 
@@ -60,23 +60,23 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
     - To be able to adjust the product quantity from shopping bag
 
-    - To be able to remove a product from shopping bag
+    - To be able to remove a product from a shopping bag
 
     - To be able to receive confirmation after purchase a product.
 
-    - To be able to contact the company and subscribe to newsletter to receive the latest offers
+    - To be able to contact the company and subscribe to the newsletter to receive the latest offers
 
     II.	Returning User Goals:
 
     - To be able to register for an account and receive confirmations after.
 
-    - To be able to easy loggin, logout and easily recover my password
+    - To be able to easily login, logout and easily recover my password
 
     - To have a user profile where I keep track of my orders, my query and update personal information
 
     - To be able to create a wishlist so I can review it later
 
-    - To be able to leave reveiw for specific product, and be able to edit or delete the review
+    - To be able to leave review for specific product, and be able to edit or delete the review
 
     III.	Site Owner Goals:
 
@@ -84,7 +84,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
     - To be able to add, edit and delete categories.
 
-    - Be able to have access to admin section
+    - Be able to have access to the admin section
 
     - Have a secure online payment
 
@@ -92,7 +92,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
  - #### Strategy
 
-    - The website was built for those users who want to have a business professional look. The website is designed with search functionality that allow users to search producs from different category and with different keywords. In order to attract more users and keep them on the website, a variety of large products and accessories have been made available for them. The purpose of all functionality it's for the owner of website to promote his brand of products as well.
+    - The website was built for those users who want to have a business professional look. The website is designed with search functionality that allows users to search products from different category and with different keywords. In order to attract more users and keep them on the website, a variety of large products and accessories have been made available for them. The purpose of all functionality it's for the owner of the website to promote his brand of products as well.
 
     | Opportunity                                 | Importance | Viability / Feasibility |
     | :------------------------------------------ | :--------: | :---------------------: |
@@ -115,29 +115,29 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
     
  - #### Scope
 
-    Based on the strategy table all the feature were implemented in order to achieve user and owner goals
+    Based on the strategy table all the features were implemented in order to achieve user and owner goals
 
     - Home page - to quickly understand the purpose of the website
 
-    - Product Page - where users can view all products and owner can promote his products along with other brands
+    - Product Page - where users can view all products and the owner can promote his products along with other brands
 
-    - Product detail - where the user user can find information about the product
+    - Product detail - where the user can find information about the product
 
     - Register Page - where user can create an account on the website
 
-    - Login Page - where user can login to the his profile
+    - Login Page - where user can log in to his profile
 
     - Product Management - where the admin can Add / Edit / Delete Product
 
-    - Reviews Page - Where users can read review about different products
+    - Reviews Page - Where users can read reviews about different products
 
-    - Contact/Newsletter - Contact the business owner and get latest offers
+    - Contact/Newsletter - Contact the business owner and get the latest offers
 
     - Profile Page - Have a profile page where users can save their details
 
     - Wishlist Page -Where users can save the products that they would want to buy
 
-    - Review Page -Where users can see all the review from all products
+    - Review Page -Where users can see all the reviews from all products
 
 [Back to Top](#table-of-contents)
 
@@ -155,13 +155,13 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
             - The logo of Gentleman Mayer
 
-            - Navigation bar - to help user navigate between the each category 
+            - Navigation bar - to help users navigate between each category 
           
             - Search form - Where the user can search by keyword
 
             - Landing section 
           
-              - with the hero image and welcome text that will make the users to quickly understand the purpose of the website
+              - with the hero image and welcome text that will make the users quickly understand the purpose of the website
 
               - call to action shop now button
 
@@ -169,37 +169,37 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
             - New arrival Carousell - Where the user can see the new arrival collection
 
-            - Sale - Where user can find the latest offers
+            - Sale - Where users can find the latest offers
 
         2. Product Page 
 
-            - Category fields - Where user can navigate to each category
+            - Category fields - Where users can navigate to each category
 
-            - Sort field - Where user can sort the products by category, name, price and brand
+            - Sort field - Where user can sort the products by category, name, price, and brand
 
-            - All products that we curently have on the website (12 products on each page)
+            - All products that we currently have on the website (12 products on each page)
 
-            - If the user is login there is call to action icon for add/remove to wishlist
+            - If the user is login there is a call to action icon for add/remove to wishlist
 
         3. Product details
 
-            - Where the user can see the details of each product along with the review from other user (if any)
+            - Where the user can see the details of each product along with the review from other users (if any)
 
-            - Call to action button for keep shopping or add to bag
+            - Call to action button to keep shopping or add to bag
 
             - If the user is login there is another call to action button for add/remove to wishlist
 
             - Add / Edit / Delete review functionality for loggin users
           
-            - Depending from what category the product is, along the page there is two or one carousel with suggested product to complete the look
+            - Depending on what category the product is, along with the page there is two or one carousels with suggested products to complete the look
 
         4. Register
 
-            - Where the user can create an account and an confirmation email is send to the email address used when register.
+            - Where the user can create an account and a confirmation email is send to the email address used when register.
 
         5. Login Page
 
-            - Where the user can login in into their account
+            - Where the user can log in to their account
 
         6. Profile Page
 
@@ -213,9 +213,9 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
             - Where the user can see their order summary
 
-            - Here they can update their products before go to secure checkout
+            - Here they can update their products before going to secure checkout
 
-            - Here they can update their products before go to secure checkout
+            - Here they can update their products before going to secure checkout
 
         8. Checkout Page
 
@@ -223,11 +223,11 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
         9. Wishlist Page
 
-            - Where the user can view all the product that they have in their wishlist
+            - Where the user can view all the products that they have on their wishlist
 
-            - From here the user can go to view each product from wishlist
+            - From here the user can go to view each product from the wishlist
 
-            - Remove the product from wishlist
+            - Remove the product from the wishlist
 
         10. Review Page
 
@@ -235,7 +235,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
             - Can sort the reviews from rating or product name
 
-            - If user is loggin and has left some reviews he can edit/delete their own reviews
+            - If the user is logged and has left some reviews he can edit/delete their own reviews
 
         11. Contact Page
 
@@ -243,9 +243,9 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
         12. Footer section
 
-            - Where the users can find newsletter subscription form
+            - Where the users can find the newsletter subscription form
 
-            - Where the users can find informativ links 
+            - Where the users can find informative links 
             
             - Where the users can find links to the business social media pages
  
@@ -253,11 +253,11 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
         - When a login user fill the contact form for a query, each time the owner replies, the user to be able to see the replay in the profile query history for the specific query
 
-        - To add variants to each product so that the user can see in product detail page different colors for each product, the sizes that comes with each color and different prices if the prices vary for each color
+        - To add variants to each product so that the user can see on the product detail page different colors for each product, the sizes that come with each color, and different prices if the prices vary for each color
 
         - Add coupons for discount
 
-        - Create social media links for share the product from product detail page
+        - Create social media links to share the product from the product detail page
 
         - Register with social media account
 
@@ -289,11 +289,11 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
     -  ##### Typography
 
-        - For this project I choose three types of Google Fonts: 'Montserrat', 'Oswald' and 'Raleway'.
+        - For this project, I choose three types of Google Fonts: 'Montserrat', 'Oswald' and 'Raleway'.
        
             For the consistency:
 
-                - 'Montserrat' fonts were used for the header, subheader, links and all other paragraphs within the page.
+                - 'Montserrat' fonts were used for the header, subheader, links, and all other paragraphs within the page.
 
                 - 'Oswald' fonts were used for the section titles and brand names
 
@@ -410,18 +410,18 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
         1. In order to deploy to Heroku you need an [account](https://signup.heroku.com/login?redirect-url=https%3A%2F%2Fid.heroku.com%2Foauth%2Fauthorize%3Fclient_id%3Dd2ef2b24-e72c-4adf-8506-28db2218547d%26response_type%3Dcode%26scope%3Dglobal%252Cplatform%26state%3DSFMyNTY.g2gDbQAAADFodHRwczovL2Rhc2hib2FyZC5oZXJva3UuY29tL2F1dGgvaGVyb2t1L2NhbGxiYWNrbgYAnwF4L3kBYgABUYA.q2PQc0k53ICJ0LR6VFKbOkyuEqmEtG0iuVzTM38UNAI)
 
-        2. Now you can create a new app from the dashboard ```New``` Menu
+        2. Now you can create a new app from the dashboard ``` New``` Menu
         ![](static/readme/heroku-app.jpg)
 
         3. Now you need to set up a name and select a region closest to you
 
             NOTE: Remember the name has to be unique and generally use a dash and lowercase letters
 
-        4. On the ```Resources``` tab we gonna provision a new Postgres Database that will gone use for this project:
+        4. On the ```Resources``` tab we gonna provision a new Postgres Database that will go used for this project:
 
             a. On the ```Add-ons``` search for Heroku Postgres and click on it
 
-            b. On the pop-up windown select the free plan ```Hobby Dev - Free``` and click ```Submit Order Form```
+            b. On the pop-up window select the free plan ```Hobby Dev - Free``` and click ```Submit Order Form```
 
         5. To use Heroku Postgres go back to the project install the two dependencies:
 
@@ -436,7 +436,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
             pip3 freeze --local > requirements.txt
             ```
 
-        7. Now on your ```settings.py``` file  ```import dj_database_url``` and in the database settings comment out the current DATABASES settings and replace the default DATABASES with following settings:
+        7. Now on your ```settings.py``` file  ```import dj_database_url``` and in the database settings comment out the current DATABASES settings and replace the default DATABASES with the following settings:
 
             ```
             DATABASES = {
@@ -444,7 +444,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
             }
             ```
 
-            NOTE: The ```DATABASE_URL``` we can get from Heroku, app that you just created, under the ```Settings``` tab on ```Reveal Config Vars```
+            NOTE: The ```DATABASE_URL``` we can get from Heroku, an app that you just created, under the ```Settings``` tab on ```Reveal Config Vars```
 
         8. Since now we are connected to Heroku Postgres we need to run migrations again, and we can see that with:
 
@@ -453,7 +453,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
             python3 manage.py showmigrations
             ```
 
-              NOTE: At this stage you might get a error 
+              NOTE: At this stage, you might get an error 
             
             ```
             django.db.utils.OperationalError: FATAL:  role "" does not exist on heroku postgres
@@ -465,7 +465,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
             unset PGHOSTADDR
             ```
 
-            and after run again to see that none of the migrations are mark off:
+            and after run again to see that none of the migrations are marked off:
 
             ```
             python3 manage.py showmigrations
@@ -491,16 +491,16 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
             IMPORTANT NOTE: We need to load data in this order because the products depend on the categories already existing
 
-        12. Now we can create a superuser so we can login with
+        12. Now we can create a superuser so we can log in with
 
             ```
             python3 manage.py createsuperuser
             ```
 
         13. Since our database in Heroku is all set up, we gonna have an if statement in ```setting.py``` to set the ```DATABASES```
-        so when we run on Heroku we gone use the environment variable ```DATABASE_URL``` to connect to Postgres else we gonna connect for SQLite
+        so when we run on Heroku we are gone use the environment variable ```DATABASE_URL``` to connect to Postgres else we gonna connect for SQLite
 
-            NOTE: That at I remane the ```DATABASE_URL``` variable to ```MAYER_DATABASE_URL``` near the end of the project. Check settings.py
+            NOTE: That at I remain the ```DATABASE_URL``` variable to ```MAYER_DATABASE_URL``` near the end of the project. Check settings.py
 
             ```
             if 'MAYER_DATABASE_URL' in os.environ:
@@ -516,7 +516,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
                 }
             ```
 
-        14. In order for the deploy to work we need to install another package qunicorn, which will act as our web server:
+        14. In order for the deployment to work we need to install another package qunicorn, which will act as our web server:
 
 
             ```
@@ -538,7 +538,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
             ```
             heroku login -i
             ```
-        18. Temporaly disable COLLECTSTATIC, because we don't want our static file when we deploy, since we are gone use AWS for that
+        18. Temporarily disable COLLECTSTATIC, because we don't want our static file when we deploy, since we are gone use AWS for that
             ```
             heroku config:set DISABLE_COLLECTSTATIC=1 --app <app-name>
             ```
@@ -549,7 +549,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
             ```
 
 
-        20. Now add variable into Heroku app, settings under Reveal Config Vars:
+        20. Now add a variable into Heroku app, settings under Reveal Config Vars:
 
             | Key                            |    Value                    |
             | :----------------------------- | :-------------------------: |
@@ -561,7 +561,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
             | MAYER_STRIPE_WH_SECRET         |  < Stripe Webhook key >     |
 
 
-        21. Now we can push to github with:
+        21. Now we can push to GitHub with:
 
             ```
             git add .
@@ -578,15 +578,15 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
             git push heroku master
             ```
 
-            NOTE: We needed to initialize our heroku git remote because we created our app on the website 
+            NOTE: We needed to initialize our Heroku git remote because we created our app on the website 
 
-    - Set up the app for automatic deployed for when we push to github:
+    - Set up the app for automatically deployed for when we push to GitHub:
 
         1. Go to your app in Heroku
 
         2. On the ```Deploy``` tab and on each section: 
         
-            a. ```Deployment method``` - set it to Connect to Github
+            a. ``` Deployment method``` - set it to Connect to Github
 
             b. ```Connect to Github``` - search for your repository and click connect
 
@@ -594,23 +594,23 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
       
   - #### Amazon AWS
 
-    - For this project Amazon AWS was used to store static and media files.
+    - For this project, Amazon AWS was used to store static and media files.
 
         1. Create an account to [Amazon AWS](https://portal.aws.amazon.com/billing/signup#/start)
  
-            a. Fill in the email, password and choose an username for the account and select ```Continue```
+            a. Fill in the email, password and choose a username for the account and select ```Continue```
             
-            b. Choose the ```Account type``` Personal and fill in the requiremnts information and select ```Create Account and Continue```
+            b. Choose the ```Account type``` Personal and fill in the requirements information and select ```Create Account and Continue```
 
-            c. Fill in the Credit card details which will be use for billing in case you go above the free usage limits, but you want go anywhere near them with this project
+            c. Fill in the Credit card details which will be used for billing in case you go above the free usage limits, but you won't go anywhere near them with this project
 
             NOTE: Amazon AWS is not a free service if you go above the free usage limits
 
         2. Create S3 Bucket
 
-            a. After you login you can find the S3 by searching on the ```Services``` Menu
+            a. After you log in you can find the S3 by searching on the ```Services``` Menu
 
-            b. Open the S3 and create a Bucket by name it to much your Heroku app name, select a region closest to you and uncheck the ```Block all public access``` and acknowledge that the bucket will be public since we are allowing public access to our static and media file
+            b. Open the S3 and create a Bucket by naming it to much your Heroku app name, select a region closest to you and uncheck the ```Block all public access``` and acknowledge that the bucket will be public since we are allowing public access to our static and media file
 
             c. Now click ```Create Bucket``` 
 
@@ -646,11 +646,11 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
                 - ```Select Type of Policy``` is S3 Bucket Policy
 
-                - ```Principal``` - is star ```*```, to allow all principals
+                - ``` Principal``` - is star ```*```, to allow all principals
 
                 - ```Actions``` - is GetObject
 
-                - ```Amazon Resource Name (ARN)``` - we will copy from the other tab under ```Bucket ARN```, paste it in, click Add Statement, click Generate Policy and copy the policy into the Bucket Policy Tab
+                - ```Amazon Resource Name (ARN)``` - we will copy from the other tab under ```Bucket ARN```, paste it in, click Add Statement, click Generate Policy, and copy the policy into the Bucket Policy Tab
 
                     - Before we click save to allow access to all our resources in this bucket we add at the end of Resource key ```/*```
 
@@ -664,17 +664,17 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
         
             - From ```Access management``` menu
 
-                a. Create a group for the user - by clicking on ```User groups``` and Create Group 
+                a. Create a group for the user - by clicking on ``` User groups``` and Create Group 
 
-                - Create Gourp by giving a name related to the Heroku app and click next until you create the group as we don't have a policy to attach for this group yet
+                - Create Group by giving a name related to the Heroku app and click next until you create the group as we don't have the policy to attach for this group yet
 
                 b. Create access policy - to give the group access to the s3 bucket we created by clicking on ```Policies``` and Create Policy
 
-                - Now we go to JSON and select ```Import manged policy``` and import a free policy that AWS has pre-build for full access for S3
+                - Now we go to JSON and select ```Import managed policy``` and import a free policy that AWS has pre-build for full access for S3
 
-                - We search fo S3 and select ```ÀmazonS3FullAccess``` and click Import
+                - We search for S3 and select ```ÀmazonS3FullAccess``` and click Import
 
-                - Now here I don't want to allow full access to our new bucket with everything in it, so we go to our S3 Bucket on the ```Permissions``` tab on the Bucket policy click edit and copy the ARN under ```Bucket ARN``` and paste it in the Resource as list:
+                - Now here I don't want to allow full access to our new bucket with everything in it, so we go to our S3 Bucket on the ```Permissions``` tab on the Bucket policy click edit, and copy the ARN under ```Bucket ARN``` and paste it in the Resource as list:
 
                     ```
                     "Resource": [
@@ -683,11 +683,11 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
                     ]
                     ```
 
-                    NOTE: First item in the list is the bucket itselt and the second, with the ```/*``` at the end, adds another rule for all files/folders in the bucket
+                    NOTE: The first item in the list is the bucket itself and the second, with the ```/*``` at the end, adds another rule for all files/folders in the bucket
 
                 - Now we can give it a name and a description by clicking ```Review policy```
 
-                c. Attach the policy to the group - by go back to ```User groups```
+                c. Attach the policy to the group - by going back to ```User groups```
 
                 - Click on the group that we create earlier
 
@@ -699,15 +699,15 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
                 d. Create a user for the group - by clicking on ```Users```
 
-                - On the users page click on ```Add users```
+                - On the user's page click on ```Add users```
 
                 - Give a name and ```Programmatic access```
 
-                - Select Next and put the user in our Group by selecting the group and click till the end to create user
+                - Select Next and put the user in our Group by selecting the group and click till the end to create a user
 
                 - Now ```download .csv``` which will contain the access key and secret access key which we will use to authenticate from our Django app
 
-                    IMPORTANT NOTE: You need to download this ```.csv``` because want we are gone through this process we can't download again
+                    IMPORTANT NOTE: You need to download this ```.csv``` because want we are gone through this process we can't download it again
 
         5. Connect Django app to S3 Bucket 
 
@@ -724,11 +724,11 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
                 pip3 freeze --local > requirements.txt
                 ```
 
-            3. Now add storages to our install apps in ```settings.py``` since django needs to now about it
+            3. Now add storage to our install apps in ```settings.py``` since Django needs to know about it
 
             4. Now we need to set up Django so that in production we use S3 to store our static files and the product images to go there also
 
-                - In project root level create a file call ```custom_storages.py```
+                - In project root level create a file called ```custom_storages.py```
 
 
                     ```
@@ -774,7 +774,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
                     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
                 ```
 
-            6. Now add variable into Heroku app, settings under Reveal Config Vars:
+            6. Now add a variable into Heroku app, settings under Reveal Config Vars:
 
                 | Key                            |    Value                    |
                 | :----------------------------- | :-------------------------: |
@@ -867,7 +867,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
         python manage.py runserver
         ```
 
-        NOTE: At this point you should see that you have unapplied migration(s).
+        NOTE: At this point, you should see that you have unapplied migration(s).
 
     9. Now you can stop the server with: ```Ctrl + C```
 
@@ -906,7 +906,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
     15. Website is now available at: http://localhost:8000
 
 
-        NOTE: If you open the website by clicking on the terminal on http://127.0.0.1:8000/ you will get a error from Django 
+        NOTE: If you open the website by clicking on the terminal on http://127.0.0.1:8000/ you will get an error from Django 
 
         ```
         Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
@@ -936,27 +936,27 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
     - [Caterpillar Montessori](https://github.com/constantinadrian/Caterpillar_Montessori_MS_1) - Footer code taken, modified and adapted from Caterpillar_Montessori_MS_1 project
 
-    - [Trivia Quiz](https://github.com/constantinadrian/Trivia_Quiz) - Hamburger Menu for mobile view taken, modified and adapted from Trivia Quiz project
+    - [Trivia Quiz](https://github.com/constantinadrian/Trivia_Quiz) - Hamburger Menu for the mobile view taken, modified and adapted from Trivia Quiz project
 
-    - [Savour](https://github.com/constantinadrian/savour) - Modal for delete confirmation taken, modified and adapted from Savour project
+    - [Savour](https://github.com/constantinadrian/savour) - Modal for delete confirmation taken, modified, and adapted from Savour project
 
-    - [Savour](https://github.com/constantinadrian/savour) -Close the collapse navbar menu when click outside the navbar, and also adapted the code for collapse when other links on the mobile menu are press
+    - [Savour](https://github.com/constantinadrian/savour) -Close the collapse navbar menu when clicking outside the navbar, and also adapted the code for collapse when other links on the mobile menu are press
 
-    - [Master Code Online](https://www.youtube.com/watch?v=MAIFJ3_bcCY) - Pagination for product, review and wishlist page was inspired from this tutorial, modified and adapted to this project
+    - [Master Code Online](https://www.youtube.com/watch?v=MAIFJ3_bcCY) - Pagination for product, review, and wishlist page was inspired from this tutorial, modified, and adapted to this project
 
     - [StackOverflow](https://stackoverflow.com/questions/54808110/django-combining-search-view-with-pagination) - Change parameter on the URL for Pagination
 
-    - [StackOverflow](https://stackoverflow.com/questions/59593884/django-rendering-a-number-as-a-5-stars-rating) - Rendering five stars rating on reviews page and product detail on review section
+    - [StackOverflow](https://stackoverflow.com/questions/59593884/django-rendering-a-number-as-a-5-stars-rating) - Rendering five stars rating on the reviews page and product detail on the review section
 
-    - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - Header section on base template, main and mobile menu, product page, product detail page, shopping bag, checkout, and success checkout - each of them with few or more modifications and make them also fully responsive on every device.
+    - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - Header section on the base template, main and mobile menu, product page, product detail page, shopping bag, checkout, and success checkout - each of them with few or more modifications and make them also fully responsive on every device.
 
-    - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - All widgets and custom widgets, webhook and webhook handler(with few additions for different sizes in)
+    - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - All widgets and custom widgets, webhook and webhook handler(with few additions for different sizes)
 
-    - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - For functionality of stripe, shoping bag and checkout, and select quantity input
+    - [Code Institute - Boutique Ado Tutorial](https://github.com/constantinadrian/boutique_ado_v1) - For functionality of stripe, shopping bag, and checkout, and select quantity input
 
     - [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/) - for the carousel used on this project
 
-    - [Bootstrap](https://getbootstrap.com/) – CSS framework used to help contact form, cards, modal, table and other classes that were used to make the app responsive.
+    - [Bootstrap](https://getbootstrap.com/) – CSS framework used to help contact form, cards, modal, table, and other classes that were used to make the app responsive.
 
     - [Django Customizing error views](https://docs.djangoproject.com/en/3.2/topics/http/views/#customizing-error-views) and [handler urls](https://docs.djangoproject.com/en/3.2/ref/urls/#handler404) used for creating the error app and redefine handler400, handler403, handler404, handler500
 
@@ -1028,7 +1028,7 @@ Gentleman Mayer an e commerce site offer suits, tuxedo, and all other men's acce
 
     - To my previous mentor Oluwafemi Medale for the support and feedback that he has given me for the entire course on milestone projects and the first session of milestone four before he has taken a break from mentoring.
 
-    - My mentor Rohit Sharma for his support and feedback that he has given me for this milestone project
+    - My mentor Rohit Sharma for the support and feedback that he has given me for this milestone project
 
 [Back to Top](#table-of-contents)
 
