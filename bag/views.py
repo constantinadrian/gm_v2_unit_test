@@ -34,7 +34,10 @@ def add_to_bag(request, item_id):
     """
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    try:
+        quantity = int(request.POST.get('quantity'))
+    except ValueError:
+        quantity = 1
     redirect_url = request.POST.get('redirect_url')
     size = None
 
