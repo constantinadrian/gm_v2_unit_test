@@ -151,7 +151,7 @@ Gentleman Mayer an e-commerce site offer suits, tuxedo, and all other men's acce
 
       - ##### Existing Features:
     
-        1. Home Page 
+        1. Home App
 
             - The logo of Gentleman Mayer
 
@@ -171,7 +171,7 @@ Gentleman Mayer an e-commerce site offer suits, tuxedo, and all other men's acce
 
             - Sale - Where users can find the latest offers
 
-        2. Product Page 
+        2. Products App
 
             - Category fields - Where users can navigate to each category
 
@@ -201,7 +201,7 @@ Gentleman Mayer an e-commerce site offer suits, tuxedo, and all other men's acce
 
             - Where the user can log in to their account
 
-        6. Profile Page
+        6. Profile App
 
             - Where the user can update their details 
 
@@ -209,19 +209,23 @@ Gentleman Mayer an e-commerce site offer suits, tuxedo, and all other men's acce
           
             - Where the user can see their query history send to the owner thru the contact form
 
-        7. Bag Page
+        7. Bag App
 
-            - Where the user can see their order summary
-
-            - Here they can update their products before going to secure checkout
+            - Where the user can see their products that they added in the bag
 
             - Here they can update their products before going to secure checkout
 
-        8. Checkout Page
+            - Here they can remove on products before going to secure checkout
 
-            - Where the user can complete the order
+            - And also theu a button to Keep Shopping
 
-        9. Wishlist Page
+        8. Checkout App
+
+            - Where the user can complete the order by filling the name, email, delivery details and credit card details
+
+            - Here they can also see an order summary on they shopping
+
+        9. Wishlist App
 
             - Where the user can view all the products that they have on their wishlist
 
@@ -229,33 +233,45 @@ Gentleman Mayer an e-commerce site offer suits, tuxedo, and all other men's acce
 
             - Remove the product from the wishlist
 
-        10. Review Page
+        10. Review App
 
-            - Where the user can view all the reviews from all products
+            - Where the user can view all the reviews from all products and they can navigate to a specific product after words to see the product detail
 
             - Can sort the reviews from rating or product name
 
-            - If the user is logged and has left some reviews he can edit/delete their own reviews
+            - If the user is logged and has left some previous reviews he can edit/delete their his reviews
 
-        11. Contact Page
+        11. Contact App
 
             - Where the user can contact the owner for different queries
 
-        12. Footer section
+            - The register user will have an history with all the queries that they send. 
+
+        12 Newsletter App
+
+            - Where the user for now they can subscribe
+
+        13. Footer section
 
             - Where the users can find the newsletter subscription form
 
-            - Where the users can find informative links 
+            - Where the users can find informative links like Contact page and Review about our products
             
             - Where the users can find links to the business social media pages
  
       - ##### Future Features to Implement:
 
-        - When a login user fill the contact form for a query, each time the owner replies, the user to be able to see the replay in the profile query history for the specific query
+        - On the Contact App the query history initialy suppose to be like a small private chat between the user and admin, where the admin can replay to the message that he receive and automaticly an email with the response and also a replay will be send to the user history query. But in the interest of time this is now on the future features to implement.
+
+        - Create a Blog Where the user can read about the newest fashion in Men Collection, and also where they can comment
 
         - To add variants to each product so that the user can see on the product detail page different colors for each product, the sizes that come with each color, and different prices if the prices vary for each color
 
-        - Add coupons for discount
+        - Finish the Newsletter app to send and to send to all subscriptions email with the new arrival and special offers that Gentleman Mayer has
+
+        - Also have a page for unsubscribe.
+
+        - Add coupons for discount, this can also be sent with the newsletter email
 
         - Create social media links to share the product from the product detail page
 
