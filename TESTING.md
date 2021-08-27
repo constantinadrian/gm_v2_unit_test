@@ -256,7 +256,7 @@
 
     1. iPhone 11 - IOS 14.0.1
 
-    2. Ipad Mini 2 - IOS 12.4.8 
+    2. Ipad Mini 2 - IOS 12.5.4
 
     3. Huawei P Smart
 
@@ -819,6 +819,11 @@
         - ![](readme_file/checkout-stripe-all-error-shows.PNG)
 
     
+- ### Unfix Bugs
+
+    - On iPhone 5S - IOS 10.2.1 the ```sort by...``` menu from products page an review page is not workin. This has to do with the fact that on older IOS version the change event or blur event don't fire. Ipad Mini 2 - IOS 12.5.4, on the other hand, was working perfectly fine.
+
+
 > NOTE: No other bugs that I'm aware of were left unsolved.
 
 Return to [README.md](README.md)

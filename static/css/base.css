@@ -367,9 +367,6 @@ input[name="q"]::placeholder {
     border-right: none;
 }
 
-.qty_input:read-only {
-    background: #f4f4f4;
-}
 /* ---------------------------- End Buttons and Color Classes ------------------------------------- */
 
 /* ----------------------------------- Bootstrap toasts ------------------------------------------- */
@@ -696,7 +693,7 @@ input[name="q"]::placeholder {
 .star-ratings-css {
     unicode-bidi: bidi-override;
     color: #c5c5c5;
-    font-size: 24px;
+    font-size: 20px;
     position: relative;
     padding: 0;
     width: -webkit-min-content;
@@ -1095,10 +1092,6 @@ input[name="q"]::placeholder {
 
     .wishlist-count {
         right: 4px;
-    }
-
-    .qty_input:read-write {
-        background: #fff;
     }
 }
 
