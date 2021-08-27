@@ -392,7 +392,7 @@ Gentleman Mayer an e-commerce site offer suits, tuxedo, and all other men's acce
 
     - [Coolors](https://coolors.co/) - used for color palette
 
-    - [Adobe Photoshop 2020](https://www.adobe.com/ie/products/photoshop.html?gclid=Cj0KCQjwrsGCBhD1ARIsALILBYpcZ9gNDfvVo1tJUaPzX_D5Bbo7kr6tDseIjZmjRTGbiBTqIURjULAaAvGnEALw_wcB&mv=search&sdid=LZ32SYVR&ef_id=Cj0KCQjwrsGCBhD1ARIsALILBYpcZ9gNDfvVo1tJUaPzX_D5Bbo7kr6tDseIjZmjRTGbiBTqIURjULAaAvGnEALw_wcB:G:s&s_kwcid=AL!3085!3!441664403997!b!!g!!%2Bphotoshop!1423510553!55397634865) - used to create logo, favicon for this project
+    - [Adobe Photoshop 2020](https://www.adobe.com/ie/products/photoshop.html?gclid=Cj0KCQjwrsGCBhD1ARIsALILBYpcZ9gNDfvVo1tJUaPzX_D5Bbo7kr6tDseIjZmjRTGbiBTqIURjULAaAvGnEALw_wcB&mv=search&sdid=LZ32SYVR&ef_id=Cj0KCQjwrsGCBhD1ARIsALILBYpcZ9gNDfvVo1tJUaPzX_D5Bbo7kr6tDseIjZmjRTGbiBTqIURjULAaAvGnEALw_wcB:G:s&s_kwcid=AL!3085!3!441664403997!b!!g!!%2Bphotoshop!1423510553!55397634865) - used to create logo, favicon for this project and to edit all the photos from this project.
 
 [Back to Top](#table-of-contents)
 
@@ -1028,13 +1028,14 @@ Gentleman Mayer an e-commerce site offer suits, tuxedo, and all other men's acce
 
         - [ShutterStock](https://www.shutterstock.com/image-photo/portrait-handsome-stylish-man-elegant-black-124851772) - Royalty-free stock photo ID: 124851772
 
-    - All the images from the products and card section on landing page were taken from:
+    - All the images from the products and card section on landing page were taken from this three website and modified by the developer:
 
         - [https://www.pexels.com/](https://www.pexels.com/)
 
         - [https://pixabay.com/](https://pixabay.com/)
 
         - [https://unsplash.com/](https://unsplash.com/)
+
 
   - #### Acknowledgements
 
