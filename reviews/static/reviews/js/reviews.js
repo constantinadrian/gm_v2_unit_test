@@ -1,7 +1,7 @@
 /**
  * Sort reviews by rating and product name
  */
-$('#sort-selector').change(function() {
+$('#sort-selector').on('blur change', function() {
     var selector = $(this);
     var currentUrl = new URL(window.location);
 

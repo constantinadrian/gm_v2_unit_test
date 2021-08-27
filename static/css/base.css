@@ -366,6 +366,10 @@ input[name="q"]::placeholder {
 .review-border-right {
     border-right: none;
 }
+
+.qty_input:read-only {
+    background: #f4f4f4;
+}
 /* ---------------------------- End Buttons and Color Classes ------------------------------------- */
 
 /* ----------------------------------- Bootstrap toasts ------------------------------------------- */
@@ -1041,9 +1045,6 @@ input[name="q"]::placeholder {
     }
 }
 
-@media only screen and (min-width:768px) and (max-width: 991px){
-}
-
 @media only screen and (min-width:768px) {
     .header-text {
         font-size: 4rem;
@@ -1072,9 +1073,6 @@ input[name="q"]::placeholder {
     }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-}
-
 @media only screen and (max-width:575px) {
     .btn-outline-white {
         min-width: 1px;
@@ -1097,6 +1095,10 @@ input[name="q"]::placeholder {
 
     .wishlist-count {
         right: 4px;
+    }
+
+    .qty_input:read-write {
+        background: #fff;
     }
 }
 
