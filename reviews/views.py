@@ -30,7 +30,7 @@ def reviews(request):
 
             if sortkey == "name":
                 sortkey = "lower_name"
-                reviews = reviews.annotate(lower_name=Lower('product'))
+                reviews = reviews.annotate(lower_name=Lower('product__name'))
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
