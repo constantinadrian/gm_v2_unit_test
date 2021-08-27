@@ -299,7 +299,7 @@ Gentleman Mayer an e-commerce site offer suits, tuxedo, and all other men's acce
 
         - Palette:
 
-            - The colors from palette colors was selected to much the Hero image background from Home page
+            - The colors from palette colors were selected to match the Hero image background from the Home page
 
             ![Palette Colors](readme_file/Palette-Coolors.png)
 
