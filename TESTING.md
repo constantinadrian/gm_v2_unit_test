@@ -260,6 +260,8 @@
 
     3. Huawei P Smart
 
+    4. iPhone - 10.2.1
+
   - A large amount of testing was done to ensure that all pages were linked correctly.
 
 [Back to Top](#table-of-contents)
@@ -785,6 +787,31 @@
         To Fix: I have removed from the template base directory the 404 HTML and I have created an ``` error``` app that will hold all the custom error pages.
 
         After I created the app and test the 404, page not found, I didn't get any errors in the console
+
+    - After checkout out on iphone without filling the checkout form I got an error than was not actually user friendly. That happen because the require atribute does work on old version of IOS.
+
+        - ![](readme_file/checkout-error-on-iphone.PNG)
+
+        To Fix 1: On the stripe_elements.js I have remove all the billing details except the email address which was required in the ```webhook_handler.py``` when creating the order for the email field.
+
+        To Fix 2: On the the checkout ```views.py``` after checking the if the order form is valid I added on the else statement the folowwing code as was given an error about the intent reference before initiate. 
+
+        ```
+        current_bag = bag_contexts(request)
+        total = current_bag['grand_total']
+        stripe_total = round(total * 100)
+
+        # set secret_key on the stripe
+        stripe.api_key = stripe_secret_key
+
+        # create the payment intent
+        intent = stripe.PaymentIntent.create(
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY
+        )
+        ```
+        After I tested the form was working properly and the django message and the form error was display corretly
+
     
 > NOTE: No other bugs that I'm aware of were left unsolved.
 

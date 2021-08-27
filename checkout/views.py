@@ -147,6 +147,22 @@ def checkout(request):
                 reverse('checkout_success', args=[order.order_number])
             )
         else:
+            # get the current bag in order to create the payment
+            # intent so we can render again the checkout page and
+            # show the django message and also the form errors
+            # due to user not filling the form
+            current_bag = bag_contexts(request)
+            total = current_bag['grand_total']
+            stripe_total = round(total * 100)
+
+            # set secret_key on the stripe
+            stripe.api_key = stripe_secret_key
+
+            # create the payment intent
+            intent = stripe.PaymentIntent.create(
+                amount=stripe_total,
+                currency=settings.STRIPE_CURRENCY
+            )
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
