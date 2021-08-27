@@ -810,7 +810,13 @@
             currency=settings.STRIPE_CURRENCY
         )
         ```
-        After I tested the form was working properly and the django message and the form error was display corretly
+        After I tested the form and submited with just the card details fill and got the email error
+
+        - ![](readme_file/checkout-stripe-email-error.PNG)
+
+        And now after fill the email and just credit card detail I have submitted and all error started to show
+
+        - ![](readme_file/checkout-stripe-all-error-shows.PNG)
 
     
 > NOTE: No other bugs that I'm aware of were left unsolved.
