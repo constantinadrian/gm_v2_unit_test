@@ -284,7 +284,6 @@ def edit_product(request, product_id):
         # Check if the form is valid with helper function
         response = check_form(request, product)
         if response['valid']:
-            print('SUCCESS!!!')
             messages.success(request, 'Successfully updated product!')
             return redirect(
                 reverse('product_detail',
