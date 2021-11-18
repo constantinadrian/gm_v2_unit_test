@@ -254,9 +254,12 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+    messages.success(
+        request,
+        f'Order successfully processed! '
+        f'Your order number is {order.order_number}. A confirmation '
+        f'email will be sent to {order.email}.'
+    )
 
     # delete the bag once the order is completed successfully
     if 'bag' in request.session:
