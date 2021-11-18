@@ -51,12 +51,12 @@ def contact(request):
                 fail_silently=False
             )
 
-            messages.success(request, ('Your message has been received. \
-                                       Thank you'))
+            messages.success(request, ('Your message has been received. '
+                                       'Thank you'))
             return redirect(reverse('contact'))
         else:
             messages.error(request,
-                           ('Failed to add review to product. '
+                           ('Failed to send your message. '
                             'Please ensure the form is valid.'))
             contact_form = ContactForm()
 
