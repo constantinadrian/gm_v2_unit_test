@@ -3,6 +3,7 @@ from django.shortcuts import (
     get_object_or_404,
     HttpResponse
 )
+from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.contrib import messages
 
@@ -22,6 +23,7 @@ def wishlist(request):
     return render(request, "wishlist/wishlist.html")
 
 
+@login_required
 def add_to_wishlist(request, product_id):
     """"
     A view that add / remove products from wishlist page
