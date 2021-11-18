@@ -15,10 +15,10 @@ class ContactForm(forms.ModelForm):
             'message'
         ]
 
-        def clean_email(self):
-            email = self.cleaned_data.get('email')
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
 
-            return email
+        return email
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
